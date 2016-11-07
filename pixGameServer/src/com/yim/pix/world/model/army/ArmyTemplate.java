@@ -56,4 +56,10 @@ public class ArmyTemplate {
 	 * 描述
 	 */
 	public String describe;
+	
+	
+	/**
+	 * 产出上限
+	 */
+	public int productLimit;
 }

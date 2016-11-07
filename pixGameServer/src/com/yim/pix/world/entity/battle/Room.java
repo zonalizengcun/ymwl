@@ -1,5 +1,7 @@
 package com.yim.pix.world.entity.battle;
 
+import com.yim.pix.world.entity.Player;
+
 /**
  * 房间
  * @author admin
@@ -9,9 +11,9 @@ public class Room {
 
 	private int roomId;
 	
-	private int player1Id;
+	private Player player1;
 	
-	private int player2Id;
+	private Player player2;
 	
 	/**
 	 * 红方
@@ -24,15 +26,15 @@ public class Room {
 	private Square blueSquare;
 	
 	public Room(int roomId) {
-		this(roomId,0,0);
+		this(roomId,null,null);
 	}
 	
-	public Room(int roomId,int player1Id,int player2Id){
+	public Room(int roomId,Player player1,Player player2){
 		this.roomId = roomId;
-		this.player1Id = player1Id;
-		this.player2Id = player2Id;
-		this.redSquare = new Square();
-		this.blueSquare = new Square();
+		this.setPlayer1(player1);
+		this.setPlayer2(player2);
+		this.redSquare = new Square(player1);
+		this.blueSquare = new Square(player2);
 		this.init();
 	}
 
@@ -42,22 +44,6 @@ public class Room {
 
 	public void setRoomId(int roomId) {
 		this.roomId = roomId;
-	}
-
-	public int getPlayer1Id() {
-		return player1Id;
-	}
-
-	public void setPlayer1Id(int player1Id) {
-		this.player1Id = player1Id;
-	}
-
-	public int getPlayer2Id() {
-		return player2Id;
-	}
-
-	public void setPlayer2Id(int player2Id) {
-		this.player2Id = player2Id;
 	}
 
 	public Square getRedSquare() {
@@ -79,6 +65,22 @@ public class Room {
 	//初始化房间
 	private void init() {
 		
+	}
+
+	public Player getPlayer2() {
+		return player2;
+	}
+
+	public void setPlayer2(Player player2) {
+		this.player2 = player2;
+	}
+
+	public Player getPlayer1() {
+		return player1;
+	}
+
+	public void setPlayer1(Player player1) {
+		this.player1 = player1;
 	}
 	
 }

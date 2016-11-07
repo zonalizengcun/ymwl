@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.Table;
+import javax.persistence.criteria.CriteriaBuilder.Case;
 
 import org.hibernate.annotations.Type;
 
@@ -29,11 +30,11 @@ public class Racist {
 	private HeroContainer heroContainer;
 	
 	/**
-	 * 5个兵种位置对应的5个兵种
+	 * 5个兵种位置对应的5个兵种 
 	 */
-	private int position0 = 0;
-	private int position1 = 1;
-	private int position2 = 2;
+	private int position0 = -1;
+	private int position1 = -1;
+	private int position2 = -1;
 	private int position3 = -1;
 	private int position4 = -1;
 	
@@ -104,6 +105,23 @@ public class Racist {
 
 	public void setPosition4(int position4) {
 		this.position4 = position4;
+	}
+	
+	public int getPosition(int pos){
+		switch (pos) {
+		case 0:
+			return position0;
+		case 1:
+			return position1;
+		case 2:
+			return position2;
+		case 3:
+			return position3;
+		case 4:
+			return position4;
+		default:
+			return -1;
+		}
 	}
 
 	

@@ -6,10 +6,12 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import com.yim.message.pix.game.MessagePtoto.ArmyMessage;
 import com.yim.pix.world.World;
+import com.yim.pix.world.entity.Player;
 import com.yim.pix.world.entity.battle.Room;
 import com.yim.pix.world.handler.BattleHandler;
 import com.yim.pix.world.model.army.ArmyTemplate;
 import com.yim.service.IService;
+import com.yim.service.ServiceContainer;
 
 public class BattleService implements IService{
 	
@@ -35,6 +37,7 @@ public class BattleService implements IService{
 	
 	public ArmyMessage buildArmyMessage(ArmyTemplate template){
 		ArmyMessage.Builder builder = ArmyMessage.newBuilder();
+		builder.setArmyId(template.id);
 		builder.setArmyType(template.armyType);
 		builder.setName(template.armyName);
 		builder.setAtk(template.atk);
@@ -52,9 +55,9 @@ public class BattleService implements IService{
 	 * @param player2Id
 	 * @return room
 	 */
-	public Room creatRoom(int player1Id,int player2Id){
+	public Room creatRoom(Player player1,Player player2){
 		synchronized (roomMap) {
-			Room room = new Room(rommIdNumber.getAndIncrement(),player1Id,player2Id);
+			Room room = new Room(rommIdNumber.getAndIncrement(),player1,player2);
 			this.roomMap.put(room.getRoomId(), room);
 			return room;
 		}

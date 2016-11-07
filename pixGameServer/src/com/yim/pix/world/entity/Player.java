@@ -7,6 +7,7 @@ import javax.persistence.Transient;
 
 import com.yim.net.session.ClientSession;
 import com.yim.net.session.IClient;
+import com.yim.pix.world.model.RacistType;
 
 @Entity
 @Table(name="palyer")
@@ -65,8 +66,8 @@ public class Player implements IClient {
 		this.session = session;
 	}
 
-	public int getRacistType() {
-		return racistType;
+	public RacistType getRacistType() {
+		return RacistType.values()[racistType];
 	}
 
 	public void setRacistType(int racistType) {

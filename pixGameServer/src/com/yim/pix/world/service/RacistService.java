@@ -8,6 +8,7 @@ import java.util.Random;
 import com.yim.persist.EntityManager;
 import com.yim.persist.EntityManagerFactory;
 import com.yim.pix.world.entity.Racist;
+import com.yim.pix.world.model.RacistType;
 import com.yim.service.IService;
 
 public class RacistService implements IService {
@@ -76,11 +77,11 @@ public class RacistService implements IService {
 	 * @param racistType
 	 * @return
 	 */
-	public Racist getRacist(int playerId,int racistType){
+	public Racist getRacist(int playerId,RacistType racistType){
 		if (this.racists.containsKey(playerId)) {
 			return this.racists.get(playerId);
 		}else{
-			return loadRacist(playerId,racistType);
+			return loadRacist(playerId,racistType.ordinal());
 		}
 	}
 	

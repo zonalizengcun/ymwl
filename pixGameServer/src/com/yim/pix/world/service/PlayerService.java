@@ -96,7 +96,7 @@ public class PlayerService implements IService{
 		PlayerMessage.Builder builder = PlayerMessage.newBuilder();
 		builder.setPlayerId(player.getId());
 		builder.setName(player.getName());
-		builder.setRacist(player.getRacistType());
+		builder.setRacist(player.getRacistType().ordinal());
 		return builder.build();
 	}
 

@@ -16,6 +16,8 @@ import com.yim.pix.world.Config;
 import com.yim.pix.world.World;
 import com.yim.pix.world.entity.Racist;
 import com.yim.pix.world.service.AccountService;
+import com.yim.pix.world.service.BattleService;
+import com.yim.pix.world.service.MatchService;
 import com.yim.pix.world.service.PlayerService;
 import com.yim.pix.world.service.RacistService;
 import com.yim.redis.RedisService;
@@ -36,6 +38,8 @@ public class GameServer {
 		ServiceContainer.getInstance().register(IdService.class, new IdService());
 		ServiceContainer.getInstance().register(PlayerService.class, new PlayerService());
 		ServiceContainer.getInstance().register(RacistService.class, new RacistService());
+		ServiceContainer.getInstance().register(BattleService.class, new BattleService());
+		ServiceContainer.getInstance().register(MatchService.class, new MatchService());
 		AbstractNettyClient nettyClient = new DefaultNettyClient(new AuthCodeMaper());
 		World.getInstance().setNettyClient(nettyClient);
 		ServiceContainer.getInstance().register(AccountService.class, new AccountService());

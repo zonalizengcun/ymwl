@@ -48,6 +48,8 @@ public class ArmyModleBuilder {
 			template.level = NumberUtils.toInt(sheet.getCell(8,i).getContents().trim());
 			template.skill = NumberUtils.toInt(sheet.getCell(9,i).getContents().trim());
 			template.icon = sheet.getCell(10,i).getContents().trim();
+			template.describe = sheet.getCell(11,i).getContents().trim();
+			template.productLimit = NumberUtils.toInt(sheet.getCell(12,i).getContents().trim());
 			this.model.addArmyTemp(template);
 		}
 		inputStream.close();

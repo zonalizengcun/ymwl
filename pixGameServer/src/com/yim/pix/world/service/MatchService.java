@@ -113,6 +113,7 @@ public class MatchService implements IService {
 		player1.getSession().send(GameCodeMaper.BATTLEMATCHSYN, syn.build());
 		syn.setPlayerInfo(playerMessage1);
 		player2.getSession().send(GameCodeMaper.BATTLEMATCHSYN, syn.build());
+		ServiceContainer.getInstance().get(BattleService.class).creatRoom(player1, player2);
 	}
 	
 	/**

@@ -28,7 +28,7 @@ message FormationReq{
 
 //当前阵型 = 105
 message FormationRes{
-	required int32 position0 = 1;
+	required int32 position0 = 1;//位置0兵种id
 	required int32 position1 = 2;
 	required int32 position2 = 3;
 	required int32 position3 = 4;
@@ -38,20 +38,21 @@ message FormationRes{
 }
 //兵种
 message ArmyMessage{
-	required int32 armyType = 1;
-	required string name = 2;
-	required int32 atk = 3;
-	required int32 def = 4;
-	required int32 round = 5;
-	required int32 level = 6;
-	required string describe = 7;
-	required string icon = 8;//兵种图标
+	required int32 armyId = 1;
+	required int32 armyType = 2;
+	required string name = 3;
+	required int32 atk = 4;
+	required int32 def = 5;
+	required int32 round = 6;
+	required int32 level = 7;
+	required string describe = 8;
+	required string icon = 9;//兵种图标
 	
 }
 
 //保存阵型请求 = 106
 message FormationSaveReq{
-	required int32 position0 = 1;
+	required int32 position0 = 1;//位置0兵种id
 	required int32 position1 = 2;
 	required int32 position2 = 3;
 	required int32 position3 = 4;

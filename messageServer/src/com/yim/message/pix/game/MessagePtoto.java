@@ -2763,10 +2763,18 @@ public final class MessagePtoto {
     // required int32 position0 = 1;
     /**
      * <code>required int32 position0 = 1;</code>
+     *
+     * <pre>
+     *位置0兵种id
+     * </pre>
      */
     boolean hasPosition0();
     /**
      * <code>required int32 position0 = 1;</code>
+     *
+     * <pre>
+     *位置0兵种id
+     * </pre>
      */
     int getPosition0();
 
@@ -2986,12 +2994,20 @@ public final class MessagePtoto {
     private int position0_;
     /**
      * <code>required int32 position0 = 1;</code>
+     *
+     * <pre>
+     *位置0兵种id
+     * </pre>
      */
     public boolean hasPosition0() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
      * <code>required int32 position0 = 1;</code>
+     *
+     * <pre>
+     *位置0兵种id
+     * </pre>
      */
     public int getPosition0() {
       return position0_;
@@ -3543,18 +3559,30 @@ public final class MessagePtoto {
       private int position0_ ;
       /**
        * <code>required int32 position0 = 1;</code>
+       *
+       * <pre>
+       *位置0兵种id
+       * </pre>
        */
       public boolean hasPosition0() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
        * <code>required int32 position0 = 1;</code>
+       *
+       * <pre>
+       *位置0兵种id
+       * </pre>
        */
       public int getPosition0() {
         return position0_;
       }
       /**
        * <code>required int32 position0 = 1;</code>
+       *
+       * <pre>
+       *位置0兵种id
+       * </pre>
        */
       public Builder setPosition0(int value) {
         bitField0_ |= 0x00000001;
@@ -3564,6 +3592,10 @@ public final class MessagePtoto {
       }
       /**
        * <code>required int32 position0 = 1;</code>
+       *
+       * <pre>
+       *位置0兵种id
+       * </pre>
        */
       public Builder clearPosition0() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -3991,89 +4023,99 @@ public final class MessagePtoto {
   public interface ArmyMessageOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
 
-    // required int32 armyType = 1;
+    // required int32 armyId = 1;
     /**
-     * <code>required int32 armyType = 1;</code>
+     * <code>required int32 armyId = 1;</code>
+     */
+    boolean hasArmyId();
+    /**
+     * <code>required int32 armyId = 1;</code>
+     */
+    int getArmyId();
+
+    // required int32 armyType = 2;
+    /**
+     * <code>required int32 armyType = 2;</code>
      */
     boolean hasArmyType();
     /**
-     * <code>required int32 armyType = 1;</code>
+     * <code>required int32 armyType = 2;</code>
      */
     int getArmyType();
 
-    // required string name = 2;
+    // required string name = 3;
     /**
-     * <code>required string name = 2;</code>
+     * <code>required string name = 3;</code>
      */
     boolean hasName();
     /**
-     * <code>required string name = 2;</code>
+     * <code>required string name = 3;</code>
      */
     java.lang.String getName();
     /**
-     * <code>required string name = 2;</code>
+     * <code>required string name = 3;</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
-    // required int32 atk = 3;
+    // required int32 atk = 4;
     /**
-     * <code>required int32 atk = 3;</code>
+     * <code>required int32 atk = 4;</code>
      */
     boolean hasAtk();
     /**
-     * <code>required int32 atk = 3;</code>
+     * <code>required int32 atk = 4;</code>
      */
     int getAtk();
 
-    // required int32 def = 4;
+    // required int32 def = 5;
     /**
-     * <code>required int32 def = 4;</code>
+     * <code>required int32 def = 5;</code>
      */
     boolean hasDef();
     /**
-     * <code>required int32 def = 4;</code>
+     * <code>required int32 def = 5;</code>
      */
     int getDef();
 
-    // required int32 round = 5;
+    // required int32 round = 6;
     /**
-     * <code>required int32 round = 5;</code>
+     * <code>required int32 round = 6;</code>
      */
     boolean hasRound();
     /**
-     * <code>required int32 round = 5;</code>
+     * <code>required int32 round = 6;</code>
      */
     int getRound();
 
-    // required int32 level = 6;
+    // required int32 level = 7;
     /**
-     * <code>required int32 level = 6;</code>
+     * <code>required int32 level = 7;</code>
      */
     boolean hasLevel();
     /**
-     * <code>required int32 level = 6;</code>
+     * <code>required int32 level = 7;</code>
      */
     int getLevel();
 
-    // required string describe = 7;
+    // required string describe = 8;
     /**
-     * <code>required string describe = 7;</code>
+     * <code>required string describe = 8;</code>
      */
     boolean hasDescribe();
     /**
-     * <code>required string describe = 7;</code>
+     * <code>required string describe = 8;</code>
      */
     java.lang.String getDescribe();
     /**
-     * <code>required string describe = 7;</code>
+     * <code>required string describe = 8;</code>
      */
     com.google.protobuf.ByteString
         getDescribeBytes();
 
-    // required string icon = 8;
+    // required string icon = 9;
     /**
-     * <code>required string icon = 8;</code>
+     * <code>required string icon = 9;</code>
      *
      * <pre>
      *兵种图标
@@ -4081,7 +4123,7 @@ public final class MessagePtoto {
      */
     boolean hasIcon();
     /**
-     * <code>required string icon = 8;</code>
+     * <code>required string icon = 9;</code>
      *
      * <pre>
      *兵种图标
@@ -4089,7 +4131,7 @@ public final class MessagePtoto {
      */
     java.lang.String getIcon();
     /**
-     * <code>required string icon = 8;</code>
+     * <code>required string icon = 9;</code>
      *
      * <pre>
      *兵种图标
@@ -4155,41 +4197,46 @@ public final class MessagePtoto {
             }
             case 8: {
               bitField0_ |= 0x00000001;
+              armyId_ = input.readInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
               armyType_ = input.readInt32();
               break;
             }
-            case 18: {
-              bitField0_ |= 0x00000002;
-              name_ = input.readBytes();
-              break;
-            }
-            case 24: {
+            case 26: {
               bitField0_ |= 0x00000004;
-              atk_ = input.readInt32();
+              name_ = input.readBytes();
               break;
             }
             case 32: {
               bitField0_ |= 0x00000008;
-              def_ = input.readInt32();
+              atk_ = input.readInt32();
               break;
             }
             case 40: {
               bitField0_ |= 0x00000010;
-              round_ = input.readInt32();
+              def_ = input.readInt32();
               break;
             }
             case 48: {
               bitField0_ |= 0x00000020;
-              level_ = input.readInt32();
+              round_ = input.readInt32();
               break;
             }
-            case 58: {
+            case 56: {
               bitField0_ |= 0x00000040;
-              describe_ = input.readBytes();
+              level_ = input.readInt32();
               break;
             }
             case 66: {
               bitField0_ |= 0x00000080;
+              describe_ = input.readBytes();
+              break;
+            }
+            case 74: {
+              bitField0_ |= 0x00000100;
               icon_ = input.readBytes();
               break;
             }
@@ -4233,33 +4280,49 @@ public final class MessagePtoto {
     }
 
     private int bitField0_;
-    // required int32 armyType = 1;
-    public static final int ARMYTYPE_FIELD_NUMBER = 1;
-    private int armyType_;
+    // required int32 armyId = 1;
+    public static final int ARMYID_FIELD_NUMBER = 1;
+    private int armyId_;
     /**
-     * <code>required int32 armyType = 1;</code>
+     * <code>required int32 armyId = 1;</code>
      */
-    public boolean hasArmyType() {
+    public boolean hasArmyId() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required int32 armyType = 1;</code>
+     * <code>required int32 armyId = 1;</code>
+     */
+    public int getArmyId() {
+      return armyId_;
+    }
+
+    // required int32 armyType = 2;
+    public static final int ARMYTYPE_FIELD_NUMBER = 2;
+    private int armyType_;
+    /**
+     * <code>required int32 armyType = 2;</code>
+     */
+    public boolean hasArmyType() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required int32 armyType = 2;</code>
      */
     public int getArmyType() {
       return armyType_;
     }
 
-    // required string name = 2;
-    public static final int NAME_FIELD_NUMBER = 2;
+    // required string name = 3;
+    public static final int NAME_FIELD_NUMBER = 3;
     private java.lang.Object name_;
     /**
-     * <code>required string name = 2;</code>
+     * <code>required string name = 3;</code>
      */
     public boolean hasName() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
+      return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>required string name = 2;</code>
+     * <code>required string name = 3;</code>
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -4276,7 +4339,7 @@ public final class MessagePtoto {
       }
     }
     /**
-     * <code>required string name = 2;</code>
+     * <code>required string name = 3;</code>
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -4292,81 +4355,81 @@ public final class MessagePtoto {
       }
     }
 
-    // required int32 atk = 3;
-    public static final int ATK_FIELD_NUMBER = 3;
+    // required int32 atk = 4;
+    public static final int ATK_FIELD_NUMBER = 4;
     private int atk_;
     /**
-     * <code>required int32 atk = 3;</code>
+     * <code>required int32 atk = 4;</code>
      */
     public boolean hasAtk() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
+      return ((bitField0_ & 0x00000008) == 0x00000008);
     }
     /**
-     * <code>required int32 atk = 3;</code>
+     * <code>required int32 atk = 4;</code>
      */
     public int getAtk() {
       return atk_;
     }
 
-    // required int32 def = 4;
-    public static final int DEF_FIELD_NUMBER = 4;
+    // required int32 def = 5;
+    public static final int DEF_FIELD_NUMBER = 5;
     private int def_;
     /**
-     * <code>required int32 def = 4;</code>
+     * <code>required int32 def = 5;</code>
      */
     public boolean hasDef() {
-      return ((bitField0_ & 0x00000008) == 0x00000008);
+      return ((bitField0_ & 0x00000010) == 0x00000010);
     }
     /**
-     * <code>required int32 def = 4;</code>
+     * <code>required int32 def = 5;</code>
      */
     public int getDef() {
       return def_;
     }
 
-    // required int32 round = 5;
-    public static final int ROUND_FIELD_NUMBER = 5;
+    // required int32 round = 6;
+    public static final int ROUND_FIELD_NUMBER = 6;
     private int round_;
     /**
-     * <code>required int32 round = 5;</code>
+     * <code>required int32 round = 6;</code>
      */
     public boolean hasRound() {
-      return ((bitField0_ & 0x00000010) == 0x00000010);
+      return ((bitField0_ & 0x00000020) == 0x00000020);
     }
     /**
-     * <code>required int32 round = 5;</code>
+     * <code>required int32 round = 6;</code>
      */
     public int getRound() {
       return round_;
     }
 
-    // required int32 level = 6;
-    public static final int LEVEL_FIELD_NUMBER = 6;
+    // required int32 level = 7;
+    public static final int LEVEL_FIELD_NUMBER = 7;
     private int level_;
     /**
-     * <code>required int32 level = 6;</code>
+     * <code>required int32 level = 7;</code>
      */
     public boolean hasLevel() {
-      return ((bitField0_ & 0x00000020) == 0x00000020);
+      return ((bitField0_ & 0x00000040) == 0x00000040);
     }
     /**
-     * <code>required int32 level = 6;</code>
+     * <code>required int32 level = 7;</code>
      */
     public int getLevel() {
       return level_;
     }
 
-    // required string describe = 7;
-    public static final int DESCRIBE_FIELD_NUMBER = 7;
+    // required string describe = 8;
+    public static final int DESCRIBE_FIELD_NUMBER = 8;
     private java.lang.Object describe_;
     /**
-     * <code>required string describe = 7;</code>
+     * <code>required string describe = 8;</code>
      */
     public boolean hasDescribe() {
-      return ((bitField0_ & 0x00000040) == 0x00000040);
+      return ((bitField0_ & 0x00000080) == 0x00000080);
     }
     /**
-     * <code>required string describe = 7;</code>
+     * <code>required string describe = 8;</code>
      */
     public java.lang.String getDescribe() {
       java.lang.Object ref = describe_;
@@ -4383,7 +4446,7 @@ public final class MessagePtoto {
       }
     }
     /**
-     * <code>required string describe = 7;</code>
+     * <code>required string describe = 8;</code>
      */
     public com.google.protobuf.ByteString
         getDescribeBytes() {
@@ -4399,21 +4462,21 @@ public final class MessagePtoto {
       }
     }
 
-    // required string icon = 8;
-    public static final int ICON_FIELD_NUMBER = 8;
+    // required string icon = 9;
+    public static final int ICON_FIELD_NUMBER = 9;
     private java.lang.Object icon_;
     /**
-     * <code>required string icon = 8;</code>
+     * <code>required string icon = 9;</code>
      *
      * <pre>
      *兵种图标
      * </pre>
      */
     public boolean hasIcon() {
-      return ((bitField0_ & 0x00000080) == 0x00000080);
+      return ((bitField0_ & 0x00000100) == 0x00000100);
     }
     /**
-     * <code>required string icon = 8;</code>
+     * <code>required string icon = 9;</code>
      *
      * <pre>
      *兵种图标
@@ -4434,7 +4497,7 @@ public final class MessagePtoto {
       }
     }
     /**
-     * <code>required string icon = 8;</code>
+     * <code>required string icon = 9;</code>
      *
      * <pre>
      *兵种图标
@@ -4455,6 +4518,7 @@ public final class MessagePtoto {
     }
 
     private void initFields() {
+      armyId_ = 0;
       armyType_ = 0;
       name_ = "";
       atk_ = 0;
@@ -4469,6 +4533,10 @@ public final class MessagePtoto {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized != -1) return isInitialized == 1;
 
+      if (!hasArmyId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       if (!hasArmyType()) {
         memoizedIsInitialized = 0;
         return false;
@@ -4509,28 +4577,31 @@ public final class MessagePtoto {
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeInt32(1, armyType_);
+        output.writeInt32(1, armyId_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeBytes(2, getNameBytes());
+        output.writeInt32(2, armyType_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeInt32(3, atk_);
+        output.writeBytes(3, getNameBytes());
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        output.writeInt32(4, def_);
+        output.writeInt32(4, atk_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        output.writeInt32(5, round_);
+        output.writeInt32(5, def_);
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        output.writeInt32(6, level_);
+        output.writeInt32(6, round_);
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        output.writeBytes(7, getDescribeBytes());
+        output.writeInt32(7, level_);
       }
       if (((bitField0_ & 0x00000080) == 0x00000080)) {
-        output.writeBytes(8, getIconBytes());
+        output.writeBytes(8, getDescribeBytes());
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        output.writeBytes(9, getIconBytes());
       }
       getUnknownFields().writeTo(output);
     }
@@ -4543,35 +4614,39 @@ public final class MessagePtoto {
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, armyType_);
+          .computeInt32Size(1, armyId_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getNameBytes());
+          .computeInt32Size(2, armyType_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(3, atk_);
+          .computeBytesSize(3, getNameBytes());
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(4, def_);
+          .computeInt32Size(4, atk_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(5, round_);
+          .computeInt32Size(5, def_);
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(6, level_);
+          .computeInt32Size(6, round_);
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(7, getDescribeBytes());
+          .computeInt32Size(7, level_);
       }
       if (((bitField0_ & 0x00000080) == 0x00000080)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(8, getIconBytes());
+          .computeBytesSize(8, getDescribeBytes());
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(9, getIconBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -4693,22 +4768,24 @@ public final class MessagePtoto {
 
       public Builder clear() {
         super.clear();
-        armyType_ = 0;
+        armyId_ = 0;
         bitField0_ = (bitField0_ & ~0x00000001);
-        name_ = "";
+        armyType_ = 0;
         bitField0_ = (bitField0_ & ~0x00000002);
-        atk_ = 0;
+        name_ = "";
         bitField0_ = (bitField0_ & ~0x00000004);
-        def_ = 0;
+        atk_ = 0;
         bitField0_ = (bitField0_ & ~0x00000008);
-        round_ = 0;
+        def_ = 0;
         bitField0_ = (bitField0_ & ~0x00000010);
-        level_ = 0;
+        round_ = 0;
         bitField0_ = (bitField0_ & ~0x00000020);
-        describe_ = "";
+        level_ = 0;
         bitField0_ = (bitField0_ & ~0x00000040);
-        icon_ = "";
+        describe_ = "";
         bitField0_ = (bitField0_ & ~0x00000080);
+        icon_ = "";
+        bitField0_ = (bitField0_ & ~0x00000100);
         return this;
       }
 
@@ -4740,33 +4817,37 @@ public final class MessagePtoto {
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
           to_bitField0_ |= 0x00000001;
         }
-        result.armyType_ = armyType_;
+        result.armyId_ = armyId_;
         if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
           to_bitField0_ |= 0x00000002;
         }
-        result.name_ = name_;
+        result.armyType_ = armyType_;
         if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
           to_bitField0_ |= 0x00000004;
         }
-        result.atk_ = atk_;
+        result.name_ = name_;
         if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
           to_bitField0_ |= 0x00000008;
         }
-        result.def_ = def_;
+        result.atk_ = atk_;
         if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
           to_bitField0_ |= 0x00000010;
         }
-        result.round_ = round_;
+        result.def_ = def_;
         if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
           to_bitField0_ |= 0x00000020;
         }
-        result.level_ = level_;
+        result.round_ = round_;
         if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
           to_bitField0_ |= 0x00000040;
         }
-        result.describe_ = describe_;
+        result.level_ = level_;
         if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
           to_bitField0_ |= 0x00000080;
+        }
+        result.describe_ = describe_;
+        if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
+          to_bitField0_ |= 0x00000100;
         }
         result.icon_ = icon_;
         result.bitField0_ = to_bitField0_;
@@ -4785,11 +4866,14 @@ public final class MessagePtoto {
 
       public Builder mergeFrom(com.yim.message.pix.game.MessagePtoto.ArmyMessage other) {
         if (other == com.yim.message.pix.game.MessagePtoto.ArmyMessage.getDefaultInstance()) return this;
+        if (other.hasArmyId()) {
+          setArmyId(other.getArmyId());
+        }
         if (other.hasArmyType()) {
           setArmyType(other.getArmyType());
         }
         if (other.hasName()) {
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000004;
           name_ = other.name_;
           onChanged();
         }
@@ -4806,12 +4890,12 @@ public final class MessagePtoto {
           setLevel(other.getLevel());
         }
         if (other.hasDescribe()) {
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000080;
           describe_ = other.describe_;
           onChanged();
         }
         if (other.hasIcon()) {
-          bitField0_ |= 0x00000080;
+          bitField0_ |= 0x00000100;
           icon_ = other.icon_;
           onChanged();
         }
@@ -4820,6 +4904,10 @@ public final class MessagePtoto {
       }
 
       public final boolean isInitialized() {
+        if (!hasArmyId()) {
+          
+          return false;
+        }
         if (!hasArmyType()) {
           
           return false;
@@ -4874,49 +4962,82 @@ public final class MessagePtoto {
       }
       private int bitField0_;
 
-      // required int32 armyType = 1;
-      private int armyType_ ;
+      // required int32 armyId = 1;
+      private int armyId_ ;
       /**
-       * <code>required int32 armyType = 1;</code>
+       * <code>required int32 armyId = 1;</code>
        */
-      public boolean hasArmyType() {
+      public boolean hasArmyId() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required int32 armyType = 1;</code>
+       * <code>required int32 armyId = 1;</code>
+       */
+      public int getArmyId() {
+        return armyId_;
+      }
+      /**
+       * <code>required int32 armyId = 1;</code>
+       */
+      public Builder setArmyId(int value) {
+        bitField0_ |= 0x00000001;
+        armyId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 armyId = 1;</code>
+       */
+      public Builder clearArmyId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        armyId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required int32 armyType = 2;
+      private int armyType_ ;
+      /**
+       * <code>required int32 armyType = 2;</code>
+       */
+      public boolean hasArmyType() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required int32 armyType = 2;</code>
        */
       public int getArmyType() {
         return armyType_;
       }
       /**
-       * <code>required int32 armyType = 1;</code>
+       * <code>required int32 armyType = 2;</code>
        */
       public Builder setArmyType(int value) {
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
         armyType_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required int32 armyType = 1;</code>
+       * <code>required int32 armyType = 2;</code>
        */
       public Builder clearArmyType() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         armyType_ = 0;
         onChanged();
         return this;
       }
 
-      // required string name = 2;
+      // required string name = 3;
       private java.lang.Object name_ = "";
       /**
-       * <code>required string name = 2;</code>
+       * <code>required string name = 3;</code>
        */
       public boolean hasName() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
+        return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
-       * <code>required string name = 2;</code>
+       * <code>required string name = 3;</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -4930,7 +5051,7 @@ public final class MessagePtoto {
         }
       }
       /**
-       * <code>required string name = 2;</code>
+       * <code>required string name = 3;</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -4946,183 +5067,183 @@ public final class MessagePtoto {
         }
       }
       /**
-       * <code>required string name = 2;</code>
+       * <code>required string name = 3;</code>
        */
       public Builder setName(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000002;
+  bitField0_ |= 0x00000004;
         name_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required string name = 2;</code>
+       * <code>required string name = 3;</code>
        */
       public Builder clearName() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         name_ = getDefaultInstance().getName();
         onChanged();
         return this;
       }
       /**
-       * <code>required string name = 2;</code>
+       * <code>required string name = 3;</code>
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000002;
+  bitField0_ |= 0x00000004;
         name_ = value;
         onChanged();
         return this;
       }
 
-      // required int32 atk = 3;
+      // required int32 atk = 4;
       private int atk_ ;
       /**
-       * <code>required int32 atk = 3;</code>
+       * <code>required int32 atk = 4;</code>
        */
       public boolean hasAtk() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
+        return ((bitField0_ & 0x00000008) == 0x00000008);
       }
       /**
-       * <code>required int32 atk = 3;</code>
+       * <code>required int32 atk = 4;</code>
        */
       public int getAtk() {
         return atk_;
       }
       /**
-       * <code>required int32 atk = 3;</code>
+       * <code>required int32 atk = 4;</code>
        */
       public Builder setAtk(int value) {
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         atk_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required int32 atk = 3;</code>
+       * <code>required int32 atk = 4;</code>
        */
       public Builder clearAtk() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
         atk_ = 0;
         onChanged();
         return this;
       }
 
-      // required int32 def = 4;
+      // required int32 def = 5;
       private int def_ ;
       /**
-       * <code>required int32 def = 4;</code>
+       * <code>required int32 def = 5;</code>
        */
       public boolean hasDef() {
-        return ((bitField0_ & 0x00000008) == 0x00000008);
+        return ((bitField0_ & 0x00000010) == 0x00000010);
       }
       /**
-       * <code>required int32 def = 4;</code>
+       * <code>required int32 def = 5;</code>
        */
       public int getDef() {
         return def_;
       }
       /**
-       * <code>required int32 def = 4;</code>
+       * <code>required int32 def = 5;</code>
        */
       public Builder setDef(int value) {
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
         def_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required int32 def = 4;</code>
+       * <code>required int32 def = 5;</code>
        */
       public Builder clearDef() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000010);
         def_ = 0;
         onChanged();
         return this;
       }
 
-      // required int32 round = 5;
+      // required int32 round = 6;
       private int round_ ;
       /**
-       * <code>required int32 round = 5;</code>
+       * <code>required int32 round = 6;</code>
        */
       public boolean hasRound() {
-        return ((bitField0_ & 0x00000010) == 0x00000010);
+        return ((bitField0_ & 0x00000020) == 0x00000020);
       }
       /**
-       * <code>required int32 round = 5;</code>
+       * <code>required int32 round = 6;</code>
        */
       public int getRound() {
         return round_;
       }
       /**
-       * <code>required int32 round = 5;</code>
+       * <code>required int32 round = 6;</code>
        */
       public Builder setRound(int value) {
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000020;
         round_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required int32 round = 5;</code>
+       * <code>required int32 round = 6;</code>
        */
       public Builder clearRound() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000020);
         round_ = 0;
         onChanged();
         return this;
       }
 
-      // required int32 level = 6;
+      // required int32 level = 7;
       private int level_ ;
       /**
-       * <code>required int32 level = 6;</code>
+       * <code>required int32 level = 7;</code>
        */
       public boolean hasLevel() {
-        return ((bitField0_ & 0x00000020) == 0x00000020);
+        return ((bitField0_ & 0x00000040) == 0x00000040);
       }
       /**
-       * <code>required int32 level = 6;</code>
+       * <code>required int32 level = 7;</code>
        */
       public int getLevel() {
         return level_;
       }
       /**
-       * <code>required int32 level = 6;</code>
+       * <code>required int32 level = 7;</code>
        */
       public Builder setLevel(int value) {
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000040;
         level_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required int32 level = 6;</code>
+       * <code>required int32 level = 7;</code>
        */
       public Builder clearLevel() {
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000040);
         level_ = 0;
         onChanged();
         return this;
       }
 
-      // required string describe = 7;
+      // required string describe = 8;
       private java.lang.Object describe_ = "";
       /**
-       * <code>required string describe = 7;</code>
+       * <code>required string describe = 8;</code>
        */
       public boolean hasDescribe() {
-        return ((bitField0_ & 0x00000040) == 0x00000040);
+        return ((bitField0_ & 0x00000080) == 0x00000080);
       }
       /**
-       * <code>required string describe = 7;</code>
+       * <code>required string describe = 8;</code>
        */
       public java.lang.String getDescribe() {
         java.lang.Object ref = describe_;
@@ -5136,7 +5257,7 @@ public final class MessagePtoto {
         }
       }
       /**
-       * <code>required string describe = 7;</code>
+       * <code>required string describe = 8;</code>
        */
       public com.google.protobuf.ByteString
           getDescribeBytes() {
@@ -5152,55 +5273,55 @@ public final class MessagePtoto {
         }
       }
       /**
-       * <code>required string describe = 7;</code>
+       * <code>required string describe = 8;</code>
        */
       public Builder setDescribe(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000040;
+  bitField0_ |= 0x00000080;
         describe_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required string describe = 7;</code>
+       * <code>required string describe = 8;</code>
        */
       public Builder clearDescribe() {
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000080);
         describe_ = getDefaultInstance().getDescribe();
         onChanged();
         return this;
       }
       /**
-       * <code>required string describe = 7;</code>
+       * <code>required string describe = 8;</code>
        */
       public Builder setDescribeBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000040;
+  bitField0_ |= 0x00000080;
         describe_ = value;
         onChanged();
         return this;
       }
 
-      // required string icon = 8;
+      // required string icon = 9;
       private java.lang.Object icon_ = "";
       /**
-       * <code>required string icon = 8;</code>
+       * <code>required string icon = 9;</code>
        *
        * <pre>
        *兵种图标
        * </pre>
        */
       public boolean hasIcon() {
-        return ((bitField0_ & 0x00000080) == 0x00000080);
+        return ((bitField0_ & 0x00000100) == 0x00000100);
       }
       /**
-       * <code>required string icon = 8;</code>
+       * <code>required string icon = 9;</code>
        *
        * <pre>
        *兵种图标
@@ -5218,7 +5339,7 @@ public final class MessagePtoto {
         }
       }
       /**
-       * <code>required string icon = 8;</code>
+       * <code>required string icon = 9;</code>
        *
        * <pre>
        *兵种图标
@@ -5238,7 +5359,7 @@ public final class MessagePtoto {
         }
       }
       /**
-       * <code>required string icon = 8;</code>
+       * <code>required string icon = 9;</code>
        *
        * <pre>
        *兵种图标
@@ -5249,26 +5370,26 @@ public final class MessagePtoto {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000080;
+  bitField0_ |= 0x00000100;
         icon_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required string icon = 8;</code>
+       * <code>required string icon = 9;</code>
        *
        * <pre>
        *兵种图标
        * </pre>
        */
       public Builder clearIcon() {
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000100);
         icon_ = getDefaultInstance().getIcon();
         onChanged();
         return this;
       }
       /**
-       * <code>required string icon = 8;</code>
+       * <code>required string icon = 9;</code>
        *
        * <pre>
        *兵种图标
@@ -5279,7 +5400,7 @@ public final class MessagePtoto {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000080;
+  bitField0_ |= 0x00000100;
         icon_ = value;
         onChanged();
         return this;
@@ -5302,10 +5423,18 @@ public final class MessagePtoto {
     // required int32 position0 = 1;
     /**
      * <code>required int32 position0 = 1;</code>
+     *
+     * <pre>
+     *位置0兵种id
+     * </pre>
      */
     boolean hasPosition0();
     /**
      * <code>required int32 position0 = 1;</code>
+     *
+     * <pre>
+     *位置0兵种id
+     * </pre>
      */
     int getPosition0();
 
@@ -5489,12 +5618,20 @@ public final class MessagePtoto {
     private int position0_;
     /**
      * <code>required int32 position0 = 1;</code>
+     *
+     * <pre>
+     *位置0兵种id
+     * </pre>
      */
     public boolean hasPosition0() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
      * <code>required int32 position0 = 1;</code>
+     *
+     * <pre>
+     *位置0兵种id
+     * </pre>
      */
     public int getPosition0() {
       return position0_;
@@ -5948,18 +6085,30 @@ public final class MessagePtoto {
       private int position0_ ;
       /**
        * <code>required int32 position0 = 1;</code>
+       *
+       * <pre>
+       *位置0兵种id
+       * </pre>
        */
       public boolean hasPosition0() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
        * <code>required int32 position0 = 1;</code>
+       *
+       * <pre>
+       *位置0兵种id
+       * </pre>
        */
       public int getPosition0() {
         return position0_;
       }
       /**
        * <code>required int32 position0 = 1;</code>
+       *
+       * <pre>
+       *位置0兵种id
+       * </pre>
        */
       public Builder setPosition0(int value) {
         bitField0_ |= 0x00000001;
@@ -5969,6 +6118,10 @@ public final class MessagePtoto {
       }
       /**
        * <code>required int32 position0 = 1;</code>
+       *
+       * <pre>
+       *位置0兵种id
+       * </pre>
        */
       public Builder clearPosition0() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -8677,19 +8830,20 @@ public final class MessagePtoto {
       "on0\030\001 \002(\005\022\021\n\tposition1\030\002 \002(\005\022\021\n\tposition" +
       "2\030\003 \002(\005\022\021\n\tposition3\030\004 \002(\005\022\021\n\tposition4\030" +
       "\005 \002(\005\022\021\n\tposition5\030\006 \002(\005\022\033\n\005armys\030\007 \003(\0132" +
-      "\014.ArmyMessage\"\205\001\n\013ArmyMessage\022\020\n\010armyTyp",
-      "e\030\001 \002(\005\022\014\n\004name\030\002 \002(\t\022\013\n\003atk\030\003 \002(\005\022\013\n\003de" +
-      "f\030\004 \002(\005\022\r\n\005round\030\005 \002(\005\022\r\n\005level\030\006 \002(\005\022\020\n" +
-      "\010describe\030\007 \002(\t\022\014\n\004icon\030\010 \002(\t\"\204\001\n\020Format" +
-      "ionSaveReq\022\021\n\tposition0\030\001 \002(\005\022\021\n\tpositio" +
-      "n1\030\002 \002(\005\022\021\n\tposition2\030\003 \002(\005\022\021\n\tposition3" +
-      "\030\004 \002(\005\022\021\n\tposition4\030\005 \002(\005\022\021\n\tposition5\030\006" +
-      " \002(\005\"\022\n\020FormationSaveRes\"\020\n\016BattleMatchR" +
-      "eq\"\020\n\016BattleMatchRes\"E\n\016BattleMatchSyn\022\017" +
-      "\n\007success\030\001 \002(\005\022\"\n\nplayerInfo\030\002 \001(\0132\016.Pl" +
-      "ayerMessage\"?\n\rPlayerMessage\022\020\n\010playerId",
-      "\030\001 \002(\005\022\014\n\004name\030\002 \002(\t\022\016\n\006racist\030\003 \002(\005B(\n\030" +
-      "com.yim.message.pix.gameB\014MessagePtoto"
+      "\014.ArmyMessage\"\225\001\n\013ArmyMessage\022\016\n\006armyId\030",
+      "\001 \002(\005\022\020\n\010armyType\030\002 \002(\005\022\014\n\004name\030\003 \002(\t\022\013\n" +
+      "\003atk\030\004 \002(\005\022\013\n\003def\030\005 \002(\005\022\r\n\005round\030\006 \002(\005\022\r" +
+      "\n\005level\030\007 \002(\005\022\020\n\010describe\030\010 \002(\t\022\014\n\004icon\030" +
+      "\t \002(\t\"\204\001\n\020FormationSaveReq\022\021\n\tposition0\030" +
+      "\001 \002(\005\022\021\n\tposition1\030\002 \002(\005\022\021\n\tposition2\030\003 " +
+      "\002(\005\022\021\n\tposition3\030\004 \002(\005\022\021\n\tposition4\030\005 \002(" +
+      "\005\022\021\n\tposition5\030\006 \002(\005\"\022\n\020FormationSaveRes" +
+      "\"\020\n\016BattleMatchReq\"\020\n\016BattleMatchRes\"E\n\016" +
+      "BattleMatchSyn\022\017\n\007success\030\001 \002(\005\022\"\n\nplaye" +
+      "rInfo\030\002 \001(\0132\016.PlayerMessage\"?\n\rPlayerMes",
+      "sage\022\020\n\010playerId\030\001 \002(\005\022\014\n\004name\030\002 \002(\t\022\016\n\006" +
+      "racist\030\003 \002(\005B(\n\030com.yim.message.pix.game" +
+      "B\014MessagePtoto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -8743,7 +8897,7 @@ public final class MessagePtoto {
           internal_static_ArmyMessage_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_ArmyMessage_descriptor,
-              new java.lang.String[] { "ArmyType", "Name", "Atk", "Def", "Round", "Level", "Describe", "Icon", });
+              new java.lang.String[] { "ArmyId", "ArmyType", "Name", "Atk", "Def", "Round", "Level", "Describe", "Icon", });
           internal_static_FormationSaveReq_descriptor =
             getDescriptor().getMessageTypes().get(8);
           internal_static_FormationSaveReq_fieldAccessorTable = new
