@@ -78,11 +78,7 @@ public class Room {
 	
 	//初始化房间
 	private void init() {
-		for (short x = 0; x < 8; x++) {
-			for (short y = 0; y < 6; y++) {
 		
-			}
-		}
 	}
 	
 }

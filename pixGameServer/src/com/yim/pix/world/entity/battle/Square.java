@@ -33,5 +33,9 @@ public class Square {
 			}
 		}
 	}
+	
+	private Army creatArmy(){
+		
+	}
 
 }
