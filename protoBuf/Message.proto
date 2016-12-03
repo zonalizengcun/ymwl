@@ -1,0 +1,67 @@
+message RegistAccReq{   
+	required string accName = 1;   
+	required string passWord = 2;   
+}
+message RegistAccRes{
+	required string token = 1;
+}
+//登陆
+message LoginReq{
+	required string accountName = 1;
+	required string passWord = 2;
+}
+message LoginRes{
+	required bool success = 1;
+	optional string reason = 2;
+}
+//玩家昵称设定
+message GiveNameReq{
+	required string name = 1;
+}
+
+message GiveNameRes{
+	required bool success = 1;
+	optional string reason = 2;
+}
+
+message HeadSetReq{
+	required int32 headId = 1;
+}
+
+message HeadSetRes{
+	required bool success = 1;
+}
+
+message ApplyFriendReq{
+	required int32 friendId = 1;	//玩家id
+}
+
+message ApplyFriendRes{
+	required bool success = 1;
+	optional string reason = 2;
+}
+
+message AgreeFriendReq{
+	required int32 roleId = 1;
+	required bool agree = 2;//true 同意 false拒绝
+	
+}
+message AgreeFriendRes{
+	required bool success = 1;
+	optional string reason = 2;
+}
+
+
+message FriendListReq{
+}
+message FriendListRes{
+	repeated FriendInfo friends = 2;
+	
+}
+message FriendInfo{
+	required int32 roleId = 1;
+	required int32 headId = 2;
+} 
+
+
+

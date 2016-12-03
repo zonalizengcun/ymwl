@@ -1,0 +1,43 @@
+option java_package = "com.yim.message.pix.auth";   
+option java_outer_classname = "AuthMessagePtoto";
+//全局错误信息 = 0
+message ErrorMessage{
+	required string errorReason = 1;
+}
+
+//心跳包
+message AuthHeartBeatReq{
+}
+message AuthHeartBeatRes{
+}
+
+message AuthRegistReq{
+	required string accountName = 1;
+	required string passWord = 2;
+}
+message AuthRegistRes{
+	required int32 accountId = 1;
+	required string accountName = 2;
+	required string passWord = 3;
+}
+
+message AuthLoginReq{
+	required string AccountName = 1;
+	required string passWord = 2;
+}
+
+message AuthLoginRes{
+	required int32 accountId = 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,536 @@
+option java_package = "message.protos";   
+option java_outer_classname = "MessagePtoto";
+//全局错误信息 = 0
+message ErrorMessage{
+	required string errorReason = 1;
+}
+message RegistAccReq{   
+	required string accName = 1;   
+	required string passWord = 2;   
+}
+
+//平台登录code = 45
+message PlatRegistReq{
+	required string platToken = 1;//渠道token
+	required string platName = 2;//渠道名
+}
+//平台登录成功code = 46
+message PlatRegistRes{
+	required bool hasRole = 1;//是否有数据
+	required PlayerInfo player = 2;
+	
+}
+
+message PlayerInfo{//玩家信息
+	required int32 userId = 1;//游戏中玩家id
+	required string token = 2;//游戏中玩家token
+	required int32 pveSectionId = 3;//当前单机模式最高关卡id
+}
+
+
+
+message RegistAccRes{
+	required string token = 1;
+}
+//登陆
+message LoginReq{
+	required string accountName = 1;
+	required string passWord = 2;
+}
+
+//游戏启动获取信息 47
+message GameStartReq{
+}
+
+//游戏启动获取信息 48
+message GameStartRes{
+	required int32 occupyAwardTime = 1;//占领模式发奖时间
+	required int32 hasMessage = 2;//是否有新消息
+	required bool WeekAwardGet = 3;//七天奖励是否已经领取
+	required bool monthAwardGet = 4;//当日月签到奖励是否已经领取
+}
+message LoginRes{
+}
+//玩家昵称设定
+message GiveNameReq{
+	required string name = 1;
+}
+
+message GiveNameRes{
+}
+
+message HeadSetReq{
+	required int32 headId = 1;
+}
+
+message HeadSetRes{
+}
+
+//请求加好友 = 9
+message ApplyFriendReq{
+	required int32 friendId = 1;	//玩家id
+}
+//请求加好友 = 10
+message ApplyFriendRes{
+}
+//同意好友申请 = 13
+message AgreeFriendReq{
+	required int32 roleId = 1;
+	required bool agree = 2;//true 同意 false拒绝
+	
+}
+//同意好友申请 = 14
+message AgreeFriendRes{
+}
+
+//获取好友列表 =11
+message FriendListReq{
+}
+//获取好友列表 =12
+message FriendListRes{
+	required int32 giftLimt = 1;//好友送礼次数上限
+	required int32 giftTimes = 2;//当日好友送礼次数
+	repeated FriendInfo friends = 3;
+	
+}
+message FriendInfo{
+	required int32 roleId = 1;
+	required int32 headId = 2;
+	required string name = 3;
+}
+//删除好友 = 61
+message FriendDeleteReq{
+	required int32 roleId = 1;
+}
+//删除好友成功 = 62
+message FriendDeleteRes{
+	
+}
+//好友送礼物 = 63
+message FriendGiftReq{
+	required int32 targetId = 1;//好友id
+	
+}
+//好友送礼物成功 =64
+message FriendGiftRes{
+}
+
+
+//发送私聊留言
+message PrivateChatReq{
+	required int32 roleId = 1;
+	required string content = 2;
+	
+}
+message PrivateChatRes{
+}
+
+//获取私聊(留言)列表 =17
+message PrivateChatListReq{
+}
+//获取私聊(留言)列表 =18
+message PrivateChatListRes{
+	repeated ChatContent contents =1;
+}
+//聊天(邮件)内容
+message ChatContent{
+	required int32 chatId = 1;//消息id(领奖、好友申请时需要)
+	required int32 type = 2;//0普通消息	1系统奖励	2好友申请
+	required int32 senderRoleId = 3;//发送者id
+	required string senderName = 4;//发送者名字
+	required int32 senderHead = 5;//发送者头像id
+	required string content = 6 ;//内容
+	repeated Attache attaches = 7;//附件
+	required bool state = 8; //邮件是否已处理(奖励领取 好友申请处理)
+}
+//附件
+message Attache{
+	required int32 attchType = 1;//附件类型 1000钻石 
+	required int32 count = 2;//附件数量
+}
+
+//领取附件 = 65
+message ReciveAttachReq{
+	required int32 chatId = 1;
+}
+
+//领取附件 = 66
+message ReciveAttachRes{
+	repeated Attache attaches = 1;
+}
+
+//19 发送世界消息 =19
+message GlobalChatReq{
+	required string content = 1;
+}
+//20 发送世界消息 =20
+message GlobalChatRes{
+}
+//世界聊天列表 =21
+message GlobalChatListReq{
+
+}
+//世界聊天列表 =22
+message GlobalChatListRes{
+	required int32 chatLimit = 1;//世界聊天次数上限
+	required int32 chatCount = 2;//当日世界聊天次数
+	repeated ChatContent contents = 3;
+}
+
+//向服务器请求当期竞技场数据  =23
+message ArenaMapReq{
+}
+// = 24
+message ArenaMapRes{
+	required int32 mapId = 1;//当前竞技场
+	required int32 times = 2;//当日剩余挑战次数
+	required int32 maxScore = 3;//当前最高分
+	required int32 lasScore = 4;//上次挑战分数
+	required int32 maxTimes = 5;//每日最高挑战次数
+}
+
+
+//上传竞技场分数 = 27
+message ArenaScoreReq{	
+	required int32 score = 1;
+}
+// = 28
+message ArenaScoreRes{
+}
+
+//竞技场排行榜 = 25
+message ArenaRankReq{
+}
+//竞技场排行榜 = 26
+message ArenaRankRes{
+	repeated ArenaRank ranks = 1;
+}
+
+message ArenaRank{
+	required int32 playerId = 1;
+	required string name = 2;
+	required int32 headId = 3;
+	required int32 score = 4;
+	repeated RankAward awards = 5;
+}
+
+message RankAward{
+	required int32 type = 1;
+	required int32 count = 2;
+}
+
+//占领模式 关卡信息列表 = 49
+message OccupyListReq{
+}
+
+//占领模式 关卡信息列表 =50
+message OccupyListRes{
+	repeated OccupySection section = 1;
+}
+
+//占领模式章节信息
+message OccupySection{
+	required int32 sectionId = 1;//关卡id
+	required int32 playerId = 2;//占领者 玩家id 如果playerid=-1 表示未有玩家占领
+	required string playerName = 3;//占领者玩家姓名
+	required int32 playerHeadId = 4;//占领者 玩家头像id
+	required int32 award = 5;//当前奖励累计
+	required int32 score = 6;//当前分数
+}
+
+//占领模式准备进入界面信息 = 29
+message OccupyEnterReq{
+	required int32 sectionId = 1;//章节id
+}
+//占领模式准备进入界面信息 = 30
+message OccupyEnterRes{
+	required bool occupyed = 1;//是否被占领
+	required int32 occupyPlayerId = 2;
+	required string occupyPlayerName = 3;//占领玩家名字
+	required int32 occupyPlayerHead = 4;//占领玩家头像id
+	required int32 occupyPlayerScore = 5;//占领者最高钻石
+	required int32 occupyaward = 6;//当前奖励累计
+	required int32 maxScore = 7;//自己最高分数
+	required int32 lastScore = 8;//自己上次挑战分数
+	required int32 occupyAwardTime = 9;//领奖时间
+}
+
+//上传占领模式分数
+message OccupyScoreReq{
+	required int32 sectionId = 1;
+	required int32 score =2;
+}
+
+message OccupyScoreRes{
+}
+
+//请求玩家Pvp信息  =33
+message PvpInfoReq{
+}
+
+//请求玩家Pvp信息  =34
+message PvpInfoRes{
+	required int32 score = 1;//分数
+	required int32 gurdTime = 2;//保护时间
+	required int32 jinghua = 3;//精华数量
+	repeated Monster monsters =4;//个人怪物信息
+}
+
+
+
+//上传地图信息 = 35
+message PvpMapUploadReq{
+	required PvpMapInfo mapInfo = 1;
+}
+//上传地图信息成功 = 36
+message PvpMapUploadRes{
+	
+}
+
+//请求匹配新玩家 = 37
+message PvpMatchReq{
+	
+}
+//匹配成功 =38
+message PvpMatchRes{
+	required int32 playerId = 1;
+	required int32 headId = 2;
+	required string name = 3;
+	required PvpMapInfo mapInfo = 4;
+}
+
+//pvp战斗结束 = 39
+message PvpOverReq{
+	required bool win = 1;
+}
+//pvp战斗结束 =40
+message PvpOverRes{
+	required int32 scoreChange = 1;
+	required int32 score = 2;
+	required int32 jinghuaChange = 3;
+	required int32 jinghua = 4;
+	
+}
+
+//玩家地图信息
+message PvpMapInfo{
+	required int32 mapId = 1;
+	required int32 bossId = 2;
+	repeated Monster monsters = 3;
+	repeated Adornment adornments = 4;
+	required int32 money = 5;
+}
+
+//怪物
+message Monster{
+	required int32 monsterId = 1;
+	optional int32 level = 2;
+}
+
+//装饰物
+message Adornment{
+	required int32 adornId = 1;
+	required int32 pointId = 2;
+}
+
+//获取怪物列表 =41
+message MonsterListReq{
+}
+// = 42
+message MonsterListRes{
+	repeated Monster monsters = 1;
+}
+
+//怪物升级或者降级 = 43
+message MonsterLevelReq{
+	required int32 monsterId = 1;//怪物id
+	required int32 operation = 2;//操作 0升级 1降级
+}
+// =44
+message MonsterLevelRes{
+	required int32 monsterId = 1;//怪物id
+	required int32 jinghua = 2;//当前精华数量
+	required int32 level = 3;//当前怪物等级
+}
+//获取pvp战报 = 79
+message pvpReportReq{
+}
+//=80
+message PvpReportRes{
+	repeated PvpReport reports = 1;
+}
+
+//战报
+message PvpReport{
+	required int32 playerId = 1;
+	required bool win = 2;
+	required string name = 3;
+	required int32 headId = 4;
+	required int64 time = 5;
+}
+
+//向服务器同步钻石数量 =51
+message DiamondReq{
+	required int32 count = 1;//钻石数量
+}
+//=52
+message DiamondRes{
+}
+
+//获取当前通过关卡id =53
+message PveSectionIdReq{
+	
+}
+//=54
+message PveSectionIdRes{
+	required int32 sectionId = 1;//关卡id
+}
+//上传所有关卡信息 = 55
+message PveSectionInfoReq{
+	repeated PveSection section = 1;
+	repeated bool cinemas = 2;//剧情
+	repeated HeroMsg heros = 3;//英雄信息
+	repeated int32 prop = 4;//道具数据
+	repeated int32 propPiece = 5;//道具碎片
+	repeated int32 storyPieces = 6;//所有故事碎片
+	required int32 maxPveSection = 7;//pve最大关卡
+	
+}
+//上传所有关卡信息成功 = 56
+message PveSectionInfoRes{
+
+}
+//下载所有关卡信息 =57
+message PveSectionDownReq{
+}
+//=58
+message PveSectionDownRes{
+	repeated PveSection section = 1;
+	repeated bool cinemas = 2;//剧情
+	repeated HeroMsg heros = 3;//英雄信息
+	repeated int32 prop = 4;//道具数据
+	repeated int32 propPiece = 5;//道具碎片
+	repeated int32 storyPieces = 6;//所有故事碎片
+	required int32 maxPveSection = 7;//pve最大关卡在
+}
+//上传某一关卡数据 =59
+message PveSectionReq{
+	required PveSection section = 1;
+}
+//=60
+message PveSectionRes{
+}
+
+message PveSection{
+	required int32 sectionId = 1;//关卡id
+	required int32 easyStar = 2;//简单模式星级
+	required int32 hardStar = 3;//困难模式星级	
+}
+
+//英雄信息
+message HeroMsg{
+	required int32 heroId = 1;//英雄id
+	required bool enable = 2;//是否激活
+	required int32 level = 3;//等级
+	required int32 exp = 4;//经验
+	repeated int32 piececount = 5;//英雄碎片
+}
+
+//月签到奖励列表 =67
+message MonthRegistListReq{
+}
+//月签到奖励列表 =68
+message MonthRegistListRes{
+	required int32 today = 1;
+	repeated DayAward dayAwards = 2;
+}
+
+message DayAward{
+	required int32 day = 1;//天数
+	required int32 awardType = 2;//奖励类型
+	required int32 count = 3;//奖励数量
+	required int32 state = 4;//1时间未到，未领取 2已经领取 3当前可领取  4过期未领取
+}
+
+//月签到 = 69
+message MonthRegistReq{
+}
+//月签到成功 = 70
+message MonthRegistRes{
+	required int32 day = 1;
+	required int32 awardType = 2;//奖励类型
+	required int32 count = 3;//奖励数量
+}
+
+//周签到奖励列表 =71
+message WeekRegistListReq{
+	repeated int32 heroId = 1;
+}
+//周签到奖励列表 =72
+message WeekRegistListRes{
+	repeated DayAward dayAwards = 1;
+}
+//周签到 = 73
+message WeekRegistReq{
+}
+//周签到成功 = 74
+message WeekRegistRes{
+	required int32 day = 1;
+	required int32 awardType = 2;//奖励类型
+	required int32 count = 3;//奖励数量
+}
+
+//上传总排行榜分数
+message GameRankScoreReq{
+	required int32 score = 1;
+}
+//上传总排行榜分数
+message GameRankScoreRes{
+
+}
+//获取当前总排行榜
+message GameRankReq{
+	
+}
+//当前总排行榜
+message GameRankRes{
+	required int32 myscore = 1;
+	repeated GameRank ranks = 2;
+}
+
+message GameRank{
+	required int32 playerId = 1;
+	required string playerName = 2;
+	required int32 playerHead = 3;
+	required int32 score = 4;
+}
+
+//客户端日志消息 = 81
+message ClientLogReq{
+	required string platform = 1;//平台
+	required string unique = 2;//唯一标识
+}
+// = 82
+message ClientLogRes{
+	
+}
+//购买pvp保护时间 = 83
+message BuyPvpProtectReq{
+}
+
+//=84
+message BuyPvpProtectRes{
+	required int32 levelTime = 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+

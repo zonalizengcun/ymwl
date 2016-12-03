@@ -1,0 +1,98 @@
+option java_package = "com.yim.message.pix.game";   
+option java_outer_classname = "MessagePtoto";
+//全局错误信息 = 0
+message ErrorMessage{
+	required string errorReason = 1;
+}
+//心跳包 =100
+message HeartBeatReq{
+}
+//心跳包 = 101
+message HeartBeatRes{
+	required int32 time = 1;//服务器当前时间
+}
+//登陆 = 102
+message LoginReq{
+	required string name = 1;
+	required int32 racist = 2;//种族类型 0 1 2 3
+}
+//登陆 = 103
+message LoginRes{
+	required int32 playerId = 1;
+	required string name =2;
+}
+
+//请求当前阵型 = 104
+message FormationReq{
+}
+
+//当前阵型 = 105
+message FormationRes{
+	required int32 position0 = 1;
+	required int32 position1 = 2;
+	required int32 position2 = 3;
+	required int32 position3 = 4;
+	required int32 position4 = 5;
+	required int32 position5 = 6;
+	repeated ArmyMessage armys = 7;
+}
+//兵种
+message ArmyMessage{
+	required int32 armyType = 1;
+	required string name = 2;
+	required int32 atk = 3;
+	required int32 def = 4;
+	required int32 round = 5;
+	required int32 level = 6;
+	required string describe = 7;
+	required string icon = 8;//兵种图标
+	
+}
+
+//保存阵型请求 = 106
+message FormationSaveReq{
+	required int32 position0 = 1;
+	required int32 position1 = 2;
+	required int32 position2 = 3;
+	required int32 position3 = 4;
+	required int32 position4 = 5;
+	required int32 position5 = 6;
+}
+//保存阵型 = 107
+message FormationSaveRes{
+	
+}
+
+//匹配战斗 = 108
+message BattleMatchReq{
+	
+}
+//匹配战斗 = 109
+message BattleMatchRes{
+}
+
+//同步匹配结果 = 110
+message BattleMatchSyn{
+	required int32 success = 1;//1匹配成功 2匹配超时
+	optional PlayerMessage playerInfo = 2;//玩家信息
+}
+
+//玩家信息
+message PlayerMessage{
+	required int32 playerId = 1;//玩家id
+	required string name = 2;//玩家名字
+	required int32 racist = 3;//种族
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
