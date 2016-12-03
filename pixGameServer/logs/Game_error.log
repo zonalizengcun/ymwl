@@ -1,0 +1,12 @@
+2016-12-01 00:44:24  [ nioEventLoopGroup-2-2:75710 ] - [ ERROR ]  refCnt: 0, decrement: 1
+2016-12-01 00:44:50  [ nioEventLoopGroup-2-2:102486 ] - [ ERROR ]  refCnt: 0, decrement: 1
+2016-12-01 00:45:22  [ nioEventLoopGroup-2-2:133798 ] - [ ERROR ]  refCnt: 0, decrement: 1
+2016-12-01 00:45:42  [ nioEventLoopGroup-2-2:154231 ] - [ ERROR ]  refCnt: 0, decrement: 1
+2016-12-01 00:46:04  [ nioEventLoopGroup-2-2:176452 ] - [ ERROR ]  远程主机强迫关闭了一个现有的连接。
+2016-12-01 00:48:07  [ nioEventLoopGroup-2-1:34801 ] - [ ERROR ]  refCnt: 0, decrement: 1
+2016-12-01 00:48:36  [ nioEventLoopGroup-2-1:63714 ] - [ ERROR ]  refCnt: 0, decrement: 1
+2016-12-01 00:49:04  [ nioEventLoopGroup-2-1:91630 ] - [ ERROR ]  refCnt: 0, decrement: 1
+2016-12-01 00:49:34  [ nioEventLoopGroup-2-1:121629 ] - [ ERROR ]  refCnt: 0, decrement: 1
+2016-12-01 00:50:04  [ nioEventLoopGroup-2-1:151629 ] - [ ERROR ]  refCnt: 0, decrement: 1
+2016-12-01 00:50:34  [ nioEventLoopGroup-2-1:181629 ] - [ ERROR ]  refCnt: 0, decrement: 1
+2016-12-01 00:51:04  [ nioEventLoopGroup-2-1:211630 ] - [ ERROR ]  refCnt: 0, decrement: 1

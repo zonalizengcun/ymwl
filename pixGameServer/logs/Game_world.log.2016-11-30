@@ -1,0 +1,265 @@
+2016-11-30|23:10:31Hibernate Commons Annotations 3.2.0.Final
+2016-11-30|23:10:31Hibernate 3.6.5.Final
+2016-11-30|23:10:31hibernate.properties not found
+2016-11-30|23:10:31Bytecode provider name : javassist
+2016-11-30|23:10:31using JDK 1.4 java.sql.Timestamp handling
+2016-11-30|23:10:31configuring from resource: /hibernate.cfg.xml
+2016-11-30|23:10:31Configuration resource: /hibernate.cfg.xml
+2016-11-30|23:10:31recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2016-11-30|23:10:31Configured SessionFactory: null
+2016-11-30|23:10:31Binding entity from annotated class: com.yim.pix.world.entity.Player
+2016-11-30|23:10:31Bind entity com.yim.pix.world.entity.Player on table palyer
+2016-11-30|23:10:31Hibernate Validator not found: ignoring
+2016-11-30|23:10:31Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2016-11-30|23:10:31Initializing connection provider: org.hibernate.connection.C3P0ConnectionProvider
+2016-11-30|23:10:31C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://127.0.0.1:3306/pix_game
+2016-11-30|23:10:31Connection properties: {useUnicode=true, user=root, password=****, characterEncoding=UTF-8}
+2016-11-30|23:10:31autocommit mode: false
+2016-11-30|23:10:31Both hibernate-style property 'hibernate.c3p0.max_size' and c3p0-style property 'c3p0.max_size' have been set in hibernate.properties. Hibernate-style property 'hibernate.c3p0.max_size' will be used and c3p0-style property 'c3p0.max_size' will be ignored!
+2016-11-30|23:10:31Both hibernate-style property 'hibernate.c3p0.time_out' and c3p0-style property 'c3p0.time_out' have been set in hibernate.properties. Hibernate-style property 'hibernate.c3p0.time_out' will be used and c3p0-style property 'c3p0.time_out' will be ignored!
+2016-11-30|23:10:31Both hibernate-style property 'hibernate.c3p0.min_size' and c3p0-style property 'c3p0.min_size' have been set in hibernate.properties. Hibernate-style property 'hibernate.c3p0.min_size' will be used and c3p0-style property 'c3p0.min_size' will be ignored!
+2016-11-30|23:10:31Both hibernate-style property 'hibernate.c3p0.validate' and c3p0-style property 'c3p0.validate' have been set in hibernate.properties. Hibernate-style property 'hibernate.c3p0.validate' will be used and c3p0-style property 'c3p0.validate' will be ignored!
+2016-11-30|23:10:31Both hibernate-style property 'hibernate.c3p0.max_statement' and c3p0-style property 'c3p0.max_statement' have been set in hibernate.properties. Hibernate-style property 'hibernate.c3p0.max_statement' will be used and c3p0-style property 'c3p0.max_statement' will be ignored!
+2016-11-30|23:10:31Both hibernate-style property 'hibernate.c3p0.idle_test_period' and c3p0-style property 'c3p0.idle_test_period' have been set in hibernate.properties. Hibernate-style property 'hibernate.c3p0.idle_test_period' will be used and c3p0-style property 'c3p0.idle_test_period' will be ignored!
+2016-11-30|23:10:31Both hibernate-style property 'hibernate.c3p0.acquire_increment' and c3p0-style property 'c3p0.acquire_increment' have been set in hibernate.properties. Hibernate-style property 'hibernate.c3p0.acquire_increment' will be used and c3p0-style property 'c3p0.acquire_increment' will be ignored!
+2016-11-30|23:10:31MLog clients using log4j logging.
+2016-11-30|23:10:31Initializing c3p0-0.9.1 [built 16-January-2007 14:46:42; debug? true; trace: 10]
+2016-11-30|23:10:31Initializing c3p0 pool... com.mchange.v2.c3p0.PoolBackedDataSource@e6a7c149 [ connectionPoolDataSource -> com.mchange.v2.c3p0.WrapperConnectionPoolDataSource@5ec428e0 [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, debugUnreturnedConnectionStackTraces -> false, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge15c9k1eftjlu1i30sal|48e92c5c, idleConnectionTestPeriod -> 120, initialPoolSize -> 5, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, nestedDataSource -> com.mchange.v2.c3p0.DriverManagerDataSource@a1c78f86 [ description -> null, driverClass -> null, factoryClassLocation -> null, identityToken -> 1hge15c9k1eftjlu1i30sal|42b02722, jdbcUrl -> jdbc:mysql://127.0.0.1:3306/pix_game, properties -> {useUnicode=true, user=******, password=******, characterEncoding=UTF-8} ], preferredTestQuery -> null, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false; userOverrides: {} ], dataSourceName -> null, factoryClassLocation -> null, identityToken -> 1hge15c9k1eftjlu1i30sal|71812481, numHelperThreads -> 3 ]
+2016-11-30|23:10:31Using dialect: org.hibernate.dialect.MySQLDialect
+2016-11-30|23:10:31Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-11-30|23:10:31Database ->
+       name : MySQL
+    version : 5.6.24
+      major : 5
+      minor : 6
+2016-11-30|23:10:31Driver ->
+       name : MySQL-AB JDBC Driver
+    version : mysql-connector-java-5.1.13 ( Revision: ${bzr.revision-id} )
+      major : 5
+      minor : 1
+2016-11-30|23:10:31Using default transaction strategy (direct JDBC transactions)
+2016-11-30|23:10:31No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2016-11-30|23:10:31Automatic flush during beforeCompletion(): disabled
+2016-11-30|23:10:31Automatic session close at end of transaction: disabled
+2016-11-30|23:10:31JDBC batch size: 15
+2016-11-30|23:10:31JDBC batch updates for versioned data: disabled
+2016-11-30|23:10:31Scrollable result sets: enabled
+2016-11-30|23:10:31JDBC3 getGeneratedKeys(): enabled
+2016-11-30|23:10:31Connection release mode: auto
+2016-11-30|23:10:31Maximum outer join fetch depth: 2
+2016-11-30|23:10:31Default batch fetch size: 1
+2016-11-30|23:10:31Generate SQL with comments: disabled
+2016-11-30|23:10:31Order SQL updates by primary key: disabled
+2016-11-30|23:10:31Order SQL inserts for batching: disabled
+2016-11-30|23:10:31Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2016-11-30|23:10:31Using ASTQueryTranslatorFactory
+2016-11-30|23:10:31Query language substitutions: {}
+2016-11-30|23:10:31JPA-QL strict compliance: disabled
+2016-11-30|23:10:31Second-level cache: enabled
+2016-11-30|23:10:31Query cache: disabled
+2016-11-30|23:10:31Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2016-11-30|23:10:31Optimize cache for minimal puts: disabled
+2016-11-30|23:10:31Structured second-level cache entries: disabled
+2016-11-30|23:10:31Echoing all SQL to stdout
+2016-11-30|23:10:31Statistics: disabled
+2016-11-30|23:10:31Deleted entity synthetic identifier rollback: disabled
+2016-11-30|23:10:31Default entity-mode: pojo
+2016-11-30|23:10:31Named query checking : enabled
+2016-11-30|23:10:31Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2016-11-30|23:10:31building session factory
+2016-11-30|23:10:31Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@5223e5ee
+2016-11-30|23:10:31Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@29626d54
+2016-11-30|23:10:31Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@4b0b0854
+2016-11-30|23:10:31Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@67a20f67
+2016-11-30|23:10:31Type registration [blob] overrides previous : org.hibernate.type.BlobType@2f7c2f4f
+2016-11-30|23:10:31Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@2f7c2f4f
+2016-11-30|23:10:31Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@1c93084c
+2016-11-30|23:10:31Type registration [clob] overrides previous : org.hibernate.type.ClobType@1622f1b
+2016-11-30|23:10:31Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@1622f1b
+2016-11-30|23:10:31Not binding factory to JNDI, no JNDI name configured
+2016-11-30|23:10:31Running hbm2ddl schema update
+2016-11-30|23:10:31fetching database metadata
+2016-11-30|23:10:31updating schema
+2016-11-30|23:10:31table found: pix_game.palyer
+2016-11-30|23:10:31columns: [accountid, name, id]
+2016-11-30|23:10:31foreign keys: []
+2016-11-30|23:10:31indexes: [primary]
+2016-11-30|23:10:31schema update complete
+2016-11-30|23:11:31Hibernate Commons Annotations 3.2.0.Final
+2016-11-30|23:11:31Hibernate 3.6.5.Final
+2016-11-30|23:11:31hibernate.properties not found
+2016-11-30|23:11:31Bytecode provider name : javassist
+2016-11-30|23:11:31using JDK 1.4 java.sql.Timestamp handling
+2016-11-30|23:11:32configuring from resource: /hibernate.cfg.xml
+2016-11-30|23:11:32Configuration resource: /hibernate.cfg.xml
+2016-11-30|23:11:32recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2016-11-30|23:11:32Configured SessionFactory: null
+2016-11-30|23:11:32Binding entity from annotated class: com.yim.pix.world.entity.Player
+2016-11-30|23:11:32Bind entity com.yim.pix.world.entity.Player on table palyer
+2016-11-30|23:11:32Hibernate Validator not found: ignoring
+2016-11-30|23:11:32Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2016-11-30|23:11:32Initializing connection provider: org.hibernate.connection.C3P0ConnectionProvider
+2016-11-30|23:11:32C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://127.0.0.1:3306/pix_game
+2016-11-30|23:11:32Connection properties: {useUnicode=true, user=root, password=****, characterEncoding=UTF-8}
+2016-11-30|23:11:32autocommit mode: false
+2016-11-30|23:11:32Both hibernate-style property 'hibernate.c3p0.max_size' and c3p0-style property 'c3p0.max_size' have been set in hibernate.properties. Hibernate-style property 'hibernate.c3p0.max_size' will be used and c3p0-style property 'c3p0.max_size' will be ignored!
+2016-11-30|23:11:32Both hibernate-style property 'hibernate.c3p0.time_out' and c3p0-style property 'c3p0.time_out' have been set in hibernate.properties. Hibernate-style property 'hibernate.c3p0.time_out' will be used and c3p0-style property 'c3p0.time_out' will be ignored!
+2016-11-30|23:11:32Both hibernate-style property 'hibernate.c3p0.min_size' and c3p0-style property 'c3p0.min_size' have been set in hibernate.properties. Hibernate-style property 'hibernate.c3p0.min_size' will be used and c3p0-style property 'c3p0.min_size' will be ignored!
+2016-11-30|23:11:32Both hibernate-style property 'hibernate.c3p0.validate' and c3p0-style property 'c3p0.validate' have been set in hibernate.properties. Hibernate-style property 'hibernate.c3p0.validate' will be used and c3p0-style property 'c3p0.validate' will be ignored!
+2016-11-30|23:11:32Both hibernate-style property 'hibernate.c3p0.max_statement' and c3p0-style property 'c3p0.max_statement' have been set in hibernate.properties. Hibernate-style property 'hibernate.c3p0.max_statement' will be used and c3p0-style property 'c3p0.max_statement' will be ignored!
+2016-11-30|23:11:32Both hibernate-style property 'hibernate.c3p0.idle_test_period' and c3p0-style property 'c3p0.idle_test_period' have been set in hibernate.properties. Hibernate-style property 'hibernate.c3p0.idle_test_period' will be used and c3p0-style property 'c3p0.idle_test_period' will be ignored!
+2016-11-30|23:11:32Both hibernate-style property 'hibernate.c3p0.acquire_increment' and c3p0-style property 'c3p0.acquire_increment' have been set in hibernate.properties. Hibernate-style property 'hibernate.c3p0.acquire_increment' will be used and c3p0-style property 'c3p0.acquire_increment' will be ignored!
+2016-11-30|23:11:32MLog clients using log4j logging.
+2016-11-30|23:11:32Initializing c3p0-0.9.1 [built 16-January-2007 14:46:42; debug? true; trace: 10]
+2016-11-30|23:11:32Initializing c3p0 pool... com.mchange.v2.c3p0.PoolBackedDataSource@e3afc1a5 [ connectionPoolDataSource -> com.mchange.v2.c3p0.WrapperConnectionPoolDataSource@5bcc293c [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, debugUnreturnedConnectionStackTraces -> false, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge15c9k1efuunl1b9zqs8|48e92c5c, idleConnectionTestPeriod -> 120, initialPoolSize -> 5, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, nestedDataSource -> com.mchange.v2.c3p0.DriverManagerDataSource@9ecf8fe2 [ description -> null, driverClass -> null, factoryClassLocation -> null, identityToken -> 1hge15c9k1efuunl1b9zqs8|42b02722, jdbcUrl -> jdbc:mysql://127.0.0.1:3306/pix_game, properties -> {useUnicode=true, user=******, password=******, characterEncoding=UTF-8} ], preferredTestQuery -> null, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false; userOverrides: {} ], dataSourceName -> null, factoryClassLocation -> null, identityToken -> 1hge15c9k1efuunl1b9zqs8|71812481, numHelperThreads -> 3 ]
+2016-11-30|23:11:32Using dialect: org.hibernate.dialect.MySQLDialect
+2016-11-30|23:11:32Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-11-30|23:11:32Database ->
+       name : MySQL
+    version : 5.6.24
+      major : 5
+      minor : 6
+2016-11-30|23:11:32Driver ->
+       name : MySQL-AB JDBC Driver
+    version : mysql-connector-java-5.1.13 ( Revision: ${bzr.revision-id} )
+      major : 5
+      minor : 1
+2016-11-30|23:11:32Using default transaction strategy (direct JDBC transactions)
+2016-11-30|23:11:32No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2016-11-30|23:11:32Automatic flush during beforeCompletion(): disabled
+2016-11-30|23:11:32Automatic session close at end of transaction: disabled
+2016-11-30|23:11:32JDBC batch size: 15
+2016-11-30|23:11:32JDBC batch updates for versioned data: disabled
+2016-11-30|23:11:32Scrollable result sets: enabled
+2016-11-30|23:11:32JDBC3 getGeneratedKeys(): enabled
+2016-11-30|23:11:32Connection release mode: auto
+2016-11-30|23:11:32Maximum outer join fetch depth: 2
+2016-11-30|23:11:32Default batch fetch size: 1
+2016-11-30|23:11:32Generate SQL with comments: disabled
+2016-11-30|23:11:32Order SQL updates by primary key: disabled
+2016-11-30|23:11:32Order SQL inserts for batching: disabled
+2016-11-30|23:11:32Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2016-11-30|23:11:32Using ASTQueryTranslatorFactory
+2016-11-30|23:11:32Query language substitutions: {}
+2016-11-30|23:11:32JPA-QL strict compliance: disabled
+2016-11-30|23:11:32Second-level cache: enabled
+2016-11-30|23:11:32Query cache: disabled
+2016-11-30|23:11:32Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2016-11-30|23:11:32Optimize cache for minimal puts: disabled
+2016-11-30|23:11:32Structured second-level cache entries: disabled
+2016-11-30|23:11:32Echoing all SQL to stdout
+2016-11-30|23:11:32Statistics: disabled
+2016-11-30|23:11:32Deleted entity synthetic identifier rollback: disabled
+2016-11-30|23:11:32Default entity-mode: pojo
+2016-11-30|23:11:32Named query checking : enabled
+2016-11-30|23:11:32Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2016-11-30|23:11:32building session factory
+2016-11-30|23:11:32Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@5223e5ee
+2016-11-30|23:11:32Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@29626d54
+2016-11-30|23:11:32Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@4b0b0854
+2016-11-30|23:11:32Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@67a20f67
+2016-11-30|23:11:32Type registration [blob] overrides previous : org.hibernate.type.BlobType@2f7c2f4f
+2016-11-30|23:11:32Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@2f7c2f4f
+2016-11-30|23:11:32Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@1c93084c
+2016-11-30|23:11:32Type registration [clob] overrides previous : org.hibernate.type.ClobType@1622f1b
+2016-11-30|23:11:32Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@1622f1b
+2016-11-30|23:11:32Not binding factory to JNDI, no JNDI name configured
+2016-11-30|23:11:32Running hbm2ddl schema update
+2016-11-30|23:11:32fetching database metadata
+2016-11-30|23:11:32updating schema
+2016-11-30|23:11:32table found: pix_game.palyer
+2016-11-30|23:11:32columns: [accountid, name, id]
+2016-11-30|23:11:32foreign keys: []
+2016-11-30|23:11:32indexes: [primary]
+2016-11-30|23:11:32schema update complete
+2016-11-30|23:11:38GAME SERVER START OK
+2016-11-30|23:13:24Hibernate Commons Annotations 3.2.0.Final
+2016-11-30|23:13:24Hibernate 3.6.5.Final
+2016-11-30|23:13:24hibernate.properties not found
+2016-11-30|23:13:24Bytecode provider name : javassist
+2016-11-30|23:13:24using JDK 1.4 java.sql.Timestamp handling
+2016-11-30|23:13:24configuring from resource: /hibernate.cfg.xml
+2016-11-30|23:13:24Configuration resource: /hibernate.cfg.xml
+2016-11-30|23:13:25recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2016-11-30|23:13:25Configured SessionFactory: null
+2016-11-30|23:13:25Binding entity from annotated class: com.yim.pix.world.entity.Player
+2016-11-30|23:13:25Bind entity com.yim.pix.world.entity.Player on table palyer
+2016-11-30|23:13:25Hibernate Validator not found: ignoring
+2016-11-30|23:13:25Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2016-11-30|23:13:25Initializing connection provider: org.hibernate.connection.C3P0ConnectionProvider
+2016-11-30|23:13:25C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://127.0.0.1:3306/pix_game
+2016-11-30|23:13:25Connection properties: {useUnicode=true, user=root, password=****, characterEncoding=UTF-8}
+2016-11-30|23:13:25autocommit mode: false
+2016-11-30|23:13:25Both hibernate-style property 'hibernate.c3p0.max_size' and c3p0-style property 'c3p0.max_size' have been set in hibernate.properties. Hibernate-style property 'hibernate.c3p0.max_size' will be used and c3p0-style property 'c3p0.max_size' will be ignored!
+2016-11-30|23:13:25Both hibernate-style property 'hibernate.c3p0.time_out' and c3p0-style property 'c3p0.time_out' have been set in hibernate.properties. Hibernate-style property 'hibernate.c3p0.time_out' will be used and c3p0-style property 'c3p0.time_out' will be ignored!
+2016-11-30|23:13:25Both hibernate-style property 'hibernate.c3p0.min_size' and c3p0-style property 'c3p0.min_size' have been set in hibernate.properties. Hibernate-style property 'hibernate.c3p0.min_size' will be used and c3p0-style property 'c3p0.min_size' will be ignored!
+2016-11-30|23:13:25Both hibernate-style property 'hibernate.c3p0.validate' and c3p0-style property 'c3p0.validate' have been set in hibernate.properties. Hibernate-style property 'hibernate.c3p0.validate' will be used and c3p0-style property 'c3p0.validate' will be ignored!
+2016-11-30|23:13:25Both hibernate-style property 'hibernate.c3p0.max_statement' and c3p0-style property 'c3p0.max_statement' have been set in hibernate.properties. Hibernate-style property 'hibernate.c3p0.max_statement' will be used and c3p0-style property 'c3p0.max_statement' will be ignored!
+2016-11-30|23:13:25Both hibernate-style property 'hibernate.c3p0.idle_test_period' and c3p0-style property 'c3p0.idle_test_period' have been set in hibernate.properties. Hibernate-style property 'hibernate.c3p0.idle_test_period' will be used and c3p0-style property 'c3p0.idle_test_period' will be ignored!
+2016-11-30|23:13:25Both hibernate-style property 'hibernate.c3p0.acquire_increment' and c3p0-style property 'c3p0.acquire_increment' have been set in hibernate.properties. Hibernate-style property 'hibernate.c3p0.acquire_increment' will be used and c3p0-style property 'c3p0.acquire_increment' will be ignored!
+2016-11-30|23:13:25MLog clients using log4j logging.
+2016-11-30|23:13:25Initializing c3p0-0.9.1 [built 16-January-2007 14:46:42; debug? true; trace: 10]
+2016-11-30|23:13:25Initializing c3p0 pool... com.mchange.v2.c3p0.PoolBackedDataSource@d9622fca [ connectionPoolDataSource -> com.mchange.v2.c3p0.WrapperConnectionPoolDataSource@517e9761 [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, debugUnreturnedConnectionStackTraces -> false, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge15c9k1efx9sn38lhuw|48e92c5c, idleConnectionTestPeriod -> 120, initialPoolSize -> 5, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, nestedDataSource -> com.mchange.v2.c3p0.DriverManagerDataSource@9481fe07 [ description -> null, driverClass -> null, factoryClassLocation -> null, identityToken -> 1hge15c9k1efx9sn38lhuw|42b02722, jdbcUrl -> jdbc:mysql://127.0.0.1:3306/pix_game, properties -> {useUnicode=true, user=******, password=******, characterEncoding=UTF-8} ], preferredTestQuery -> null, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false; userOverrides: {} ], dataSourceName -> null, factoryClassLocation -> null, identityToken -> 1hge15c9k1efx9sn38lhuw|71812481, numHelperThreads -> 3 ]
+2016-11-30|23:13:25Using dialect: org.hibernate.dialect.MySQLDialect
+2016-11-30|23:13:25Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-11-30|23:13:25Database ->
+       name : MySQL
+    version : 5.6.24
+      major : 5
+      minor : 6
+2016-11-30|23:13:25Driver ->
+       name : MySQL-AB JDBC Driver
+    version : mysql-connector-java-5.1.13 ( Revision: ${bzr.revision-id} )
+      major : 5
+      minor : 1
+2016-11-30|23:13:25Using default transaction strategy (direct JDBC transactions)
+2016-11-30|23:13:25No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2016-11-30|23:13:25Automatic flush during beforeCompletion(): disabled
+2016-11-30|23:13:25Automatic session close at end of transaction: disabled
+2016-11-30|23:13:25JDBC batch size: 15
+2016-11-30|23:13:25JDBC batch updates for versioned data: disabled
+2016-11-30|23:13:25Scrollable result sets: enabled
+2016-11-30|23:13:25JDBC3 getGeneratedKeys(): enabled
+2016-11-30|23:13:25Connection release mode: auto
+2016-11-30|23:13:25Maximum outer join fetch depth: 2
+2016-11-30|23:13:25Default batch fetch size: 1
+2016-11-30|23:13:25Generate SQL with comments: disabled
+2016-11-30|23:13:25Order SQL updates by primary key: disabled
+2016-11-30|23:13:25Order SQL inserts for batching: disabled
+2016-11-30|23:13:25Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2016-11-30|23:13:25Using ASTQueryTranslatorFactory
+2016-11-30|23:13:25Query language substitutions: {}
+2016-11-30|23:13:25JPA-QL strict compliance: disabled
+2016-11-30|23:13:25Second-level cache: enabled
+2016-11-30|23:13:25Query cache: disabled
+2016-11-30|23:13:25Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2016-11-30|23:13:25Optimize cache for minimal puts: disabled
+2016-11-30|23:13:25Structured second-level cache entries: disabled
+2016-11-30|23:13:25Echoing all SQL to stdout
+2016-11-30|23:13:25Statistics: disabled
+2016-11-30|23:13:25Deleted entity synthetic identifier rollback: disabled
+2016-11-30|23:13:25Default entity-mode: pojo
+2016-11-30|23:13:25Named query checking : enabled
+2016-11-30|23:13:25Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2016-11-30|23:13:25building session factory
+2016-11-30|23:13:25Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@5223e5ee
+2016-11-30|23:13:25Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@29626d54
+2016-11-30|23:13:25Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@4b0b0854
+2016-11-30|23:13:25Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@67a20f67
+2016-11-30|23:13:25Type registration [blob] overrides previous : org.hibernate.type.BlobType@2f7c2f4f
+2016-11-30|23:13:25Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@2f7c2f4f
+2016-11-30|23:13:25Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@1c93084c
+2016-11-30|23:13:25Type registration [clob] overrides previous : org.hibernate.type.ClobType@1622f1b
+2016-11-30|23:13:25Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@1622f1b
+2016-11-30|23:13:25Not binding factory to JNDI, no JNDI name configured
+2016-11-30|23:13:25Running hbm2ddl schema update
+2016-11-30|23:13:25fetching database metadata
+2016-11-30|23:13:25updating schema
+2016-11-30|23:13:25table found: pix_game.palyer
+2016-11-30|23:13:25columns: [accountid, name, id]
+2016-11-30|23:13:25foreign keys: []
+2016-11-30|23:13:25indexes: [primary]
+2016-11-30|23:13:25schema update complete
+2016-11-30|23:13:29GAME SERVER START OK
+2016-11-30|23:15:04
+2016-11-30|23:15:19远程主机强迫关闭了一个现有的连接。
