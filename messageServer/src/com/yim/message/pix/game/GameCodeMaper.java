@@ -13,6 +13,8 @@ import com.yim.message.pix.game.MessagePtoto.HeartBeatReq;
 import com.yim.message.pix.game.MessagePtoto.HeartBeatRes;
 import com.yim.message.pix.game.MessagePtoto.LoginReq;
 import com.yim.message.pix.game.MessagePtoto.LoginRes;
+import com.yim.message.pix.game.MessagePtoto.StartBattleReq;
+import com.yim.message.pix.game.MessagePtoto.StartBattleRes;
 import com.yim.net.protocol.OpCodeMapper;
 
 public class GameCodeMaper extends OpCodeMapper{
@@ -35,6 +37,9 @@ public class GameCodeMaper extends OpCodeMapper{
 	public static final int BATTLEMATCHRES = 109;
 	public static final int BATTLEMATCHSYN = 110;
 	
+	public static final int STARTBATTLEREQ = 111;
+	public static final int STARTBATTLERES = 112;
+	
 	
 	
 	public GameCodeMaper() {
@@ -55,6 +60,8 @@ public class GameCodeMaper extends OpCodeMapper{
 		this.codeToClazz.put(BATTLEMATCHREQ,BattleMatchReq.class);
 		this.codeToClazz.put(BATTLEMATCHRES, BattleMatchRes.class);
 		this.codeToClazz.put(BATTLEMATCHSYN, BattleMatchRes.class);
+		this.codeToClazz.put(STARTBATTLEREQ, StartBattleReq.class);
+		this.codeToClazz.put(STARTBATTLERES, StartBattleRes.class);
 	}
 
 }

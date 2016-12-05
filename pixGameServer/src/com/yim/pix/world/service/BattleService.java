@@ -11,7 +11,6 @@ import com.yim.pix.world.entity.battle.Room;
 import com.yim.pix.world.handler.BattleHandler;
 import com.yim.pix.world.model.army.ArmyTemplate;
 import com.yim.service.IService;
-import com.yim.service.ServiceContainer;
 
 public class BattleService implements IService{
 	
@@ -37,8 +36,7 @@ public class BattleService implements IService{
 	
 	public ArmyMessage buildArmyMessage(ArmyTemplate template){
 		ArmyMessage.Builder builder = ArmyMessage.newBuilder();
-		builder.setArmyId(template.id);
-		builder.setArmyType(template.armyType);
+		builder.setArmyTemplateId(template.id);
 		builder.setName(template.armyName);
 		builder.setAtk(template.atk);
 		builder.setDef(template.def);
@@ -50,7 +48,7 @@ public class BattleService implements IService{
 	}
 	
 	/**
-	 * 创建房间
+	 * 鍒涘缓瀵规垬鎴块棿
 	 * @param player1Id
 	 * @param player2Id
 	 * @return room
@@ -59,12 +57,14 @@ public class BattleService implements IService{
 		synchronized (roomMap) {
 			Room room = new Room(rommIdNumber.getAndIncrement(),player1,player2);
 			this.roomMap.put(room.getRoomId(), room);
+			player1.getRacist().setRoomId(room.getRoomId());
+			player2.getRacist().setRoomId(room.getRoomId());
 			return room;
 		}
 	}
 	
 	/**
-	 * 根据房间id取得房间
+	 * 鑾峰彇鎴块棿
 	 * @param id
 	 * @return room
 	 */

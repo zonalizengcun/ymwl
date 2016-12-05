@@ -2763,18 +2763,10 @@ public final class MessagePtoto {
     // required int32 position0 = 1;
     /**
      * <code>required int32 position0 = 1;</code>
-     *
-     * <pre>
-     *位置0兵种id
-     * </pre>
      */
     boolean hasPosition0();
     /**
      * <code>required int32 position0 = 1;</code>
-     *
-     * <pre>
-     *位置0兵种id
-     * </pre>
      */
     int getPosition0();
 
@@ -2994,20 +2986,12 @@ public final class MessagePtoto {
     private int position0_;
     /**
      * <code>required int32 position0 = 1;</code>
-     *
-     * <pre>
-     *位置0兵种id
-     * </pre>
      */
     public boolean hasPosition0() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
      * <code>required int32 position0 = 1;</code>
-     *
-     * <pre>
-     *位置0兵种id
-     * </pre>
      */
     public int getPosition0() {
       return position0_;
@@ -3559,30 +3543,18 @@ public final class MessagePtoto {
       private int position0_ ;
       /**
        * <code>required int32 position0 = 1;</code>
-       *
-       * <pre>
-       *位置0兵种id
-       * </pre>
        */
       public boolean hasPosition0() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
        * <code>required int32 position0 = 1;</code>
-       *
-       * <pre>
-       *位置0兵种id
-       * </pre>
        */
       public int getPosition0() {
         return position0_;
       }
       /**
        * <code>required int32 position0 = 1;</code>
-       *
-       * <pre>
-       *位置0兵种id
-       * </pre>
        */
       public Builder setPosition0(int value) {
         bitField0_ |= 0x00000001;
@@ -3592,10 +3564,6 @@ public final class MessagePtoto {
       }
       /**
        * <code>required int32 position0 = 1;</code>
-       *
-       * <pre>
-       *位置0兵种id
-       * </pre>
        */
       public Builder clearPosition0() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -4023,99 +3991,97 @@ public final class MessagePtoto {
   public interface ArmyMessageOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
 
-    // required int32 armyId = 1;
+    // required int32 armyTemplateId = 1;
     /**
-     * <code>required int32 armyId = 1;</code>
+     * <code>required int32 armyTemplateId = 1;</code>
+     *
+     * <pre>
+     *兵种模板id
+     * </pre>
      */
-    boolean hasArmyId();
+    boolean hasArmyTemplateId();
     /**
-     * <code>required int32 armyId = 1;</code>
+     * <code>required int32 armyTemplateId = 1;</code>
+     *
+     * <pre>
+     *兵种模板id
+     * </pre>
      */
-    int getArmyId();
+    int getArmyTemplateId();
 
-    // required int32 armyType = 2;
+    // required string name = 2;
     /**
-     * <code>required int32 armyType = 2;</code>
-     */
-    boolean hasArmyType();
-    /**
-     * <code>required int32 armyType = 2;</code>
-     */
-    int getArmyType();
-
-    // required string name = 3;
-    /**
-     * <code>required string name = 3;</code>
+     * <code>required string name = 2;</code>
      */
     boolean hasName();
     /**
-     * <code>required string name = 3;</code>
+     * <code>required string name = 2;</code>
      */
     java.lang.String getName();
     /**
-     * <code>required string name = 3;</code>
+     * <code>required string name = 2;</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
-    // required int32 atk = 4;
+    // required int32 atk = 3;
     /**
-     * <code>required int32 atk = 4;</code>
+     * <code>required int32 atk = 3;</code>
      */
     boolean hasAtk();
     /**
-     * <code>required int32 atk = 4;</code>
+     * <code>required int32 atk = 3;</code>
      */
     int getAtk();
 
-    // required int32 def = 5;
+    // required int32 def = 4;
     /**
-     * <code>required int32 def = 5;</code>
+     * <code>required int32 def = 4;</code>
      */
     boolean hasDef();
     /**
-     * <code>required int32 def = 5;</code>
+     * <code>required int32 def = 4;</code>
      */
     int getDef();
 
-    // required int32 round = 6;
+    // required int32 round = 5;
     /**
-     * <code>required int32 round = 6;</code>
+     * <code>required int32 round = 5;</code>
      */
     boolean hasRound();
     /**
-     * <code>required int32 round = 6;</code>
+     * <code>required int32 round = 5;</code>
      */
     int getRound();
 
-    // required int32 level = 7;
+    // required int32 level = 6;
     /**
-     * <code>required int32 level = 7;</code>
+     * <code>required int32 level = 6;</code>
      */
     boolean hasLevel();
     /**
-     * <code>required int32 level = 7;</code>
+     * <code>required int32 level = 6;</code>
      */
     int getLevel();
 
-    // required string describe = 8;
+    // required string describe = 7;
     /**
-     * <code>required string describe = 8;</code>
+     * <code>required string describe = 7;</code>
      */
     boolean hasDescribe();
     /**
-     * <code>required string describe = 8;</code>
+     * <code>required string describe = 7;</code>
      */
     java.lang.String getDescribe();
     /**
-     * <code>required string describe = 8;</code>
+     * <code>required string describe = 7;</code>
      */
     com.google.protobuf.ByteString
         getDescribeBytes();
 
-    // required string icon = 9;
+    // required string icon = 8;
     /**
-     * <code>required string icon = 9;</code>
+     * <code>required string icon = 8;</code>
      *
      * <pre>
      *兵种图标
@@ -4123,7 +4089,7 @@ public final class MessagePtoto {
      */
     boolean hasIcon();
     /**
-     * <code>required string icon = 9;</code>
+     * <code>required string icon = 8;</code>
      *
      * <pre>
      *兵种图标
@@ -4131,7 +4097,7 @@ public final class MessagePtoto {
      */
     java.lang.String getIcon();
     /**
-     * <code>required string icon = 9;</code>
+     * <code>required string icon = 8;</code>
      *
      * <pre>
      *兵种图标
@@ -4197,46 +4163,41 @@ public final class MessagePtoto {
             }
             case 8: {
               bitField0_ |= 0x00000001;
-              armyId_ = input.readInt32();
+              armyTemplateId_ = input.readInt32();
               break;
             }
-            case 16: {
+            case 18: {
               bitField0_ |= 0x00000002;
-              armyType_ = input.readInt32();
+              name_ = input.readBytes();
               break;
             }
-            case 26: {
+            case 24: {
               bitField0_ |= 0x00000004;
-              name_ = input.readBytes();
+              atk_ = input.readInt32();
               break;
             }
             case 32: {
               bitField0_ |= 0x00000008;
-              atk_ = input.readInt32();
+              def_ = input.readInt32();
               break;
             }
             case 40: {
               bitField0_ |= 0x00000010;
-              def_ = input.readInt32();
+              round_ = input.readInt32();
               break;
             }
             case 48: {
               bitField0_ |= 0x00000020;
-              round_ = input.readInt32();
+              level_ = input.readInt32();
               break;
             }
-            case 56: {
+            case 58: {
               bitField0_ |= 0x00000040;
-              level_ = input.readInt32();
+              describe_ = input.readBytes();
               break;
             }
             case 66: {
               bitField0_ |= 0x00000080;
-              describe_ = input.readBytes();
-              break;
-            }
-            case 74: {
-              bitField0_ |= 0x00000100;
               icon_ = input.readBytes();
               break;
             }
@@ -4280,49 +4241,41 @@ public final class MessagePtoto {
     }
 
     private int bitField0_;
-    // required int32 armyId = 1;
-    public static final int ARMYID_FIELD_NUMBER = 1;
-    private int armyId_;
+    // required int32 armyTemplateId = 1;
+    public static final int ARMYTEMPLATEID_FIELD_NUMBER = 1;
+    private int armyTemplateId_;
     /**
-     * <code>required int32 armyId = 1;</code>
+     * <code>required int32 armyTemplateId = 1;</code>
+     *
+     * <pre>
+     *兵种模板id
+     * </pre>
      */
-    public boolean hasArmyId() {
+    public boolean hasArmyTemplateId() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required int32 armyId = 1;</code>
+     * <code>required int32 armyTemplateId = 1;</code>
+     *
+     * <pre>
+     *兵种模板id
+     * </pre>
      */
-    public int getArmyId() {
-      return armyId_;
+    public int getArmyTemplateId() {
+      return armyTemplateId_;
     }
 
-    // required int32 armyType = 2;
-    public static final int ARMYTYPE_FIELD_NUMBER = 2;
-    private int armyType_;
+    // required string name = 2;
+    public static final int NAME_FIELD_NUMBER = 2;
+    private java.lang.Object name_;
     /**
-     * <code>required int32 armyType = 2;</code>
+     * <code>required string name = 2;</code>
      */
-    public boolean hasArmyType() {
+    public boolean hasName() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>required int32 armyType = 2;</code>
-     */
-    public int getArmyType() {
-      return armyType_;
-    }
-
-    // required string name = 3;
-    public static final int NAME_FIELD_NUMBER = 3;
-    private java.lang.Object name_;
-    /**
-     * <code>required string name = 3;</code>
-     */
-    public boolean hasName() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
-    }
-    /**
-     * <code>required string name = 3;</code>
+     * <code>required string name = 2;</code>
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -4339,7 +4292,7 @@ public final class MessagePtoto {
       }
     }
     /**
-     * <code>required string name = 3;</code>
+     * <code>required string name = 2;</code>
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -4355,81 +4308,81 @@ public final class MessagePtoto {
       }
     }
 
-    // required int32 atk = 4;
-    public static final int ATK_FIELD_NUMBER = 4;
+    // required int32 atk = 3;
+    public static final int ATK_FIELD_NUMBER = 3;
     private int atk_;
     /**
-     * <code>required int32 atk = 4;</code>
+     * <code>required int32 atk = 3;</code>
      */
     public boolean hasAtk() {
-      return ((bitField0_ & 0x00000008) == 0x00000008);
+      return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>required int32 atk = 4;</code>
+     * <code>required int32 atk = 3;</code>
      */
     public int getAtk() {
       return atk_;
     }
 
-    // required int32 def = 5;
-    public static final int DEF_FIELD_NUMBER = 5;
+    // required int32 def = 4;
+    public static final int DEF_FIELD_NUMBER = 4;
     private int def_;
     /**
-     * <code>required int32 def = 5;</code>
+     * <code>required int32 def = 4;</code>
      */
     public boolean hasDef() {
-      return ((bitField0_ & 0x00000010) == 0x00000010);
+      return ((bitField0_ & 0x00000008) == 0x00000008);
     }
     /**
-     * <code>required int32 def = 5;</code>
+     * <code>required int32 def = 4;</code>
      */
     public int getDef() {
       return def_;
     }
 
-    // required int32 round = 6;
-    public static final int ROUND_FIELD_NUMBER = 6;
+    // required int32 round = 5;
+    public static final int ROUND_FIELD_NUMBER = 5;
     private int round_;
     /**
-     * <code>required int32 round = 6;</code>
+     * <code>required int32 round = 5;</code>
      */
     public boolean hasRound() {
-      return ((bitField0_ & 0x00000020) == 0x00000020);
+      return ((bitField0_ & 0x00000010) == 0x00000010);
     }
     /**
-     * <code>required int32 round = 6;</code>
+     * <code>required int32 round = 5;</code>
      */
     public int getRound() {
       return round_;
     }
 
-    // required int32 level = 7;
-    public static final int LEVEL_FIELD_NUMBER = 7;
+    // required int32 level = 6;
+    public static final int LEVEL_FIELD_NUMBER = 6;
     private int level_;
     /**
-     * <code>required int32 level = 7;</code>
+     * <code>required int32 level = 6;</code>
      */
     public boolean hasLevel() {
-      return ((bitField0_ & 0x00000040) == 0x00000040);
+      return ((bitField0_ & 0x00000020) == 0x00000020);
     }
     /**
-     * <code>required int32 level = 7;</code>
+     * <code>required int32 level = 6;</code>
      */
     public int getLevel() {
       return level_;
     }
 
-    // required string describe = 8;
-    public static final int DESCRIBE_FIELD_NUMBER = 8;
+    // required string describe = 7;
+    public static final int DESCRIBE_FIELD_NUMBER = 7;
     private java.lang.Object describe_;
     /**
-     * <code>required string describe = 8;</code>
+     * <code>required string describe = 7;</code>
      */
     public boolean hasDescribe() {
-      return ((bitField0_ & 0x00000080) == 0x00000080);
+      return ((bitField0_ & 0x00000040) == 0x00000040);
     }
     /**
-     * <code>required string describe = 8;</code>
+     * <code>required string describe = 7;</code>
      */
     public java.lang.String getDescribe() {
       java.lang.Object ref = describe_;
@@ -4446,7 +4399,7 @@ public final class MessagePtoto {
       }
     }
     /**
-     * <code>required string describe = 8;</code>
+     * <code>required string describe = 7;</code>
      */
     public com.google.protobuf.ByteString
         getDescribeBytes() {
@@ -4462,21 +4415,21 @@ public final class MessagePtoto {
       }
     }
 
-    // required string icon = 9;
-    public static final int ICON_FIELD_NUMBER = 9;
+    // required string icon = 8;
+    public static final int ICON_FIELD_NUMBER = 8;
     private java.lang.Object icon_;
     /**
-     * <code>required string icon = 9;</code>
+     * <code>required string icon = 8;</code>
      *
      * <pre>
      *兵种图标
      * </pre>
      */
     public boolean hasIcon() {
-      return ((bitField0_ & 0x00000100) == 0x00000100);
+      return ((bitField0_ & 0x00000080) == 0x00000080);
     }
     /**
-     * <code>required string icon = 9;</code>
+     * <code>required string icon = 8;</code>
      *
      * <pre>
      *兵种图标
@@ -4497,7 +4450,7 @@ public final class MessagePtoto {
       }
     }
     /**
-     * <code>required string icon = 9;</code>
+     * <code>required string icon = 8;</code>
      *
      * <pre>
      *兵种图标
@@ -4518,8 +4471,7 @@ public final class MessagePtoto {
     }
 
     private void initFields() {
-      armyId_ = 0;
-      armyType_ = 0;
+      armyTemplateId_ = 0;
       name_ = "";
       atk_ = 0;
       def_ = 0;
@@ -4533,11 +4485,7 @@ public final class MessagePtoto {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized != -1) return isInitialized == 1;
 
-      if (!hasArmyId()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasArmyType()) {
+      if (!hasArmyTemplateId()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -4577,31 +4525,28 @@ public final class MessagePtoto {
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeInt32(1, armyId_);
+        output.writeInt32(1, armyTemplateId_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeInt32(2, armyType_);
+        output.writeBytes(2, getNameBytes());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeBytes(3, getNameBytes());
+        output.writeInt32(3, atk_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        output.writeInt32(4, atk_);
+        output.writeInt32(4, def_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        output.writeInt32(5, def_);
+        output.writeInt32(5, round_);
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        output.writeInt32(6, round_);
+        output.writeInt32(6, level_);
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        output.writeInt32(7, level_);
+        output.writeBytes(7, getDescribeBytes());
       }
       if (((bitField0_ & 0x00000080) == 0x00000080)) {
-        output.writeBytes(8, getDescribeBytes());
-      }
-      if (((bitField0_ & 0x00000100) == 0x00000100)) {
-        output.writeBytes(9, getIconBytes());
+        output.writeBytes(8, getIconBytes());
       }
       getUnknownFields().writeTo(output);
     }
@@ -4614,39 +4559,35 @@ public final class MessagePtoto {
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, armyId_);
+          .computeInt32Size(1, armyTemplateId_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, armyType_);
+          .computeBytesSize(2, getNameBytes());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, getNameBytes());
+          .computeInt32Size(3, atk_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(4, atk_);
+          .computeInt32Size(4, def_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(5, def_);
+          .computeInt32Size(5, round_);
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(6, round_);
+          .computeInt32Size(6, level_);
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(7, level_);
+          .computeBytesSize(7, getDescribeBytes());
       }
       if (((bitField0_ & 0x00000080) == 0x00000080)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(8, getDescribeBytes());
-      }
-      if (((bitField0_ & 0x00000100) == 0x00000100)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(9, getIconBytes());
+          .computeBytesSize(8, getIconBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -4768,24 +4709,22 @@ public final class MessagePtoto {
 
       public Builder clear() {
         super.clear();
-        armyId_ = 0;
+        armyTemplateId_ = 0;
         bitField0_ = (bitField0_ & ~0x00000001);
-        armyType_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000002);
         name_ = "";
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         atk_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
         def_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
         round_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000010);
         level_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000020);
         describe_ = "";
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000040);
         icon_ = "";
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000080);
         return this;
       }
 
@@ -4817,37 +4756,33 @@ public final class MessagePtoto {
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
           to_bitField0_ |= 0x00000001;
         }
-        result.armyId_ = armyId_;
+        result.armyTemplateId_ = armyTemplateId_;
         if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
           to_bitField0_ |= 0x00000002;
         }
-        result.armyType_ = armyType_;
+        result.name_ = name_;
         if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
           to_bitField0_ |= 0x00000004;
         }
-        result.name_ = name_;
+        result.atk_ = atk_;
         if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
           to_bitField0_ |= 0x00000008;
         }
-        result.atk_ = atk_;
+        result.def_ = def_;
         if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
           to_bitField0_ |= 0x00000010;
         }
-        result.def_ = def_;
+        result.round_ = round_;
         if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
           to_bitField0_ |= 0x00000020;
         }
-        result.round_ = round_;
+        result.level_ = level_;
         if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
           to_bitField0_ |= 0x00000040;
         }
-        result.level_ = level_;
+        result.describe_ = describe_;
         if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
           to_bitField0_ |= 0x00000080;
-        }
-        result.describe_ = describe_;
-        if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
-          to_bitField0_ |= 0x00000100;
         }
         result.icon_ = icon_;
         result.bitField0_ = to_bitField0_;
@@ -4866,14 +4801,11 @@ public final class MessagePtoto {
 
       public Builder mergeFrom(com.yim.message.pix.game.MessagePtoto.ArmyMessage other) {
         if (other == com.yim.message.pix.game.MessagePtoto.ArmyMessage.getDefaultInstance()) return this;
-        if (other.hasArmyId()) {
-          setArmyId(other.getArmyId());
-        }
-        if (other.hasArmyType()) {
-          setArmyType(other.getArmyType());
+        if (other.hasArmyTemplateId()) {
+          setArmyTemplateId(other.getArmyTemplateId());
         }
         if (other.hasName()) {
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000002;
           name_ = other.name_;
           onChanged();
         }
@@ -4890,12 +4822,12 @@ public final class MessagePtoto {
           setLevel(other.getLevel());
         }
         if (other.hasDescribe()) {
-          bitField0_ |= 0x00000080;
+          bitField0_ |= 0x00000040;
           describe_ = other.describe_;
           onChanged();
         }
         if (other.hasIcon()) {
-          bitField0_ |= 0x00000100;
+          bitField0_ |= 0x00000080;
           icon_ = other.icon_;
           onChanged();
         }
@@ -4904,11 +4836,7 @@ public final class MessagePtoto {
       }
 
       public final boolean isInitialized() {
-        if (!hasArmyId()) {
-          
-          return false;
-        }
-        if (!hasArmyType()) {
+        if (!hasArmyTemplateId()) {
           
           return false;
         }
@@ -4962,82 +4890,65 @@ public final class MessagePtoto {
       }
       private int bitField0_;
 
-      // required int32 armyId = 1;
-      private int armyId_ ;
+      // required int32 armyTemplateId = 1;
+      private int armyTemplateId_ ;
       /**
-       * <code>required int32 armyId = 1;</code>
+       * <code>required int32 armyTemplateId = 1;</code>
+       *
+       * <pre>
+       *兵种模板id
+       * </pre>
        */
-      public boolean hasArmyId() {
+      public boolean hasArmyTemplateId() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required int32 armyId = 1;</code>
+       * <code>required int32 armyTemplateId = 1;</code>
+       *
+       * <pre>
+       *兵种模板id
+       * </pre>
        */
-      public int getArmyId() {
-        return armyId_;
+      public int getArmyTemplateId() {
+        return armyTemplateId_;
       }
       /**
-       * <code>required int32 armyId = 1;</code>
+       * <code>required int32 armyTemplateId = 1;</code>
+       *
+       * <pre>
+       *兵种模板id
+       * </pre>
        */
-      public Builder setArmyId(int value) {
+      public Builder setArmyTemplateId(int value) {
         bitField0_ |= 0x00000001;
-        armyId_ = value;
+        armyTemplateId_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required int32 armyId = 1;</code>
+       * <code>required int32 armyTemplateId = 1;</code>
+       *
+       * <pre>
+       *兵种模板id
+       * </pre>
        */
-      public Builder clearArmyId() {
+      public Builder clearArmyTemplateId() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        armyId_ = 0;
+        armyTemplateId_ = 0;
         onChanged();
         return this;
       }
 
-      // required int32 armyType = 2;
-      private int armyType_ ;
+      // required string name = 2;
+      private java.lang.Object name_ = "";
       /**
-       * <code>required int32 armyType = 2;</code>
+       * <code>required string name = 2;</code>
        */
-      public boolean hasArmyType() {
+      public boolean hasName() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>required int32 armyType = 2;</code>
-       */
-      public int getArmyType() {
-        return armyType_;
-      }
-      /**
-       * <code>required int32 armyType = 2;</code>
-       */
-      public Builder setArmyType(int value) {
-        bitField0_ |= 0x00000002;
-        armyType_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required int32 armyType = 2;</code>
-       */
-      public Builder clearArmyType() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        armyType_ = 0;
-        onChanged();
-        return this;
-      }
-
-      // required string name = 3;
-      private java.lang.Object name_ = "";
-      /**
-       * <code>required string name = 3;</code>
-       */
-      public boolean hasName() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
-      }
-      /**
-       * <code>required string name = 3;</code>
+       * <code>required string name = 2;</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -5051,7 +4962,7 @@ public final class MessagePtoto {
         }
       }
       /**
-       * <code>required string name = 3;</code>
+       * <code>required string name = 2;</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -5067,183 +4978,183 @@ public final class MessagePtoto {
         }
       }
       /**
-       * <code>required string name = 3;</code>
+       * <code>required string name = 2;</code>
        */
       public Builder setName(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000004;
+  bitField0_ |= 0x00000002;
         name_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required string name = 3;</code>
+       * <code>required string name = 2;</code>
        */
       public Builder clearName() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         name_ = getDefaultInstance().getName();
         onChanged();
         return this;
       }
       /**
-       * <code>required string name = 3;</code>
+       * <code>required string name = 2;</code>
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000004;
+  bitField0_ |= 0x00000002;
         name_ = value;
         onChanged();
         return this;
       }
 
-      // required int32 atk = 4;
+      // required int32 atk = 3;
       private int atk_ ;
       /**
-       * <code>required int32 atk = 4;</code>
+       * <code>required int32 atk = 3;</code>
        */
       public boolean hasAtk() {
-        return ((bitField0_ & 0x00000008) == 0x00000008);
+        return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
-       * <code>required int32 atk = 4;</code>
+       * <code>required int32 atk = 3;</code>
        */
       public int getAtk() {
         return atk_;
       }
       /**
-       * <code>required int32 atk = 4;</code>
+       * <code>required int32 atk = 3;</code>
        */
       public Builder setAtk(int value) {
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000004;
         atk_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required int32 atk = 4;</code>
+       * <code>required int32 atk = 3;</code>
        */
       public Builder clearAtk() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
         atk_ = 0;
         onChanged();
         return this;
       }
 
-      // required int32 def = 5;
+      // required int32 def = 4;
       private int def_ ;
       /**
-       * <code>required int32 def = 5;</code>
+       * <code>required int32 def = 4;</code>
        */
       public boolean hasDef() {
-        return ((bitField0_ & 0x00000010) == 0x00000010);
+        return ((bitField0_ & 0x00000008) == 0x00000008);
       }
       /**
-       * <code>required int32 def = 5;</code>
+       * <code>required int32 def = 4;</code>
        */
       public int getDef() {
         return def_;
       }
       /**
-       * <code>required int32 def = 5;</code>
+       * <code>required int32 def = 4;</code>
        */
       public Builder setDef(int value) {
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
         def_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required int32 def = 5;</code>
+       * <code>required int32 def = 4;</code>
        */
       public Builder clearDef() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
         def_ = 0;
         onChanged();
         return this;
       }
 
-      // required int32 round = 6;
+      // required int32 round = 5;
       private int round_ ;
       /**
-       * <code>required int32 round = 6;</code>
+       * <code>required int32 round = 5;</code>
        */
       public boolean hasRound() {
-        return ((bitField0_ & 0x00000020) == 0x00000020);
+        return ((bitField0_ & 0x00000010) == 0x00000010);
       }
       /**
-       * <code>required int32 round = 6;</code>
+       * <code>required int32 round = 5;</code>
        */
       public int getRound() {
         return round_;
       }
       /**
-       * <code>required int32 round = 6;</code>
+       * <code>required int32 round = 5;</code>
        */
       public Builder setRound(int value) {
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000010;
         round_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required int32 round = 6;</code>
+       * <code>required int32 round = 5;</code>
        */
       public Builder clearRound() {
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000010);
         round_ = 0;
         onChanged();
         return this;
       }
 
-      // required int32 level = 7;
+      // required int32 level = 6;
       private int level_ ;
       /**
-       * <code>required int32 level = 7;</code>
+       * <code>required int32 level = 6;</code>
        */
       public boolean hasLevel() {
-        return ((bitField0_ & 0x00000040) == 0x00000040);
+        return ((bitField0_ & 0x00000020) == 0x00000020);
       }
       /**
-       * <code>required int32 level = 7;</code>
+       * <code>required int32 level = 6;</code>
        */
       public int getLevel() {
         return level_;
       }
       /**
-       * <code>required int32 level = 7;</code>
+       * <code>required int32 level = 6;</code>
        */
       public Builder setLevel(int value) {
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000020;
         level_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required int32 level = 7;</code>
+       * <code>required int32 level = 6;</code>
        */
       public Builder clearLevel() {
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000020);
         level_ = 0;
         onChanged();
         return this;
       }
 
-      // required string describe = 8;
+      // required string describe = 7;
       private java.lang.Object describe_ = "";
       /**
-       * <code>required string describe = 8;</code>
+       * <code>required string describe = 7;</code>
        */
       public boolean hasDescribe() {
-        return ((bitField0_ & 0x00000080) == 0x00000080);
+        return ((bitField0_ & 0x00000040) == 0x00000040);
       }
       /**
-       * <code>required string describe = 8;</code>
+       * <code>required string describe = 7;</code>
        */
       public java.lang.String getDescribe() {
         java.lang.Object ref = describe_;
@@ -5257,7 +5168,7 @@ public final class MessagePtoto {
         }
       }
       /**
-       * <code>required string describe = 8;</code>
+       * <code>required string describe = 7;</code>
        */
       public com.google.protobuf.ByteString
           getDescribeBytes() {
@@ -5273,55 +5184,55 @@ public final class MessagePtoto {
         }
       }
       /**
-       * <code>required string describe = 8;</code>
+       * <code>required string describe = 7;</code>
        */
       public Builder setDescribe(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000080;
+  bitField0_ |= 0x00000040;
         describe_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required string describe = 8;</code>
+       * <code>required string describe = 7;</code>
        */
       public Builder clearDescribe() {
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000040);
         describe_ = getDefaultInstance().getDescribe();
         onChanged();
         return this;
       }
       /**
-       * <code>required string describe = 8;</code>
+       * <code>required string describe = 7;</code>
        */
       public Builder setDescribeBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000080;
+  bitField0_ |= 0x00000040;
         describe_ = value;
         onChanged();
         return this;
       }
 
-      // required string icon = 9;
+      // required string icon = 8;
       private java.lang.Object icon_ = "";
       /**
-       * <code>required string icon = 9;</code>
+       * <code>required string icon = 8;</code>
        *
        * <pre>
        *兵种图标
        * </pre>
        */
       public boolean hasIcon() {
-        return ((bitField0_ & 0x00000100) == 0x00000100);
+        return ((bitField0_ & 0x00000080) == 0x00000080);
       }
       /**
-       * <code>required string icon = 9;</code>
+       * <code>required string icon = 8;</code>
        *
        * <pre>
        *兵种图标
@@ -5339,7 +5250,7 @@ public final class MessagePtoto {
         }
       }
       /**
-       * <code>required string icon = 9;</code>
+       * <code>required string icon = 8;</code>
        *
        * <pre>
        *兵种图标
@@ -5359,7 +5270,7 @@ public final class MessagePtoto {
         }
       }
       /**
-       * <code>required string icon = 9;</code>
+       * <code>required string icon = 8;</code>
        *
        * <pre>
        *兵种图标
@@ -5370,26 +5281,26 @@ public final class MessagePtoto {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000100;
+  bitField0_ |= 0x00000080;
         icon_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required string icon = 9;</code>
+       * <code>required string icon = 8;</code>
        *
        * <pre>
        *兵种图标
        * </pre>
        */
       public Builder clearIcon() {
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000080);
         icon_ = getDefaultInstance().getIcon();
         onChanged();
         return this;
       }
       /**
-       * <code>required string icon = 9;</code>
+       * <code>required string icon = 8;</code>
        *
        * <pre>
        *兵种图标
@@ -5400,7 +5311,7 @@ public final class MessagePtoto {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000100;
+  bitField0_ |= 0x00000080;
         icon_ = value;
         onChanged();
         return this;
@@ -5423,18 +5334,10 @@ public final class MessagePtoto {
     // required int32 position0 = 1;
     /**
      * <code>required int32 position0 = 1;</code>
-     *
-     * <pre>
-     *位置0兵种id
-     * </pre>
      */
     boolean hasPosition0();
     /**
      * <code>required int32 position0 = 1;</code>
-     *
-     * <pre>
-     *位置0兵种id
-     * </pre>
      */
     int getPosition0();
 
@@ -5618,20 +5521,12 @@ public final class MessagePtoto {
     private int position0_;
     /**
      * <code>required int32 position0 = 1;</code>
-     *
-     * <pre>
-     *位置0兵种id
-     * </pre>
      */
     public boolean hasPosition0() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
      * <code>required int32 position0 = 1;</code>
-     *
-     * <pre>
-     *位置0兵种id
-     * </pre>
      */
     public int getPosition0() {
       return position0_;
@@ -6085,30 +5980,18 @@ public final class MessagePtoto {
       private int position0_ ;
       /**
        * <code>required int32 position0 = 1;</code>
-       *
-       * <pre>
-       *位置0兵种id
-       * </pre>
        */
       public boolean hasPosition0() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
        * <code>required int32 position0 = 1;</code>
-       *
-       * <pre>
-       *位置0兵种id
-       * </pre>
        */
       public int getPosition0() {
         return position0_;
       }
       /**
        * <code>required int32 position0 = 1;</code>
-       *
-       * <pre>
-       *位置0兵种id
-       * </pre>
        */
       public Builder setPosition0(int value) {
         bitField0_ |= 0x00000001;
@@ -6118,10 +6001,6 @@ public final class MessagePtoto {
       }
       /**
        * <code>required int32 position0 = 1;</code>
-       *
-       * <pre>
-       *位置0兵种id
-       * </pre>
        */
       public Builder clearPosition0() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -8742,6 +8621,3775 @@ public final class MessagePtoto {
     // @@protoc_insertion_point(class_scope:PlayerMessage)
   }
 
+  public interface StartBattleReqOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code StartBattleReq}
+   *
+   * <pre>
+   *开始战斗 = 111
+   * </pre>
+   */
+  public static final class StartBattleReq extends
+      com.google.protobuf.GeneratedMessage
+      implements StartBattleReqOrBuilder {
+    // Use StartBattleReq.newBuilder() to construct.
+    private StartBattleReq(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private StartBattleReq(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final StartBattleReq defaultInstance;
+    public static StartBattleReq getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public StartBattleReq getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private StartBattleReq(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.yim.message.pix.game.MessagePtoto.internal_static_StartBattleReq_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.yim.message.pix.game.MessagePtoto.internal_static_StartBattleReq_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.yim.message.pix.game.MessagePtoto.StartBattleReq.class, com.yim.message.pix.game.MessagePtoto.StartBattleReq.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<StartBattleReq> PARSER =
+        new com.google.protobuf.AbstractParser<StartBattleReq>() {
+      public StartBattleReq parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new StartBattleReq(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StartBattleReq> getParserForType() {
+      return PARSER;
+    }
+
+    private void initFields() {
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.yim.message.pix.game.MessagePtoto.StartBattleReq parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.StartBattleReq parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.StartBattleReq parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.StartBattleReq parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.StartBattleReq parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.StartBattleReq parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.StartBattleReq parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.StartBattleReq parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.StartBattleReq parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.StartBattleReq parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.yim.message.pix.game.MessagePtoto.StartBattleReq prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code StartBattleReq}
+     *
+     * <pre>
+     *开始战斗 = 111
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.yim.message.pix.game.MessagePtoto.StartBattleReqOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.yim.message.pix.game.MessagePtoto.internal_static_StartBattleReq_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.yim.message.pix.game.MessagePtoto.internal_static_StartBattleReq_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.yim.message.pix.game.MessagePtoto.StartBattleReq.class, com.yim.message.pix.game.MessagePtoto.StartBattleReq.Builder.class);
+      }
+
+      // Construct using com.yim.message.pix.game.MessagePtoto.StartBattleReq.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.yim.message.pix.game.MessagePtoto.internal_static_StartBattleReq_descriptor;
+      }
+
+      public com.yim.message.pix.game.MessagePtoto.StartBattleReq getDefaultInstanceForType() {
+        return com.yim.message.pix.game.MessagePtoto.StartBattleReq.getDefaultInstance();
+      }
+
+      public com.yim.message.pix.game.MessagePtoto.StartBattleReq build() {
+        com.yim.message.pix.game.MessagePtoto.StartBattleReq result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.yim.message.pix.game.MessagePtoto.StartBattleReq buildPartial() {
+        com.yim.message.pix.game.MessagePtoto.StartBattleReq result = new com.yim.message.pix.game.MessagePtoto.StartBattleReq(this);
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.yim.message.pix.game.MessagePtoto.StartBattleReq) {
+          return mergeFrom((com.yim.message.pix.game.MessagePtoto.StartBattleReq)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.yim.message.pix.game.MessagePtoto.StartBattleReq other) {
+        if (other == com.yim.message.pix.game.MessagePtoto.StartBattleReq.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.yim.message.pix.game.MessagePtoto.StartBattleReq parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.yim.message.pix.game.MessagePtoto.StartBattleReq) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:StartBattleReq)
+    }
+
+    static {
+      defaultInstance = new StartBattleReq(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:StartBattleReq)
+  }
+
+  public interface StartBattleResOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required int32 maxHp = 1;
+    /**
+     * <code>required int32 maxHp = 1;</code>
+     *
+     * <pre>
+     *最大血量
+     * </pre>
+     */
+    boolean hasMaxHp();
+    /**
+     * <code>required int32 maxHp = 1;</code>
+     *
+     * <pre>
+     *最大血量
+     * </pre>
+     */
+    int getMaxHp();
+
+    // required int32 hp = 2;
+    /**
+     * <code>required int32 hp = 2;</code>
+     *
+     * <pre>
+     *当前血量
+     * </pre>
+     */
+    boolean hasHp();
+    /**
+     * <code>required int32 hp = 2;</code>
+     *
+     * <pre>
+     *当前血量
+     * </pre>
+     */
+    int getHp();
+
+    // required int32 maxMagic = 3;
+    /**
+     * <code>required int32 maxMagic = 3;</code>
+     *
+     * <pre>
+     *最大魔力值
+     * </pre>
+     */
+    boolean hasMaxMagic();
+    /**
+     * <code>required int32 maxMagic = 3;</code>
+     *
+     * <pre>
+     *最大魔力值
+     * </pre>
+     */
+    int getMaxMagic();
+
+    // required int32 magic = 4;
+    /**
+     * <code>required int32 magic = 4;</code>
+     *
+     * <pre>
+     *魔力值
+     * </pre>
+     */
+    boolean hasMagic();
+    /**
+     * <code>required int32 magic = 4;</code>
+     *
+     * <pre>
+     *魔力值
+     * </pre>
+     */
+    int getMagic();
+
+    // required int32 idleArmy = 5;
+    /**
+     * <code>required int32 idleArmy = 5;</code>
+     *
+     * <pre>
+     *空闲兵数量
+     * </pre>
+     */
+    boolean hasIdleArmy();
+    /**
+     * <code>required int32 idleArmy = 5;</code>
+     *
+     * <pre>
+     *空闲兵数量
+     * </pre>
+     */
+    int getIdleArmy();
+
+    // required int32 maxHp_e = 6;
+    /**
+     * <code>required int32 maxHp_e = 6;</code>
+     *
+     * <pre>
+     *对手最大血量
+     * </pre>
+     */
+    boolean hasMaxHpE();
+    /**
+     * <code>required int32 maxHp_e = 6;</code>
+     *
+     * <pre>
+     *对手最大血量
+     * </pre>
+     */
+    int getMaxHpE();
+
+    // required int32 hp_e = 7;
+    /**
+     * <code>required int32 hp_e = 7;</code>
+     *
+     * <pre>
+     *对手当前血量
+     * </pre>
+     */
+    boolean hasHpE();
+    /**
+     * <code>required int32 hp_e = 7;</code>
+     *
+     * <pre>
+     *对手当前血量
+     * </pre>
+     */
+    int getHpE();
+
+    // required int32 maxMagic_e = 8;
+    /**
+     * <code>required int32 maxMagic_e = 8;</code>
+     *
+     * <pre>
+     *对手最大魔力值
+     * </pre>
+     */
+    boolean hasMaxMagicE();
+    /**
+     * <code>required int32 maxMagic_e = 8;</code>
+     *
+     * <pre>
+     *对手最大魔力值
+     * </pre>
+     */
+    int getMaxMagicE();
+
+    // required int32 magic_e = 9;
+    /**
+     * <code>required int32 magic_e = 9;</code>
+     *
+     * <pre>
+     *对手魔力值
+     * </pre>
+     */
+    boolean hasMagicE();
+    /**
+     * <code>required int32 magic_e = 9;</code>
+     *
+     * <pre>
+     *对手魔力值
+     * </pre>
+     */
+    int getMagicE();
+
+    // required int32 idleArmy_e = 10;
+    /**
+     * <code>required int32 idleArmy_e = 10;</code>
+     *
+     * <pre>
+     *对手空闲兵数量
+     * </pre>
+     */
+    boolean hasIdleArmyE();
+    /**
+     * <code>required int32 idleArmy_e = 10;</code>
+     *
+     * <pre>
+     *对手空闲兵数量
+     * </pre>
+     */
+    int getIdleArmyE();
+
+    // repeated .BattleArmy battleArmys = 11;
+    /**
+     * <code>repeated .BattleArmy battleArmys = 11;</code>
+     *
+     * <pre>
+     *兵种信息
+     * </pre>
+     */
+    java.util.List<com.yim.message.pix.game.MessagePtoto.BattleArmy> 
+        getBattleArmysList();
+    /**
+     * <code>repeated .BattleArmy battleArmys = 11;</code>
+     *
+     * <pre>
+     *兵种信息
+     * </pre>
+     */
+    com.yim.message.pix.game.MessagePtoto.BattleArmy getBattleArmys(int index);
+    /**
+     * <code>repeated .BattleArmy battleArmys = 11;</code>
+     *
+     * <pre>
+     *兵种信息
+     * </pre>
+     */
+    int getBattleArmysCount();
+    /**
+     * <code>repeated .BattleArmy battleArmys = 11;</code>
+     *
+     * <pre>
+     *兵种信息
+     * </pre>
+     */
+    java.util.List<? extends com.yim.message.pix.game.MessagePtoto.BattleArmyOrBuilder> 
+        getBattleArmysOrBuilderList();
+    /**
+     * <code>repeated .BattleArmy battleArmys = 11;</code>
+     *
+     * <pre>
+     *兵种信息
+     * </pre>
+     */
+    com.yim.message.pix.game.MessagePtoto.BattleArmyOrBuilder getBattleArmysOrBuilder(
+        int index);
+
+    // repeated .BattleArmy battleArmys_e = 12;
+    /**
+     * <code>repeated .BattleArmy battleArmys_e = 12;</code>
+     *
+     * <pre>
+     *对手兵种信息
+     * </pre>
+     */
+    java.util.List<com.yim.message.pix.game.MessagePtoto.BattleArmy> 
+        getBattleArmysEList();
+    /**
+     * <code>repeated .BattleArmy battleArmys_e = 12;</code>
+     *
+     * <pre>
+     *对手兵种信息
+     * </pre>
+     */
+    com.yim.message.pix.game.MessagePtoto.BattleArmy getBattleArmysE(int index);
+    /**
+     * <code>repeated .BattleArmy battleArmys_e = 12;</code>
+     *
+     * <pre>
+     *对手兵种信息
+     * </pre>
+     */
+    int getBattleArmysECount();
+    /**
+     * <code>repeated .BattleArmy battleArmys_e = 12;</code>
+     *
+     * <pre>
+     *对手兵种信息
+     * </pre>
+     */
+    java.util.List<? extends com.yim.message.pix.game.MessagePtoto.BattleArmyOrBuilder> 
+        getBattleArmysEOrBuilderList();
+    /**
+     * <code>repeated .BattleArmy battleArmys_e = 12;</code>
+     *
+     * <pre>
+     *对手兵种信息
+     * </pre>
+     */
+    com.yim.message.pix.game.MessagePtoto.BattleArmyOrBuilder getBattleArmysEOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code StartBattleRes}
+   *
+   * <pre>
+   *开始战斗 = 112
+   * </pre>
+   */
+  public static final class StartBattleRes extends
+      com.google.protobuf.GeneratedMessage
+      implements StartBattleResOrBuilder {
+    // Use StartBattleRes.newBuilder() to construct.
+    private StartBattleRes(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private StartBattleRes(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final StartBattleRes defaultInstance;
+    public static StartBattleRes getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public StartBattleRes getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private StartBattleRes(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              maxHp_ = input.readInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              hp_ = input.readInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              maxMagic_ = input.readInt32();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              magic_ = input.readInt32();
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000010;
+              idleArmy_ = input.readInt32();
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000020;
+              maxHpE_ = input.readInt32();
+              break;
+            }
+            case 56: {
+              bitField0_ |= 0x00000040;
+              hpE_ = input.readInt32();
+              break;
+            }
+            case 64: {
+              bitField0_ |= 0x00000080;
+              maxMagicE_ = input.readInt32();
+              break;
+            }
+            case 72: {
+              bitField0_ |= 0x00000100;
+              magicE_ = input.readInt32();
+              break;
+            }
+            case 80: {
+              bitField0_ |= 0x00000200;
+              idleArmyE_ = input.readInt32();
+              break;
+            }
+            case 90: {
+              if (!((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+                battleArmys_ = new java.util.ArrayList<com.yim.message.pix.game.MessagePtoto.BattleArmy>();
+                mutable_bitField0_ |= 0x00000400;
+              }
+              battleArmys_.add(input.readMessage(com.yim.message.pix.game.MessagePtoto.BattleArmy.PARSER, extensionRegistry));
+              break;
+            }
+            case 98: {
+              if (!((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+                battleArmysE_ = new java.util.ArrayList<com.yim.message.pix.game.MessagePtoto.BattleArmy>();
+                mutable_bitField0_ |= 0x00000800;
+              }
+              battleArmysE_.add(input.readMessage(com.yim.message.pix.game.MessagePtoto.BattleArmy.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+          battleArmys_ = java.util.Collections.unmodifiableList(battleArmys_);
+        }
+        if (((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+          battleArmysE_ = java.util.Collections.unmodifiableList(battleArmysE_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.yim.message.pix.game.MessagePtoto.internal_static_StartBattleRes_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.yim.message.pix.game.MessagePtoto.internal_static_StartBattleRes_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.yim.message.pix.game.MessagePtoto.StartBattleRes.class, com.yim.message.pix.game.MessagePtoto.StartBattleRes.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<StartBattleRes> PARSER =
+        new com.google.protobuf.AbstractParser<StartBattleRes>() {
+      public StartBattleRes parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new StartBattleRes(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StartBattleRes> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required int32 maxHp = 1;
+    public static final int MAXHP_FIELD_NUMBER = 1;
+    private int maxHp_;
+    /**
+     * <code>required int32 maxHp = 1;</code>
+     *
+     * <pre>
+     *最大血量
+     * </pre>
+     */
+    public boolean hasMaxHp() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int32 maxHp = 1;</code>
+     *
+     * <pre>
+     *最大血量
+     * </pre>
+     */
+    public int getMaxHp() {
+      return maxHp_;
+    }
+
+    // required int32 hp = 2;
+    public static final int HP_FIELD_NUMBER = 2;
+    private int hp_;
+    /**
+     * <code>required int32 hp = 2;</code>
+     *
+     * <pre>
+     *当前血量
+     * </pre>
+     */
+    public boolean hasHp() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required int32 hp = 2;</code>
+     *
+     * <pre>
+     *当前血量
+     * </pre>
+     */
+    public int getHp() {
+      return hp_;
+    }
+
+    // required int32 maxMagic = 3;
+    public static final int MAXMAGIC_FIELD_NUMBER = 3;
+    private int maxMagic_;
+    /**
+     * <code>required int32 maxMagic = 3;</code>
+     *
+     * <pre>
+     *最大魔力值
+     * </pre>
+     */
+    public boolean hasMaxMagic() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>required int32 maxMagic = 3;</code>
+     *
+     * <pre>
+     *最大魔力值
+     * </pre>
+     */
+    public int getMaxMagic() {
+      return maxMagic_;
+    }
+
+    // required int32 magic = 4;
+    public static final int MAGIC_FIELD_NUMBER = 4;
+    private int magic_;
+    /**
+     * <code>required int32 magic = 4;</code>
+     *
+     * <pre>
+     *魔力值
+     * </pre>
+     */
+    public boolean hasMagic() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>required int32 magic = 4;</code>
+     *
+     * <pre>
+     *魔力值
+     * </pre>
+     */
+    public int getMagic() {
+      return magic_;
+    }
+
+    // required int32 idleArmy = 5;
+    public static final int IDLEARMY_FIELD_NUMBER = 5;
+    private int idleArmy_;
+    /**
+     * <code>required int32 idleArmy = 5;</code>
+     *
+     * <pre>
+     *空闲兵数量
+     * </pre>
+     */
+    public boolean hasIdleArmy() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>required int32 idleArmy = 5;</code>
+     *
+     * <pre>
+     *空闲兵数量
+     * </pre>
+     */
+    public int getIdleArmy() {
+      return idleArmy_;
+    }
+
+    // required int32 maxHp_e = 6;
+    public static final int MAXHP_E_FIELD_NUMBER = 6;
+    private int maxHpE_;
+    /**
+     * <code>required int32 maxHp_e = 6;</code>
+     *
+     * <pre>
+     *对手最大血量
+     * </pre>
+     */
+    public boolean hasMaxHpE() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>required int32 maxHp_e = 6;</code>
+     *
+     * <pre>
+     *对手最大血量
+     * </pre>
+     */
+    public int getMaxHpE() {
+      return maxHpE_;
+    }
+
+    // required int32 hp_e = 7;
+    public static final int HP_E_FIELD_NUMBER = 7;
+    private int hpE_;
+    /**
+     * <code>required int32 hp_e = 7;</code>
+     *
+     * <pre>
+     *对手当前血量
+     * </pre>
+     */
+    public boolean hasHpE() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>required int32 hp_e = 7;</code>
+     *
+     * <pre>
+     *对手当前血量
+     * </pre>
+     */
+    public int getHpE() {
+      return hpE_;
+    }
+
+    // required int32 maxMagic_e = 8;
+    public static final int MAXMAGIC_E_FIELD_NUMBER = 8;
+    private int maxMagicE_;
+    /**
+     * <code>required int32 maxMagic_e = 8;</code>
+     *
+     * <pre>
+     *对手最大魔力值
+     * </pre>
+     */
+    public boolean hasMaxMagicE() {
+      return ((bitField0_ & 0x00000080) == 0x00000080);
+    }
+    /**
+     * <code>required int32 maxMagic_e = 8;</code>
+     *
+     * <pre>
+     *对手最大魔力值
+     * </pre>
+     */
+    public int getMaxMagicE() {
+      return maxMagicE_;
+    }
+
+    // required int32 magic_e = 9;
+    public static final int MAGIC_E_FIELD_NUMBER = 9;
+    private int magicE_;
+    /**
+     * <code>required int32 magic_e = 9;</code>
+     *
+     * <pre>
+     *对手魔力值
+     * </pre>
+     */
+    public boolean hasMagicE() {
+      return ((bitField0_ & 0x00000100) == 0x00000100);
+    }
+    /**
+     * <code>required int32 magic_e = 9;</code>
+     *
+     * <pre>
+     *对手魔力值
+     * </pre>
+     */
+    public int getMagicE() {
+      return magicE_;
+    }
+
+    // required int32 idleArmy_e = 10;
+    public static final int IDLEARMY_E_FIELD_NUMBER = 10;
+    private int idleArmyE_;
+    /**
+     * <code>required int32 idleArmy_e = 10;</code>
+     *
+     * <pre>
+     *对手空闲兵数量
+     * </pre>
+     */
+    public boolean hasIdleArmyE() {
+      return ((bitField0_ & 0x00000200) == 0x00000200);
+    }
+    /**
+     * <code>required int32 idleArmy_e = 10;</code>
+     *
+     * <pre>
+     *对手空闲兵数量
+     * </pre>
+     */
+    public int getIdleArmyE() {
+      return idleArmyE_;
+    }
+
+    // repeated .BattleArmy battleArmys = 11;
+    public static final int BATTLEARMYS_FIELD_NUMBER = 11;
+    private java.util.List<com.yim.message.pix.game.MessagePtoto.BattleArmy> battleArmys_;
+    /**
+     * <code>repeated .BattleArmy battleArmys = 11;</code>
+     *
+     * <pre>
+     *兵种信息
+     * </pre>
+     */
+    public java.util.List<com.yim.message.pix.game.MessagePtoto.BattleArmy> getBattleArmysList() {
+      return battleArmys_;
+    }
+    /**
+     * <code>repeated .BattleArmy battleArmys = 11;</code>
+     *
+     * <pre>
+     *兵种信息
+     * </pre>
+     */
+    public java.util.List<? extends com.yim.message.pix.game.MessagePtoto.BattleArmyOrBuilder> 
+        getBattleArmysOrBuilderList() {
+      return battleArmys_;
+    }
+    /**
+     * <code>repeated .BattleArmy battleArmys = 11;</code>
+     *
+     * <pre>
+     *兵种信息
+     * </pre>
+     */
+    public int getBattleArmysCount() {
+      return battleArmys_.size();
+    }
+    /**
+     * <code>repeated .BattleArmy battleArmys = 11;</code>
+     *
+     * <pre>
+     *兵种信息
+     * </pre>
+     */
+    public com.yim.message.pix.game.MessagePtoto.BattleArmy getBattleArmys(int index) {
+      return battleArmys_.get(index);
+    }
+    /**
+     * <code>repeated .BattleArmy battleArmys = 11;</code>
+     *
+     * <pre>
+     *兵种信息
+     * </pre>
+     */
+    public com.yim.message.pix.game.MessagePtoto.BattleArmyOrBuilder getBattleArmysOrBuilder(
+        int index) {
+      return battleArmys_.get(index);
+    }
+
+    // repeated .BattleArmy battleArmys_e = 12;
+    public static final int BATTLEARMYS_E_FIELD_NUMBER = 12;
+    private java.util.List<com.yim.message.pix.game.MessagePtoto.BattleArmy> battleArmysE_;
+    /**
+     * <code>repeated .BattleArmy battleArmys_e = 12;</code>
+     *
+     * <pre>
+     *对手兵种信息
+     * </pre>
+     */
+    public java.util.List<com.yim.message.pix.game.MessagePtoto.BattleArmy> getBattleArmysEList() {
+      return battleArmysE_;
+    }
+    /**
+     * <code>repeated .BattleArmy battleArmys_e = 12;</code>
+     *
+     * <pre>
+     *对手兵种信息
+     * </pre>
+     */
+    public java.util.List<? extends com.yim.message.pix.game.MessagePtoto.BattleArmyOrBuilder> 
+        getBattleArmysEOrBuilderList() {
+      return battleArmysE_;
+    }
+    /**
+     * <code>repeated .BattleArmy battleArmys_e = 12;</code>
+     *
+     * <pre>
+     *对手兵种信息
+     * </pre>
+     */
+    public int getBattleArmysECount() {
+      return battleArmysE_.size();
+    }
+    /**
+     * <code>repeated .BattleArmy battleArmys_e = 12;</code>
+     *
+     * <pre>
+     *对手兵种信息
+     * </pre>
+     */
+    public com.yim.message.pix.game.MessagePtoto.BattleArmy getBattleArmysE(int index) {
+      return battleArmysE_.get(index);
+    }
+    /**
+     * <code>repeated .BattleArmy battleArmys_e = 12;</code>
+     *
+     * <pre>
+     *对手兵种信息
+     * </pre>
+     */
+    public com.yim.message.pix.game.MessagePtoto.BattleArmyOrBuilder getBattleArmysEOrBuilder(
+        int index) {
+      return battleArmysE_.get(index);
+    }
+
+    private void initFields() {
+      maxHp_ = 0;
+      hp_ = 0;
+      maxMagic_ = 0;
+      magic_ = 0;
+      idleArmy_ = 0;
+      maxHpE_ = 0;
+      hpE_ = 0;
+      maxMagicE_ = 0;
+      magicE_ = 0;
+      idleArmyE_ = 0;
+      battleArmys_ = java.util.Collections.emptyList();
+      battleArmysE_ = java.util.Collections.emptyList();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasMaxHp()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasHp()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasMaxMagic()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasMagic()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasIdleArmy()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasMaxHpE()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasHpE()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasMaxMagicE()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasMagicE()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasIdleArmyE()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      for (int i = 0; i < getBattleArmysCount(); i++) {
+        if (!getBattleArmys(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      for (int i = 0; i < getBattleArmysECount(); i++) {
+        if (!getBattleArmysE(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, maxHp_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(2, hp_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeInt32(3, maxMagic_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeInt32(4, magic_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeInt32(5, idleArmy_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeInt32(6, maxHpE_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeInt32(7, hpE_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        output.writeInt32(8, maxMagicE_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        output.writeInt32(9, magicE_);
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        output.writeInt32(10, idleArmyE_);
+      }
+      for (int i = 0; i < battleArmys_.size(); i++) {
+        output.writeMessage(11, battleArmys_.get(i));
+      }
+      for (int i = 0; i < battleArmysE_.size(); i++) {
+        output.writeMessage(12, battleArmysE_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, maxHp_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, hp_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, maxMagic_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, magic_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(5, idleArmy_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(6, maxHpE_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(7, hpE_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(8, maxMagicE_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(9, magicE_);
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(10, idleArmyE_);
+      }
+      for (int i = 0; i < battleArmys_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, battleArmys_.get(i));
+      }
+      for (int i = 0; i < battleArmysE_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, battleArmysE_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.yim.message.pix.game.MessagePtoto.StartBattleRes parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.StartBattleRes parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.StartBattleRes parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.StartBattleRes parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.StartBattleRes parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.StartBattleRes parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.StartBattleRes parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.StartBattleRes parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.StartBattleRes parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.StartBattleRes parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.yim.message.pix.game.MessagePtoto.StartBattleRes prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code StartBattleRes}
+     *
+     * <pre>
+     *开始战斗 = 112
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.yim.message.pix.game.MessagePtoto.StartBattleResOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.yim.message.pix.game.MessagePtoto.internal_static_StartBattleRes_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.yim.message.pix.game.MessagePtoto.internal_static_StartBattleRes_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.yim.message.pix.game.MessagePtoto.StartBattleRes.class, com.yim.message.pix.game.MessagePtoto.StartBattleRes.Builder.class);
+      }
+
+      // Construct using com.yim.message.pix.game.MessagePtoto.StartBattleRes.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getBattleArmysFieldBuilder();
+          getBattleArmysEFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        maxHp_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        hp_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        maxMagic_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        magic_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        idleArmy_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        maxHpE_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        hpE_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        maxMagicE_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        magicE_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        idleArmyE_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000200);
+        if (battleArmysBuilder_ == null) {
+          battleArmys_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000400);
+        } else {
+          battleArmysBuilder_.clear();
+        }
+        if (battleArmysEBuilder_ == null) {
+          battleArmysE_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000800);
+        } else {
+          battleArmysEBuilder_.clear();
+        }
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.yim.message.pix.game.MessagePtoto.internal_static_StartBattleRes_descriptor;
+      }
+
+      public com.yim.message.pix.game.MessagePtoto.StartBattleRes getDefaultInstanceForType() {
+        return com.yim.message.pix.game.MessagePtoto.StartBattleRes.getDefaultInstance();
+      }
+
+      public com.yim.message.pix.game.MessagePtoto.StartBattleRes build() {
+        com.yim.message.pix.game.MessagePtoto.StartBattleRes result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.yim.message.pix.game.MessagePtoto.StartBattleRes buildPartial() {
+        com.yim.message.pix.game.MessagePtoto.StartBattleRes result = new com.yim.message.pix.game.MessagePtoto.StartBattleRes(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.maxHp_ = maxHp_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.hp_ = hp_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.maxMagic_ = maxMagic_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.magic_ = magic_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.idleArmy_ = idleArmy_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.maxHpE_ = maxHpE_;
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.hpE_ = hpE_;
+        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        result.maxMagicE_ = maxMagicE_;
+        if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
+          to_bitField0_ |= 0x00000100;
+        }
+        result.magicE_ = magicE_;
+        if (((from_bitField0_ & 0x00000200) == 0x00000200)) {
+          to_bitField0_ |= 0x00000200;
+        }
+        result.idleArmyE_ = idleArmyE_;
+        if (battleArmysBuilder_ == null) {
+          if (((bitField0_ & 0x00000400) == 0x00000400)) {
+            battleArmys_ = java.util.Collections.unmodifiableList(battleArmys_);
+            bitField0_ = (bitField0_ & ~0x00000400);
+          }
+          result.battleArmys_ = battleArmys_;
+        } else {
+          result.battleArmys_ = battleArmysBuilder_.build();
+        }
+        if (battleArmysEBuilder_ == null) {
+          if (((bitField0_ & 0x00000800) == 0x00000800)) {
+            battleArmysE_ = java.util.Collections.unmodifiableList(battleArmysE_);
+            bitField0_ = (bitField0_ & ~0x00000800);
+          }
+          result.battleArmysE_ = battleArmysE_;
+        } else {
+          result.battleArmysE_ = battleArmysEBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.yim.message.pix.game.MessagePtoto.StartBattleRes) {
+          return mergeFrom((com.yim.message.pix.game.MessagePtoto.StartBattleRes)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.yim.message.pix.game.MessagePtoto.StartBattleRes other) {
+        if (other == com.yim.message.pix.game.MessagePtoto.StartBattleRes.getDefaultInstance()) return this;
+        if (other.hasMaxHp()) {
+          setMaxHp(other.getMaxHp());
+        }
+        if (other.hasHp()) {
+          setHp(other.getHp());
+        }
+        if (other.hasMaxMagic()) {
+          setMaxMagic(other.getMaxMagic());
+        }
+        if (other.hasMagic()) {
+          setMagic(other.getMagic());
+        }
+        if (other.hasIdleArmy()) {
+          setIdleArmy(other.getIdleArmy());
+        }
+        if (other.hasMaxHpE()) {
+          setMaxHpE(other.getMaxHpE());
+        }
+        if (other.hasHpE()) {
+          setHpE(other.getHpE());
+        }
+        if (other.hasMaxMagicE()) {
+          setMaxMagicE(other.getMaxMagicE());
+        }
+        if (other.hasMagicE()) {
+          setMagicE(other.getMagicE());
+        }
+        if (other.hasIdleArmyE()) {
+          setIdleArmyE(other.getIdleArmyE());
+        }
+        if (battleArmysBuilder_ == null) {
+          if (!other.battleArmys_.isEmpty()) {
+            if (battleArmys_.isEmpty()) {
+              battleArmys_ = other.battleArmys_;
+              bitField0_ = (bitField0_ & ~0x00000400);
+            } else {
+              ensureBattleArmysIsMutable();
+              battleArmys_.addAll(other.battleArmys_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.battleArmys_.isEmpty()) {
+            if (battleArmysBuilder_.isEmpty()) {
+              battleArmysBuilder_.dispose();
+              battleArmysBuilder_ = null;
+              battleArmys_ = other.battleArmys_;
+              bitField0_ = (bitField0_ & ~0x00000400);
+              battleArmysBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getBattleArmysFieldBuilder() : null;
+            } else {
+              battleArmysBuilder_.addAllMessages(other.battleArmys_);
+            }
+          }
+        }
+        if (battleArmysEBuilder_ == null) {
+          if (!other.battleArmysE_.isEmpty()) {
+            if (battleArmysE_.isEmpty()) {
+              battleArmysE_ = other.battleArmysE_;
+              bitField0_ = (bitField0_ & ~0x00000800);
+            } else {
+              ensureBattleArmysEIsMutable();
+              battleArmysE_.addAll(other.battleArmysE_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.battleArmysE_.isEmpty()) {
+            if (battleArmysEBuilder_.isEmpty()) {
+              battleArmysEBuilder_.dispose();
+              battleArmysEBuilder_ = null;
+              battleArmysE_ = other.battleArmysE_;
+              bitField0_ = (bitField0_ & ~0x00000800);
+              battleArmysEBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getBattleArmysEFieldBuilder() : null;
+            } else {
+              battleArmysEBuilder_.addAllMessages(other.battleArmysE_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasMaxHp()) {
+          
+          return false;
+        }
+        if (!hasHp()) {
+          
+          return false;
+        }
+        if (!hasMaxMagic()) {
+          
+          return false;
+        }
+        if (!hasMagic()) {
+          
+          return false;
+        }
+        if (!hasIdleArmy()) {
+          
+          return false;
+        }
+        if (!hasMaxHpE()) {
+          
+          return false;
+        }
+        if (!hasHpE()) {
+          
+          return false;
+        }
+        if (!hasMaxMagicE()) {
+          
+          return false;
+        }
+        if (!hasMagicE()) {
+          
+          return false;
+        }
+        if (!hasIdleArmyE()) {
+          
+          return false;
+        }
+        for (int i = 0; i < getBattleArmysCount(); i++) {
+          if (!getBattleArmys(i).isInitialized()) {
+            
+            return false;
+          }
+        }
+        for (int i = 0; i < getBattleArmysECount(); i++) {
+          if (!getBattleArmysE(i).isInitialized()) {
+            
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.yim.message.pix.game.MessagePtoto.StartBattleRes parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.yim.message.pix.game.MessagePtoto.StartBattleRes) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // required int32 maxHp = 1;
+      private int maxHp_ ;
+      /**
+       * <code>required int32 maxHp = 1;</code>
+       *
+       * <pre>
+       *最大血量
+       * </pre>
+       */
+      public boolean hasMaxHp() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int32 maxHp = 1;</code>
+       *
+       * <pre>
+       *最大血量
+       * </pre>
+       */
+      public int getMaxHp() {
+        return maxHp_;
+      }
+      /**
+       * <code>required int32 maxHp = 1;</code>
+       *
+       * <pre>
+       *最大血量
+       * </pre>
+       */
+      public Builder setMaxHp(int value) {
+        bitField0_ |= 0x00000001;
+        maxHp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 maxHp = 1;</code>
+       *
+       * <pre>
+       *最大血量
+       * </pre>
+       */
+      public Builder clearMaxHp() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        maxHp_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required int32 hp = 2;
+      private int hp_ ;
+      /**
+       * <code>required int32 hp = 2;</code>
+       *
+       * <pre>
+       *当前血量
+       * </pre>
+       */
+      public boolean hasHp() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required int32 hp = 2;</code>
+       *
+       * <pre>
+       *当前血量
+       * </pre>
+       */
+      public int getHp() {
+        return hp_;
+      }
+      /**
+       * <code>required int32 hp = 2;</code>
+       *
+       * <pre>
+       *当前血量
+       * </pre>
+       */
+      public Builder setHp(int value) {
+        bitField0_ |= 0x00000002;
+        hp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 hp = 2;</code>
+       *
+       * <pre>
+       *当前血量
+       * </pre>
+       */
+      public Builder clearHp() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        hp_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required int32 maxMagic = 3;
+      private int maxMagic_ ;
+      /**
+       * <code>required int32 maxMagic = 3;</code>
+       *
+       * <pre>
+       *最大魔力值
+       * </pre>
+       */
+      public boolean hasMaxMagic() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>required int32 maxMagic = 3;</code>
+       *
+       * <pre>
+       *最大魔力值
+       * </pre>
+       */
+      public int getMaxMagic() {
+        return maxMagic_;
+      }
+      /**
+       * <code>required int32 maxMagic = 3;</code>
+       *
+       * <pre>
+       *最大魔力值
+       * </pre>
+       */
+      public Builder setMaxMagic(int value) {
+        bitField0_ |= 0x00000004;
+        maxMagic_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 maxMagic = 3;</code>
+       *
+       * <pre>
+       *最大魔力值
+       * </pre>
+       */
+      public Builder clearMaxMagic() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        maxMagic_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required int32 magic = 4;
+      private int magic_ ;
+      /**
+       * <code>required int32 magic = 4;</code>
+       *
+       * <pre>
+       *魔力值
+       * </pre>
+       */
+      public boolean hasMagic() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>required int32 magic = 4;</code>
+       *
+       * <pre>
+       *魔力值
+       * </pre>
+       */
+      public int getMagic() {
+        return magic_;
+      }
+      /**
+       * <code>required int32 magic = 4;</code>
+       *
+       * <pre>
+       *魔力值
+       * </pre>
+       */
+      public Builder setMagic(int value) {
+        bitField0_ |= 0x00000008;
+        magic_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 magic = 4;</code>
+       *
+       * <pre>
+       *魔力值
+       * </pre>
+       */
+      public Builder clearMagic() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        magic_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required int32 idleArmy = 5;
+      private int idleArmy_ ;
+      /**
+       * <code>required int32 idleArmy = 5;</code>
+       *
+       * <pre>
+       *空闲兵数量
+       * </pre>
+       */
+      public boolean hasIdleArmy() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>required int32 idleArmy = 5;</code>
+       *
+       * <pre>
+       *空闲兵数量
+       * </pre>
+       */
+      public int getIdleArmy() {
+        return idleArmy_;
+      }
+      /**
+       * <code>required int32 idleArmy = 5;</code>
+       *
+       * <pre>
+       *空闲兵数量
+       * </pre>
+       */
+      public Builder setIdleArmy(int value) {
+        bitField0_ |= 0x00000010;
+        idleArmy_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 idleArmy = 5;</code>
+       *
+       * <pre>
+       *空闲兵数量
+       * </pre>
+       */
+      public Builder clearIdleArmy() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        idleArmy_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required int32 maxHp_e = 6;
+      private int maxHpE_ ;
+      /**
+       * <code>required int32 maxHp_e = 6;</code>
+       *
+       * <pre>
+       *对手最大血量
+       * </pre>
+       */
+      public boolean hasMaxHpE() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>required int32 maxHp_e = 6;</code>
+       *
+       * <pre>
+       *对手最大血量
+       * </pre>
+       */
+      public int getMaxHpE() {
+        return maxHpE_;
+      }
+      /**
+       * <code>required int32 maxHp_e = 6;</code>
+       *
+       * <pre>
+       *对手最大血量
+       * </pre>
+       */
+      public Builder setMaxHpE(int value) {
+        bitField0_ |= 0x00000020;
+        maxHpE_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 maxHp_e = 6;</code>
+       *
+       * <pre>
+       *对手最大血量
+       * </pre>
+       */
+      public Builder clearMaxHpE() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        maxHpE_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required int32 hp_e = 7;
+      private int hpE_ ;
+      /**
+       * <code>required int32 hp_e = 7;</code>
+       *
+       * <pre>
+       *对手当前血量
+       * </pre>
+       */
+      public boolean hasHpE() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>required int32 hp_e = 7;</code>
+       *
+       * <pre>
+       *对手当前血量
+       * </pre>
+       */
+      public int getHpE() {
+        return hpE_;
+      }
+      /**
+       * <code>required int32 hp_e = 7;</code>
+       *
+       * <pre>
+       *对手当前血量
+       * </pre>
+       */
+      public Builder setHpE(int value) {
+        bitField0_ |= 0x00000040;
+        hpE_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 hp_e = 7;</code>
+       *
+       * <pre>
+       *对手当前血量
+       * </pre>
+       */
+      public Builder clearHpE() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        hpE_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required int32 maxMagic_e = 8;
+      private int maxMagicE_ ;
+      /**
+       * <code>required int32 maxMagic_e = 8;</code>
+       *
+       * <pre>
+       *对手最大魔力值
+       * </pre>
+       */
+      public boolean hasMaxMagicE() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>required int32 maxMagic_e = 8;</code>
+       *
+       * <pre>
+       *对手最大魔力值
+       * </pre>
+       */
+      public int getMaxMagicE() {
+        return maxMagicE_;
+      }
+      /**
+       * <code>required int32 maxMagic_e = 8;</code>
+       *
+       * <pre>
+       *对手最大魔力值
+       * </pre>
+       */
+      public Builder setMaxMagicE(int value) {
+        bitField0_ |= 0x00000080;
+        maxMagicE_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 maxMagic_e = 8;</code>
+       *
+       * <pre>
+       *对手最大魔力值
+       * </pre>
+       */
+      public Builder clearMaxMagicE() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        maxMagicE_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required int32 magic_e = 9;
+      private int magicE_ ;
+      /**
+       * <code>required int32 magic_e = 9;</code>
+       *
+       * <pre>
+       *对手魔力值
+       * </pre>
+       */
+      public boolean hasMagicE() {
+        return ((bitField0_ & 0x00000100) == 0x00000100);
+      }
+      /**
+       * <code>required int32 magic_e = 9;</code>
+       *
+       * <pre>
+       *对手魔力值
+       * </pre>
+       */
+      public int getMagicE() {
+        return magicE_;
+      }
+      /**
+       * <code>required int32 magic_e = 9;</code>
+       *
+       * <pre>
+       *对手魔力值
+       * </pre>
+       */
+      public Builder setMagicE(int value) {
+        bitField0_ |= 0x00000100;
+        magicE_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 magic_e = 9;</code>
+       *
+       * <pre>
+       *对手魔力值
+       * </pre>
+       */
+      public Builder clearMagicE() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        magicE_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required int32 idleArmy_e = 10;
+      private int idleArmyE_ ;
+      /**
+       * <code>required int32 idleArmy_e = 10;</code>
+       *
+       * <pre>
+       *对手空闲兵数量
+       * </pre>
+       */
+      public boolean hasIdleArmyE() {
+        return ((bitField0_ & 0x00000200) == 0x00000200);
+      }
+      /**
+       * <code>required int32 idleArmy_e = 10;</code>
+       *
+       * <pre>
+       *对手空闲兵数量
+       * </pre>
+       */
+      public int getIdleArmyE() {
+        return idleArmyE_;
+      }
+      /**
+       * <code>required int32 idleArmy_e = 10;</code>
+       *
+       * <pre>
+       *对手空闲兵数量
+       * </pre>
+       */
+      public Builder setIdleArmyE(int value) {
+        bitField0_ |= 0x00000200;
+        idleArmyE_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 idleArmy_e = 10;</code>
+       *
+       * <pre>
+       *对手空闲兵数量
+       * </pre>
+       */
+      public Builder clearIdleArmyE() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        idleArmyE_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // repeated .BattleArmy battleArmys = 11;
+      private java.util.List<com.yim.message.pix.game.MessagePtoto.BattleArmy> battleArmys_ =
+        java.util.Collections.emptyList();
+      private void ensureBattleArmysIsMutable() {
+        if (!((bitField0_ & 0x00000400) == 0x00000400)) {
+          battleArmys_ = new java.util.ArrayList<com.yim.message.pix.game.MessagePtoto.BattleArmy>(battleArmys_);
+          bitField0_ |= 0x00000400;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.yim.message.pix.game.MessagePtoto.BattleArmy, com.yim.message.pix.game.MessagePtoto.BattleArmy.Builder, com.yim.message.pix.game.MessagePtoto.BattleArmyOrBuilder> battleArmysBuilder_;
+
+      /**
+       * <code>repeated .BattleArmy battleArmys = 11;</code>
+       *
+       * <pre>
+       *兵种信息
+       * </pre>
+       */
+      public java.util.List<com.yim.message.pix.game.MessagePtoto.BattleArmy> getBattleArmysList() {
+        if (battleArmysBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(battleArmys_);
+        } else {
+          return battleArmysBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .BattleArmy battleArmys = 11;</code>
+       *
+       * <pre>
+       *兵种信息
+       * </pre>
+       */
+      public int getBattleArmysCount() {
+        if (battleArmysBuilder_ == null) {
+          return battleArmys_.size();
+        } else {
+          return battleArmysBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .BattleArmy battleArmys = 11;</code>
+       *
+       * <pre>
+       *兵种信息
+       * </pre>
+       */
+      public com.yim.message.pix.game.MessagePtoto.BattleArmy getBattleArmys(int index) {
+        if (battleArmysBuilder_ == null) {
+          return battleArmys_.get(index);
+        } else {
+          return battleArmysBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .BattleArmy battleArmys = 11;</code>
+       *
+       * <pre>
+       *兵种信息
+       * </pre>
+       */
+      public Builder setBattleArmys(
+          int index, com.yim.message.pix.game.MessagePtoto.BattleArmy value) {
+        if (battleArmysBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBattleArmysIsMutable();
+          battleArmys_.set(index, value);
+          onChanged();
+        } else {
+          battleArmysBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .BattleArmy battleArmys = 11;</code>
+       *
+       * <pre>
+       *兵种信息
+       * </pre>
+       */
+      public Builder setBattleArmys(
+          int index, com.yim.message.pix.game.MessagePtoto.BattleArmy.Builder builderForValue) {
+        if (battleArmysBuilder_ == null) {
+          ensureBattleArmysIsMutable();
+          battleArmys_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          battleArmysBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .BattleArmy battleArmys = 11;</code>
+       *
+       * <pre>
+       *兵种信息
+       * </pre>
+       */
+      public Builder addBattleArmys(com.yim.message.pix.game.MessagePtoto.BattleArmy value) {
+        if (battleArmysBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBattleArmysIsMutable();
+          battleArmys_.add(value);
+          onChanged();
+        } else {
+          battleArmysBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .BattleArmy battleArmys = 11;</code>
+       *
+       * <pre>
+       *兵种信息
+       * </pre>
+       */
+      public Builder addBattleArmys(
+          int index, com.yim.message.pix.game.MessagePtoto.BattleArmy value) {
+        if (battleArmysBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBattleArmysIsMutable();
+          battleArmys_.add(index, value);
+          onChanged();
+        } else {
+          battleArmysBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .BattleArmy battleArmys = 11;</code>
+       *
+       * <pre>
+       *兵种信息
+       * </pre>
+       */
+      public Builder addBattleArmys(
+          com.yim.message.pix.game.MessagePtoto.BattleArmy.Builder builderForValue) {
+        if (battleArmysBuilder_ == null) {
+          ensureBattleArmysIsMutable();
+          battleArmys_.add(builderForValue.build());
+          onChanged();
+        } else {
+          battleArmysBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .BattleArmy battleArmys = 11;</code>
+       *
+       * <pre>
+       *兵种信息
+       * </pre>
+       */
+      public Builder addBattleArmys(
+          int index, com.yim.message.pix.game.MessagePtoto.BattleArmy.Builder builderForValue) {
+        if (battleArmysBuilder_ == null) {
+          ensureBattleArmysIsMutable();
+          battleArmys_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          battleArmysBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .BattleArmy battleArmys = 11;</code>
+       *
+       * <pre>
+       *兵种信息
+       * </pre>
+       */
+      public Builder addAllBattleArmys(
+          java.lang.Iterable<? extends com.yim.message.pix.game.MessagePtoto.BattleArmy> values) {
+        if (battleArmysBuilder_ == null) {
+          ensureBattleArmysIsMutable();
+          super.addAll(values, battleArmys_);
+          onChanged();
+        } else {
+          battleArmysBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .BattleArmy battleArmys = 11;</code>
+       *
+       * <pre>
+       *兵种信息
+       * </pre>
+       */
+      public Builder clearBattleArmys() {
+        if (battleArmysBuilder_ == null) {
+          battleArmys_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000400);
+          onChanged();
+        } else {
+          battleArmysBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .BattleArmy battleArmys = 11;</code>
+       *
+       * <pre>
+       *兵种信息
+       * </pre>
+       */
+      public Builder removeBattleArmys(int index) {
+        if (battleArmysBuilder_ == null) {
+          ensureBattleArmysIsMutable();
+          battleArmys_.remove(index);
+          onChanged();
+        } else {
+          battleArmysBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .BattleArmy battleArmys = 11;</code>
+       *
+       * <pre>
+       *兵种信息
+       * </pre>
+       */
+      public com.yim.message.pix.game.MessagePtoto.BattleArmy.Builder getBattleArmysBuilder(
+          int index) {
+        return getBattleArmysFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .BattleArmy battleArmys = 11;</code>
+       *
+       * <pre>
+       *兵种信息
+       * </pre>
+       */
+      public com.yim.message.pix.game.MessagePtoto.BattleArmyOrBuilder getBattleArmysOrBuilder(
+          int index) {
+        if (battleArmysBuilder_ == null) {
+          return battleArmys_.get(index);  } else {
+          return battleArmysBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .BattleArmy battleArmys = 11;</code>
+       *
+       * <pre>
+       *兵种信息
+       * </pre>
+       */
+      public java.util.List<? extends com.yim.message.pix.game.MessagePtoto.BattleArmyOrBuilder> 
+           getBattleArmysOrBuilderList() {
+        if (battleArmysBuilder_ != null) {
+          return battleArmysBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(battleArmys_);
+        }
+      }
+      /**
+       * <code>repeated .BattleArmy battleArmys = 11;</code>
+       *
+       * <pre>
+       *兵种信息
+       * </pre>
+       */
+      public com.yim.message.pix.game.MessagePtoto.BattleArmy.Builder addBattleArmysBuilder() {
+        return getBattleArmysFieldBuilder().addBuilder(
+            com.yim.message.pix.game.MessagePtoto.BattleArmy.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .BattleArmy battleArmys = 11;</code>
+       *
+       * <pre>
+       *兵种信息
+       * </pre>
+       */
+      public com.yim.message.pix.game.MessagePtoto.BattleArmy.Builder addBattleArmysBuilder(
+          int index) {
+        return getBattleArmysFieldBuilder().addBuilder(
+            index, com.yim.message.pix.game.MessagePtoto.BattleArmy.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .BattleArmy battleArmys = 11;</code>
+       *
+       * <pre>
+       *兵种信息
+       * </pre>
+       */
+      public java.util.List<com.yim.message.pix.game.MessagePtoto.BattleArmy.Builder> 
+           getBattleArmysBuilderList() {
+        return getBattleArmysFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.yim.message.pix.game.MessagePtoto.BattleArmy, com.yim.message.pix.game.MessagePtoto.BattleArmy.Builder, com.yim.message.pix.game.MessagePtoto.BattleArmyOrBuilder> 
+          getBattleArmysFieldBuilder() {
+        if (battleArmysBuilder_ == null) {
+          battleArmysBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.yim.message.pix.game.MessagePtoto.BattleArmy, com.yim.message.pix.game.MessagePtoto.BattleArmy.Builder, com.yim.message.pix.game.MessagePtoto.BattleArmyOrBuilder>(
+                  battleArmys_,
+                  ((bitField0_ & 0x00000400) == 0x00000400),
+                  getParentForChildren(),
+                  isClean());
+          battleArmys_ = null;
+        }
+        return battleArmysBuilder_;
+      }
+
+      // repeated .BattleArmy battleArmys_e = 12;
+      private java.util.List<com.yim.message.pix.game.MessagePtoto.BattleArmy> battleArmysE_ =
+        java.util.Collections.emptyList();
+      private void ensureBattleArmysEIsMutable() {
+        if (!((bitField0_ & 0x00000800) == 0x00000800)) {
+          battleArmysE_ = new java.util.ArrayList<com.yim.message.pix.game.MessagePtoto.BattleArmy>(battleArmysE_);
+          bitField0_ |= 0x00000800;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.yim.message.pix.game.MessagePtoto.BattleArmy, com.yim.message.pix.game.MessagePtoto.BattleArmy.Builder, com.yim.message.pix.game.MessagePtoto.BattleArmyOrBuilder> battleArmysEBuilder_;
+
+      /**
+       * <code>repeated .BattleArmy battleArmys_e = 12;</code>
+       *
+       * <pre>
+       *对手兵种信息
+       * </pre>
+       */
+      public java.util.List<com.yim.message.pix.game.MessagePtoto.BattleArmy> getBattleArmysEList() {
+        if (battleArmysEBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(battleArmysE_);
+        } else {
+          return battleArmysEBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .BattleArmy battleArmys_e = 12;</code>
+       *
+       * <pre>
+       *对手兵种信息
+       * </pre>
+       */
+      public int getBattleArmysECount() {
+        if (battleArmysEBuilder_ == null) {
+          return battleArmysE_.size();
+        } else {
+          return battleArmysEBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .BattleArmy battleArmys_e = 12;</code>
+       *
+       * <pre>
+       *对手兵种信息
+       * </pre>
+       */
+      public com.yim.message.pix.game.MessagePtoto.BattleArmy getBattleArmysE(int index) {
+        if (battleArmysEBuilder_ == null) {
+          return battleArmysE_.get(index);
+        } else {
+          return battleArmysEBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .BattleArmy battleArmys_e = 12;</code>
+       *
+       * <pre>
+       *对手兵种信息
+       * </pre>
+       */
+      public Builder setBattleArmysE(
+          int index, com.yim.message.pix.game.MessagePtoto.BattleArmy value) {
+        if (battleArmysEBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBattleArmysEIsMutable();
+          battleArmysE_.set(index, value);
+          onChanged();
+        } else {
+          battleArmysEBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .BattleArmy battleArmys_e = 12;</code>
+       *
+       * <pre>
+       *对手兵种信息
+       * </pre>
+       */
+      public Builder setBattleArmysE(
+          int index, com.yim.message.pix.game.MessagePtoto.BattleArmy.Builder builderForValue) {
+        if (battleArmysEBuilder_ == null) {
+          ensureBattleArmysEIsMutable();
+          battleArmysE_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          battleArmysEBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .BattleArmy battleArmys_e = 12;</code>
+       *
+       * <pre>
+       *对手兵种信息
+       * </pre>
+       */
+      public Builder addBattleArmysE(com.yim.message.pix.game.MessagePtoto.BattleArmy value) {
+        if (battleArmysEBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBattleArmysEIsMutable();
+          battleArmysE_.add(value);
+          onChanged();
+        } else {
+          battleArmysEBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .BattleArmy battleArmys_e = 12;</code>
+       *
+       * <pre>
+       *对手兵种信息
+       * </pre>
+       */
+      public Builder addBattleArmysE(
+          int index, com.yim.message.pix.game.MessagePtoto.BattleArmy value) {
+        if (battleArmysEBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBattleArmysEIsMutable();
+          battleArmysE_.add(index, value);
+          onChanged();
+        } else {
+          battleArmysEBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .BattleArmy battleArmys_e = 12;</code>
+       *
+       * <pre>
+       *对手兵种信息
+       * </pre>
+       */
+      public Builder addBattleArmysE(
+          com.yim.message.pix.game.MessagePtoto.BattleArmy.Builder builderForValue) {
+        if (battleArmysEBuilder_ == null) {
+          ensureBattleArmysEIsMutable();
+          battleArmysE_.add(builderForValue.build());
+          onChanged();
+        } else {
+          battleArmysEBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .BattleArmy battleArmys_e = 12;</code>
+       *
+       * <pre>
+       *对手兵种信息
+       * </pre>
+       */
+      public Builder addBattleArmysE(
+          int index, com.yim.message.pix.game.MessagePtoto.BattleArmy.Builder builderForValue) {
+        if (battleArmysEBuilder_ == null) {
+          ensureBattleArmysEIsMutable();
+          battleArmysE_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          battleArmysEBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .BattleArmy battleArmys_e = 12;</code>
+       *
+       * <pre>
+       *对手兵种信息
+       * </pre>
+       */
+      public Builder addAllBattleArmysE(
+          java.lang.Iterable<? extends com.yim.message.pix.game.MessagePtoto.BattleArmy> values) {
+        if (battleArmysEBuilder_ == null) {
+          ensureBattleArmysEIsMutable();
+          super.addAll(values, battleArmysE_);
+          onChanged();
+        } else {
+          battleArmysEBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .BattleArmy battleArmys_e = 12;</code>
+       *
+       * <pre>
+       *对手兵种信息
+       * </pre>
+       */
+      public Builder clearBattleArmysE() {
+        if (battleArmysEBuilder_ == null) {
+          battleArmysE_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000800);
+          onChanged();
+        } else {
+          battleArmysEBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .BattleArmy battleArmys_e = 12;</code>
+       *
+       * <pre>
+       *对手兵种信息
+       * </pre>
+       */
+      public Builder removeBattleArmysE(int index) {
+        if (battleArmysEBuilder_ == null) {
+          ensureBattleArmysEIsMutable();
+          battleArmysE_.remove(index);
+          onChanged();
+        } else {
+          battleArmysEBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .BattleArmy battleArmys_e = 12;</code>
+       *
+       * <pre>
+       *对手兵种信息
+       * </pre>
+       */
+      public com.yim.message.pix.game.MessagePtoto.BattleArmy.Builder getBattleArmysEBuilder(
+          int index) {
+        return getBattleArmysEFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .BattleArmy battleArmys_e = 12;</code>
+       *
+       * <pre>
+       *对手兵种信息
+       * </pre>
+       */
+      public com.yim.message.pix.game.MessagePtoto.BattleArmyOrBuilder getBattleArmysEOrBuilder(
+          int index) {
+        if (battleArmysEBuilder_ == null) {
+          return battleArmysE_.get(index);  } else {
+          return battleArmysEBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .BattleArmy battleArmys_e = 12;</code>
+       *
+       * <pre>
+       *对手兵种信息
+       * </pre>
+       */
+      public java.util.List<? extends com.yim.message.pix.game.MessagePtoto.BattleArmyOrBuilder> 
+           getBattleArmysEOrBuilderList() {
+        if (battleArmysEBuilder_ != null) {
+          return battleArmysEBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(battleArmysE_);
+        }
+      }
+      /**
+       * <code>repeated .BattleArmy battleArmys_e = 12;</code>
+       *
+       * <pre>
+       *对手兵种信息
+       * </pre>
+       */
+      public com.yim.message.pix.game.MessagePtoto.BattleArmy.Builder addBattleArmysEBuilder() {
+        return getBattleArmysEFieldBuilder().addBuilder(
+            com.yim.message.pix.game.MessagePtoto.BattleArmy.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .BattleArmy battleArmys_e = 12;</code>
+       *
+       * <pre>
+       *对手兵种信息
+       * </pre>
+       */
+      public com.yim.message.pix.game.MessagePtoto.BattleArmy.Builder addBattleArmysEBuilder(
+          int index) {
+        return getBattleArmysEFieldBuilder().addBuilder(
+            index, com.yim.message.pix.game.MessagePtoto.BattleArmy.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .BattleArmy battleArmys_e = 12;</code>
+       *
+       * <pre>
+       *对手兵种信息
+       * </pre>
+       */
+      public java.util.List<com.yim.message.pix.game.MessagePtoto.BattleArmy.Builder> 
+           getBattleArmysEBuilderList() {
+        return getBattleArmysEFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.yim.message.pix.game.MessagePtoto.BattleArmy, com.yim.message.pix.game.MessagePtoto.BattleArmy.Builder, com.yim.message.pix.game.MessagePtoto.BattleArmyOrBuilder> 
+          getBattleArmysEFieldBuilder() {
+        if (battleArmysEBuilder_ == null) {
+          battleArmysEBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.yim.message.pix.game.MessagePtoto.BattleArmy, com.yim.message.pix.game.MessagePtoto.BattleArmy.Builder, com.yim.message.pix.game.MessagePtoto.BattleArmyOrBuilder>(
+                  battleArmysE_,
+                  ((bitField0_ & 0x00000800) == 0x00000800),
+                  getParentForChildren(),
+                  isClean());
+          battleArmysE_ = null;
+        }
+        return battleArmysEBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:StartBattleRes)
+    }
+
+    static {
+      defaultInstance = new StartBattleRes(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:StartBattleRes)
+  }
+
+  public interface BattleArmyOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required int32 x = 1;
+    /**
+     * <code>required int32 x = 1;</code>
+     */
+    boolean hasX();
+    /**
+     * <code>required int32 x = 1;</code>
+     */
+    int getX();
+
+    // required int32 y = 2;
+    /**
+     * <code>required int32 y = 2;</code>
+     */
+    boolean hasY();
+    /**
+     * <code>required int32 y = 2;</code>
+     */
+    int getY();
+
+    // required int32 instanceId = 3;
+    /**
+     * <code>required int32 instanceId = 3;</code>
+     *
+     * <pre>
+     *兵种实例id
+     * </pre>
+     */
+    boolean hasInstanceId();
+    /**
+     * <code>required int32 instanceId = 3;</code>
+     *
+     * <pre>
+     *兵种实例id
+     * </pre>
+     */
+    int getInstanceId();
+
+    // required int32 armyColor = 4;
+    /**
+     * <code>required int32 armyColor = 4;</code>
+     *
+     * <pre>
+     *兵种颜色id
+     * </pre>
+     */
+    boolean hasArmyColor();
+    /**
+     * <code>required int32 armyColor = 4;</code>
+     *
+     * <pre>
+     *兵种颜色id
+     * </pre>
+     */
+    int getArmyColor();
+
+    // required string icon = 5;
+    /**
+     * <code>required string icon = 5;</code>
+     *
+     * <pre>
+     *兵种图标
+     * </pre>
+     */
+    boolean hasIcon();
+    /**
+     * <code>required string icon = 5;</code>
+     *
+     * <pre>
+     *兵种图标
+     * </pre>
+     */
+    java.lang.String getIcon();
+    /**
+     * <code>required string icon = 5;</code>
+     *
+     * <pre>
+     *兵种图标
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getIconBytes();
+  }
+  /**
+   * Protobuf type {@code BattleArmy}
+   */
+  public static final class BattleArmy extends
+      com.google.protobuf.GeneratedMessage
+      implements BattleArmyOrBuilder {
+    // Use BattleArmy.newBuilder() to construct.
+    private BattleArmy(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private BattleArmy(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final BattleArmy defaultInstance;
+    public static BattleArmy getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public BattleArmy getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private BattleArmy(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              x_ = input.readInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              y_ = input.readInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              instanceId_ = input.readInt32();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              armyColor_ = input.readInt32();
+              break;
+            }
+            case 42: {
+              bitField0_ |= 0x00000010;
+              icon_ = input.readBytes();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.yim.message.pix.game.MessagePtoto.internal_static_BattleArmy_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.yim.message.pix.game.MessagePtoto.internal_static_BattleArmy_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.yim.message.pix.game.MessagePtoto.BattleArmy.class, com.yim.message.pix.game.MessagePtoto.BattleArmy.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<BattleArmy> PARSER =
+        new com.google.protobuf.AbstractParser<BattleArmy>() {
+      public BattleArmy parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new BattleArmy(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BattleArmy> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required int32 x = 1;
+    public static final int X_FIELD_NUMBER = 1;
+    private int x_;
+    /**
+     * <code>required int32 x = 1;</code>
+     */
+    public boolean hasX() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int32 x = 1;</code>
+     */
+    public int getX() {
+      return x_;
+    }
+
+    // required int32 y = 2;
+    public static final int Y_FIELD_NUMBER = 2;
+    private int y_;
+    /**
+     * <code>required int32 y = 2;</code>
+     */
+    public boolean hasY() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required int32 y = 2;</code>
+     */
+    public int getY() {
+      return y_;
+    }
+
+    // required int32 instanceId = 3;
+    public static final int INSTANCEID_FIELD_NUMBER = 3;
+    private int instanceId_;
+    /**
+     * <code>required int32 instanceId = 3;</code>
+     *
+     * <pre>
+     *兵种实例id
+     * </pre>
+     */
+    public boolean hasInstanceId() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>required int32 instanceId = 3;</code>
+     *
+     * <pre>
+     *兵种实例id
+     * </pre>
+     */
+    public int getInstanceId() {
+      return instanceId_;
+    }
+
+    // required int32 armyColor = 4;
+    public static final int ARMYCOLOR_FIELD_NUMBER = 4;
+    private int armyColor_;
+    /**
+     * <code>required int32 armyColor = 4;</code>
+     *
+     * <pre>
+     *兵种颜色id
+     * </pre>
+     */
+    public boolean hasArmyColor() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>required int32 armyColor = 4;</code>
+     *
+     * <pre>
+     *兵种颜色id
+     * </pre>
+     */
+    public int getArmyColor() {
+      return armyColor_;
+    }
+
+    // required string icon = 5;
+    public static final int ICON_FIELD_NUMBER = 5;
+    private java.lang.Object icon_;
+    /**
+     * <code>required string icon = 5;</code>
+     *
+     * <pre>
+     *兵种图标
+     * </pre>
+     */
+    public boolean hasIcon() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>required string icon = 5;</code>
+     *
+     * <pre>
+     *兵种图标
+     * </pre>
+     */
+    public java.lang.String getIcon() {
+      java.lang.Object ref = icon_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          icon_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string icon = 5;</code>
+     *
+     * <pre>
+     *兵种图标
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getIconBytes() {
+      java.lang.Object ref = icon_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        icon_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private void initFields() {
+      x_ = 0;
+      y_ = 0;
+      instanceId_ = 0;
+      armyColor_ = 0;
+      icon_ = "";
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasX()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasY()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasInstanceId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasArmyColor()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasIcon()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, x_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(2, y_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeInt32(3, instanceId_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeInt32(4, armyColor_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeBytes(5, getIconBytes());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, x_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, y_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, instanceId_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, armyColor_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(5, getIconBytes());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.yim.message.pix.game.MessagePtoto.BattleArmy parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.BattleArmy parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.BattleArmy parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.BattleArmy parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.BattleArmy parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.BattleArmy parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.BattleArmy parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.BattleArmy parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.BattleArmy parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.BattleArmy parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.yim.message.pix.game.MessagePtoto.BattleArmy prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code BattleArmy}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.yim.message.pix.game.MessagePtoto.BattleArmyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.yim.message.pix.game.MessagePtoto.internal_static_BattleArmy_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.yim.message.pix.game.MessagePtoto.internal_static_BattleArmy_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.yim.message.pix.game.MessagePtoto.BattleArmy.class, com.yim.message.pix.game.MessagePtoto.BattleArmy.Builder.class);
+      }
+
+      // Construct using com.yim.message.pix.game.MessagePtoto.BattleArmy.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        x_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        y_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        instanceId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        armyColor_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        icon_ = "";
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.yim.message.pix.game.MessagePtoto.internal_static_BattleArmy_descriptor;
+      }
+
+      public com.yim.message.pix.game.MessagePtoto.BattleArmy getDefaultInstanceForType() {
+        return com.yim.message.pix.game.MessagePtoto.BattleArmy.getDefaultInstance();
+      }
+
+      public com.yim.message.pix.game.MessagePtoto.BattleArmy build() {
+        com.yim.message.pix.game.MessagePtoto.BattleArmy result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.yim.message.pix.game.MessagePtoto.BattleArmy buildPartial() {
+        com.yim.message.pix.game.MessagePtoto.BattleArmy result = new com.yim.message.pix.game.MessagePtoto.BattleArmy(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.x_ = x_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.y_ = y_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.instanceId_ = instanceId_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.armyColor_ = armyColor_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.icon_ = icon_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.yim.message.pix.game.MessagePtoto.BattleArmy) {
+          return mergeFrom((com.yim.message.pix.game.MessagePtoto.BattleArmy)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.yim.message.pix.game.MessagePtoto.BattleArmy other) {
+        if (other == com.yim.message.pix.game.MessagePtoto.BattleArmy.getDefaultInstance()) return this;
+        if (other.hasX()) {
+          setX(other.getX());
+        }
+        if (other.hasY()) {
+          setY(other.getY());
+        }
+        if (other.hasInstanceId()) {
+          setInstanceId(other.getInstanceId());
+        }
+        if (other.hasArmyColor()) {
+          setArmyColor(other.getArmyColor());
+        }
+        if (other.hasIcon()) {
+          bitField0_ |= 0x00000010;
+          icon_ = other.icon_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasX()) {
+          
+          return false;
+        }
+        if (!hasY()) {
+          
+          return false;
+        }
+        if (!hasInstanceId()) {
+          
+          return false;
+        }
+        if (!hasArmyColor()) {
+          
+          return false;
+        }
+        if (!hasIcon()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.yim.message.pix.game.MessagePtoto.BattleArmy parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.yim.message.pix.game.MessagePtoto.BattleArmy) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // required int32 x = 1;
+      private int x_ ;
+      /**
+       * <code>required int32 x = 1;</code>
+       */
+      public boolean hasX() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int32 x = 1;</code>
+       */
+      public int getX() {
+        return x_;
+      }
+      /**
+       * <code>required int32 x = 1;</code>
+       */
+      public Builder setX(int value) {
+        bitField0_ |= 0x00000001;
+        x_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 x = 1;</code>
+       */
+      public Builder clearX() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        x_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required int32 y = 2;
+      private int y_ ;
+      /**
+       * <code>required int32 y = 2;</code>
+       */
+      public boolean hasY() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required int32 y = 2;</code>
+       */
+      public int getY() {
+        return y_;
+      }
+      /**
+       * <code>required int32 y = 2;</code>
+       */
+      public Builder setY(int value) {
+        bitField0_ |= 0x00000002;
+        y_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 y = 2;</code>
+       */
+      public Builder clearY() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        y_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required int32 instanceId = 3;
+      private int instanceId_ ;
+      /**
+       * <code>required int32 instanceId = 3;</code>
+       *
+       * <pre>
+       *兵种实例id
+       * </pre>
+       */
+      public boolean hasInstanceId() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>required int32 instanceId = 3;</code>
+       *
+       * <pre>
+       *兵种实例id
+       * </pre>
+       */
+      public int getInstanceId() {
+        return instanceId_;
+      }
+      /**
+       * <code>required int32 instanceId = 3;</code>
+       *
+       * <pre>
+       *兵种实例id
+       * </pre>
+       */
+      public Builder setInstanceId(int value) {
+        bitField0_ |= 0x00000004;
+        instanceId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 instanceId = 3;</code>
+       *
+       * <pre>
+       *兵种实例id
+       * </pre>
+       */
+      public Builder clearInstanceId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        instanceId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required int32 armyColor = 4;
+      private int armyColor_ ;
+      /**
+       * <code>required int32 armyColor = 4;</code>
+       *
+       * <pre>
+       *兵种颜色id
+       * </pre>
+       */
+      public boolean hasArmyColor() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>required int32 armyColor = 4;</code>
+       *
+       * <pre>
+       *兵种颜色id
+       * </pre>
+       */
+      public int getArmyColor() {
+        return armyColor_;
+      }
+      /**
+       * <code>required int32 armyColor = 4;</code>
+       *
+       * <pre>
+       *兵种颜色id
+       * </pre>
+       */
+      public Builder setArmyColor(int value) {
+        bitField0_ |= 0x00000008;
+        armyColor_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 armyColor = 4;</code>
+       *
+       * <pre>
+       *兵种颜色id
+       * </pre>
+       */
+      public Builder clearArmyColor() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        armyColor_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required string icon = 5;
+      private java.lang.Object icon_ = "";
+      /**
+       * <code>required string icon = 5;</code>
+       *
+       * <pre>
+       *兵种图标
+       * </pre>
+       */
+      public boolean hasIcon() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>required string icon = 5;</code>
+       *
+       * <pre>
+       *兵种图标
+       * </pre>
+       */
+      public java.lang.String getIcon() {
+        java.lang.Object ref = icon_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          icon_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string icon = 5;</code>
+       *
+       * <pre>
+       *兵种图标
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getIconBytes() {
+        java.lang.Object ref = icon_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          icon_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string icon = 5;</code>
+       *
+       * <pre>
+       *兵种图标
+       * </pre>
+       */
+      public Builder setIcon(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        icon_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string icon = 5;</code>
+       *
+       * <pre>
+       *兵种图标
+       * </pre>
+       */
+      public Builder clearIcon() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        icon_ = getDefaultInstance().getIcon();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string icon = 5;</code>
+       *
+       * <pre>
+       *兵种图标
+       * </pre>
+       */
+      public Builder setIconBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        icon_ = value;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:BattleArmy)
+    }
+
+    static {
+      defaultInstance = new BattleArmy(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:BattleArmy)
+  }
+
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_ErrorMessage_descriptor;
   private static
@@ -8812,6 +12460,21 @@ public final class MessagePtoto {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_PlayerMessage_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_StartBattleReq_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_StartBattleReq_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_StartBattleRes_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_StartBattleRes_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_BattleArmy_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_BattleArmy_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -8830,20 +12493,29 @@ public final class MessagePtoto {
       "on0\030\001 \002(\005\022\021\n\tposition1\030\002 \002(\005\022\021\n\tposition" +
       "2\030\003 \002(\005\022\021\n\tposition3\030\004 \002(\005\022\021\n\tposition4\030" +
       "\005 \002(\005\022\021\n\tposition5\030\006 \002(\005\022\033\n\005armys\030\007 \003(\0132" +
-      "\014.ArmyMessage\"\225\001\n\013ArmyMessage\022\016\n\006armyId\030",
-      "\001 \002(\005\022\020\n\010armyType\030\002 \002(\005\022\014\n\004name\030\003 \002(\t\022\013\n" +
-      "\003atk\030\004 \002(\005\022\013\n\003def\030\005 \002(\005\022\r\n\005round\030\006 \002(\005\022\r" +
-      "\n\005level\030\007 \002(\005\022\020\n\010describe\030\010 \002(\t\022\014\n\004icon\030" +
-      "\t \002(\t\"\204\001\n\020FormationSaveReq\022\021\n\tposition0\030" +
-      "\001 \002(\005\022\021\n\tposition1\030\002 \002(\005\022\021\n\tposition2\030\003 " +
-      "\002(\005\022\021\n\tposition3\030\004 \002(\005\022\021\n\tposition4\030\005 \002(" +
-      "\005\022\021\n\tposition5\030\006 \002(\005\"\022\n\020FormationSaveRes" +
-      "\"\020\n\016BattleMatchReq\"\020\n\016BattleMatchRes\"E\n\016" +
-      "BattleMatchSyn\022\017\n\007success\030\001 \002(\005\022\"\n\nplaye" +
-      "rInfo\030\002 \001(\0132\016.PlayerMessage\"?\n\rPlayerMes",
-      "sage\022\020\n\010playerId\030\001 \002(\005\022\014\n\004name\030\002 \002(\t\022\016\n\006" +
-      "racist\030\003 \002(\005B(\n\030com.yim.message.pix.game" +
-      "B\014MessagePtoto"
+      "\014.ArmyMessage\"\213\001\n\013ArmyMessage\022\026\n\016armyTem",
+      "plateId\030\001 \002(\005\022\014\n\004name\030\002 \002(\t\022\013\n\003atk\030\003 \002(\005" +
+      "\022\013\n\003def\030\004 \002(\005\022\r\n\005round\030\005 \002(\005\022\r\n\005level\030\006 " +
+      "\002(\005\022\020\n\010describe\030\007 \002(\t\022\014\n\004icon\030\010 \002(\t\"\204\001\n\020" +
+      "FormationSaveReq\022\021\n\tposition0\030\001 \002(\005\022\021\n\tp" +
+      "osition1\030\002 \002(\005\022\021\n\tposition2\030\003 \002(\005\022\021\n\tpos" +
+      "ition3\030\004 \002(\005\022\021\n\tposition4\030\005 \002(\005\022\021\n\tposit" +
+      "ion5\030\006 \002(\005\"\022\n\020FormationSaveRes\"\020\n\016Battle" +
+      "MatchReq\"\020\n\016BattleMatchRes\"E\n\016BattleMatc" +
+      "hSyn\022\017\n\007success\030\001 \002(\005\022\"\n\nplayerInfo\030\002 \001(" +
+      "\0132\016.PlayerMessage\"?\n\rPlayerMessage\022\020\n\010pl",
+      "ayerId\030\001 \002(\005\022\014\n\004name\030\002 \002(\t\022\016\n\006racist\030\003 \002" +
+      "(\005\"\020\n\016StartBattleReq\"\374\001\n\016StartBattleRes\022" +
+      "\r\n\005maxHp\030\001 \002(\005\022\n\n\002hp\030\002 \002(\005\022\020\n\010maxMagic\030\003" +
+      " \002(\005\022\r\n\005magic\030\004 \002(\005\022\020\n\010idleArmy\030\005 \002(\005\022\017\n" +
+      "\007maxHp_e\030\006 \002(\005\022\014\n\004hp_e\030\007 \002(\005\022\022\n\nmaxMagic" +
+      "_e\030\010 \002(\005\022\017\n\007magic_e\030\t \002(\005\022\022\n\nidleArmy_e\030" +
+      "\n \002(\005\022 \n\013battleArmys\030\013 \003(\0132\013.BattleArmy\022" +
+      "\"\n\rbattleArmys_e\030\014 \003(\0132\013.BattleArmy\"W\n\nB" +
+      "attleArmy\022\t\n\001x\030\001 \002(\005\022\t\n\001y\030\002 \002(\005\022\022\n\ninsta" +
+      "nceId\030\003 \002(\005\022\021\n\tarmyColor\030\004 \002(\005\022\014\n\004icon\030\005",
+      " \002(\tB(\n\030com.yim.message.pix.gameB\014Messag" +
+      "ePtoto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -8897,7 +12569,7 @@ public final class MessagePtoto {
           internal_static_ArmyMessage_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_ArmyMessage_descriptor,
-              new java.lang.String[] { "ArmyId", "ArmyType", "Name", "Atk", "Def", "Round", "Level", "Describe", "Icon", });
+              new java.lang.String[] { "ArmyTemplateId", "Name", "Atk", "Def", "Round", "Level", "Describe", "Icon", });
           internal_static_FormationSaveReq_descriptor =
             getDescriptor().getMessageTypes().get(8);
           internal_static_FormationSaveReq_fieldAccessorTable = new
@@ -8934,6 +12606,24 @@ public final class MessagePtoto {
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_PlayerMessage_descriptor,
               new java.lang.String[] { "PlayerId", "Name", "Racist", });
+          internal_static_StartBattleReq_descriptor =
+            getDescriptor().getMessageTypes().get(14);
+          internal_static_StartBattleReq_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_StartBattleReq_descriptor,
+              new java.lang.String[] { });
+          internal_static_StartBattleRes_descriptor =
+            getDescriptor().getMessageTypes().get(15);
+          internal_static_StartBattleRes_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_StartBattleRes_descriptor,
+              new java.lang.String[] { "MaxHp", "Hp", "MaxMagic", "Magic", "IdleArmy", "MaxHpE", "HpE", "MaxMagicE", "MagicE", "IdleArmyE", "BattleArmys", "BattleArmysE", });
+          internal_static_BattleArmy_descriptor =
+            getDescriptor().getMessageTypes().get(16);
+          internal_static_BattleArmy_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_BattleArmy_descriptor,
+              new java.lang.String[] { "X", "Y", "InstanceId", "ArmyColor", "Icon", });
           return null;
         }
       };

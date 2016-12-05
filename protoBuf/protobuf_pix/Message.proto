@@ -28,7 +28,7 @@ message FormationReq{
 
 //当前阵型 = 105
 message FormationRes{
-	required int32 position0 = 1;//位置0兵种id
+	required int32 position0 = 1;
 	required int32 position1 = 2;
 	required int32 position2 = 3;
 	required int32 position3 = 4;
@@ -38,21 +38,20 @@ message FormationRes{
 }
 //兵种
 message ArmyMessage{
-	required int32 armyId = 1;
-	required int32 armyType = 2;
-	required string name = 3;
-	required int32 atk = 4;
-	required int32 def = 5;
-	required int32 round = 6;
-	required int32 level = 7;
-	required string describe = 8;
-	required string icon = 9;//兵种图标
+	required int32 armyTemplateId = 1;//兵种模板id
+	required string name = 2;
+	required int32 atk = 3;
+	required int32 def = 4;
+	required int32 round = 5;
+	required int32 level = 6;
+	required string describe = 7;
+	required string icon = 8;//兵种图标
 	
 }
 
 //保存阵型请求 = 106
 message FormationSaveReq{
-	required int32 position0 = 1;//位置0兵种id
+	required int32 position0 = 1;
 	required int32 position1 = 2;
 	required int32 position2 = 3;
 	required int32 position3 = 4;
@@ -84,6 +83,53 @@ message PlayerMessage{
 	required string name = 2;//玩家名字
 	required int32 racist = 3;//种族
 }
+
+//开始战斗 = 111
+message StartBattleReq{
+}
+//开始战斗 = 112
+message StartBattleRes{
+	required int32 maxHp = 1;//最大血量
+	required int32 hp = 2;//当前血量
+	required int32 maxMagic = 3;//最大魔力值
+	required int32 magic = 4;//魔力值
+	required int32 idleArmy = 5;//空闲兵数量
+	required int32 maxHp_e = 6;//对手最大血量
+	required int32 hp_e = 7;//对手当前血量
+	required int32 maxMagic_e = 8;//对手最大魔力值
+	required int32 magic_e = 9;//对手魔力值
+	required int32 idleArmy_e = 10;//对手空闲兵数量
+	repeated BattleArmy battleArmys = 11;//兵种信息
+	repeated BattleArmy battleArmys_e = 12;//对手兵种信息
+}
+message BattleArmy{
+	required int32 x = 1;
+	required int32 y = 2;
+	required int32 instanceId = 3;//兵种实例id
+	required int32 armyColor = 4;//兵种颜色id
+	required string icon = 5;//兵种图标
+}
+
+//请求移动士兵 = 113
+message MoveArmyReq{
+	required int32 fromx = 1;//移动开始的x坐标
+	required int32 tox = 2;//目标x坐标
+}
+//请求删除士兵 = 114
+message RemoveArmyReq{
+	required int32 targetx = 1;
+	required int32 targety = 2;
+}
+
+//释放技能 = 115
+message PlayerAtkReq{
+}
+
+//战场效果变化 = 120
+message BattleChangeSyn{
+	
+}
+
 
 
 

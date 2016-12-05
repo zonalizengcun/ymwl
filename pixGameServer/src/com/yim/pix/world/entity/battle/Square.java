@@ -9,14 +9,18 @@ import java.util.Map;
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import org.apache.commons.lang.ObjectUtils.Null;
+
+import com.yim.message.pix.game.MessagePtoto.BattleArmy;
 import com.yim.pix.world.World;
 import com.yim.pix.world.entity.Player;
 import com.yim.pix.world.entity.Racist;
 
+import io.netty.channel.epoll.AbstractEpollStreamChannel;
 import jxl.read.biff.BiffException;
 
 /**
- * Õ½¶·ÖĞµÄÕóÓª
+ * é˜µå‹ä¿¡æ¯
  * 
  * @author lizengcun
  *
@@ -33,10 +37,27 @@ public class Square {
 	private AtomicInteger poolInstance = new AtomicInteger(0);
 	
 	private Player player;
+	
+	/**
+	 * é­”åŠ›å€¼
+	 */
+	private int magic;
+	
+	/**
+	 * è¡€é‡
+	 */
+	private int hp;
+	
 
 	public Square(Player player) {
 		this.armyMap = new HashMap<>();
 		this.player = player;
+	}
+	/**
+	 * åˆå§‹åŒ–é˜µå‹ä¿¡æ¯
+	 */
+	public void initSquare(){
+		this.initArmys();
 	}
 	
 	public Map<Integer, Army> getArmyMap(){
@@ -44,13 +65,29 @@ public class Square {
 	}
 	
 	/**
-	 * ³õÊ¼»¯Ê¿±ø 
+	 * è·å–å½“å‰è¡€é‡
+	 * @return
 	 */
-	public void initArmys(){
+	public int getHp(){
+		return hp;
+	}
+	
+	/**
+	 * è·å–å½“å‰æ§çº¿å£«å…µæ•°é‡
+	 * @return
+	 */
+	public int getIdleArmy(){
+		return 48 - this.armyMap.size();
+	}
+	
+	/**
+	 * åˆå§‹åŒ–å…µç§ä¿¡æ¯
+	 */
+	private void initArmys(){
 		Racist racist = player.getRacist();
 		Random random = new Random();
 		List<Army> armys = new ArrayList<>();
-		//ÏÈË¢27¸öµÍ¼¶±ø
+		//å…ˆä»æ™®é€šå…µä¸­éšæœº27ä¸ª
 		for(int i=0;i<27;i++){
 			int position = random.nextInt(3);
 			int armyTempId = racist.getPosition(position);
@@ -62,9 +99,9 @@ public class Square {
 			this.armyMap.put(army.getInstanceId(), army);
 		}
 
-		//´Ó¸ß¼¶±øºÍµÍ¼¶±øÀïËæ»ú5¸ö±ø
+		//ä»æ™®é€šå…µå’Œé«˜çº§å…µä¸­éšæœº5ä¸ª
 		for (int i = 0; i < 5; i++) {
-			int position = random.nextInt(5);//ÕóĞÍÖĞµÄÎ»ÖÃ
+			int position = random.nextInt(5);//ï¿½ï¿½ï¿½ï¿½ï¿½Ğµï¿½Î»ï¿½ï¿½
 			int armyTempId = racist.getPosition(position);
 			if (armyTempId == -1) {
 				position = random.nextInt(3);
@@ -73,19 +110,19 @@ public class Square {
 			Army army = new Army();
 			army.setInstanceId(poolInstance.getAndIncrement());
 			army.setTemplateId(armyTempId);
-			if (army.getTemplate().level > 0) {//Èç¹ûÊÇ¸ß¼¶±ø Ëæ»úÒ»ÖÖÑÕÉ«
+			if (army.getTemplate().level > 0) {//ï¿½ï¿½ï¿½ï¿½Ç¸ß¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½É«
 				army.setColor(random.nextInt(3));
 			}
 			armys.add(army);
 			this.armyMap.put(army.getInstanceId(), army);
 		}
 		Collections.shuffle(armys);
-		//ÉèÖÃ±øµÄÎ»ÖÃ
-		this.initArmyXY(random,armys);
 		
+		this.initArmyXY(random,armys);
+		this.checkColor();
 	}
 	/**
-	 * ¸øÊ¿±øÉèÖÃxy×ø±ê
+	 * è®¾ç½®xyåæ ‡
 	 */
 	private void initArmyXY(Random random,List<Army> armys){
 		for(Army army : armys){
@@ -95,7 +132,77 @@ public class Square {
 	}
 	
 	/**
-	 * ½«xyÌî³äµ½Êı×éÖĞ
+	 * æ£€æŸ¥å£«å…µé¢œè‰² æ˜¯å¦å¯ä»¥ç»„æˆç‰¹æ•ˆ
+	 */
+	private void checkColor(){
+		int color1 = -1;
+		int color2 = -1;
+		for(Army[] armys : x_Armies){
+			for(Army army : armys){
+				if (army == null) {
+					color1 = -1;
+					color2 = -1;
+					continue;
+				}
+				if (army.getTemplate().level != 0) {
+					color1 = -1;
+					color2 = -1;
+					continue;
+				}
+				if (color1 == army.getColor() && color2 == army.getColor()) {
+					int position = (color1+1)%3;
+					int templateId = this.player.getRacist().getPosition(position);
+					army.setTemplateId(templateId);
+					army.setTemplate(World.getInstance().getArmyModel().getArmyTemplate(templateId));
+					army.setColor(position);
+				}
+				color1 = color2;
+				color2 = army.getColor();
+			}
+		}
+		color1 = -1;
+		color2 = -1;
+		for(Army[] armys : y_Armies){
+			for(Army army : armys){
+				if (army == null) {
+					color1 = -1;
+					color2 = -1;
+					continue;
+				}
+				if (army.getTemplate().level != 0) {
+					color1 = -1;
+					color2 = -1;
+					continue;
+				}
+				if (color1 == army.getColor() && color2 == army.getColor()) {
+					int position = (color1+1)%3;
+					int templateId = this.player.getRacist().getPosition(position);
+					army.setTemplateId(templateId);
+					army.setTemplate(World.getInstance().getArmyModel().getArmyTemplate(templateId));
+					army.setColor(position);
+				}
+				color1 = color2;
+				color2 = army.getColor();
+			}
+		}
+		for(Army army : this.armyMap.values()){
+			if (army.getTemplate().level != 0) {
+				if ( army.getY() >= 3) {
+					continue;
+				}
+				Army next = x_Armies[army.getX()][army.getY()+2];
+				Army next1 = x_Armies[army.getX()][army.getY()+2];
+				if (next!=null && next1 != null ) {
+					if (next.getColor() == next1.getColor()&&next.getColor() == army.getColor()) {
+						army.setColor((army.getColor()+1)%3);
+					}
+				}
+			}
+		}
+	}
+	
+	/**
+	 * å°†å£«å…µæ·»åŠ åˆ°æ•°ç»„
 	 * @param army
 	 */
 	private void cacheXyArmy(Army army){
@@ -119,13 +226,13 @@ public class Square {
 		}
 	}
 	/**
-	 * ÉèÖÃxy×ø±ê
+	 * è®¾ç½®å£«å…µxyåæ ‡
 	 * @param random
 	 * @param army
 	 */
 	private void armySetXY(Random random ,Army army){
-		short x = (short)random.nextInt(8);//Ê¿±øµÄx×ø±ê
-		short size = getYSize(x);//x¶ÔÓ¦µÄÒ»ÁĞÓĞ¶àÉÙ¸öÊ¿±ø
+		short x = (short)random.nextInt(8);//Ê¿ï¿½ï¿½ï¿½ï¿½xï¿½ï¿½ï¿½ï¿½
+		short size = getYSize(x);//xï¿½ï¿½Ó¦ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ğ¶ï¿½ï¿½Ù¸ï¿½Ê¿ï¿½ï¿½
 		while(size>=6){
 			x = (short)((x+1)%8);
 			size = getYSize(x);
@@ -135,7 +242,7 @@ public class Square {
 		if (army.getTemplate().level == 0) {
 			return;
 		}
-		//Èç¹ûÊÇ¸ß¼¶±ø ĞèÒª¼ì²éµ±Ç°Î»ÖÃÊÇ·ñºÏÊÊ
+		//æ£€æŸ¥æ˜¯å¦èƒ½å®¹çº³é«˜çº§å£«å…µ
 		boolean match = isMatch(army);
 		if (!match) {
 			short tempSize = 0;
@@ -149,7 +256,7 @@ public class Square {
 				}
 			}
 		}
-		if (!match) {//Èç¹û»¹ÕÒ²»µ½Î»ÖÃ£¬·ÅÆú¡­¡­»»¸öÆÕÍ¨±ø
+		if (!match) {//ä¾ç„¶ä¸èƒ½å®¹çº³ ï¼ŒæŠŠé«˜çº§å£«å…µç¼“å­˜å°å…µâ€¦â€¦
 			army.setX(x);
 			army.setY(size);
 			int position = random.nextInt(3);
@@ -162,7 +269,7 @@ public class Square {
 	}
 	
 	/**
-	 * ÅĞ¶ÏÒ»¸ö¸ß¼¶Ê¿±øµÄÎ»ÖÃÊÇ·ñºÏÊÊ£¬ÊÇ·ñÄÜ¹»ÈİÏÂ
+	 * æ˜¯å¦å¯ä»¥å®¹çº³
 	 * @param army
 	 * @return
 	 */
@@ -182,7 +289,7 @@ public class Square {
 	}
 	
 	/**
-	 * ¸ù¾İxÖá»ñÈ¡yµÄ¸öÊı
+	 * æŸä¸€åˆ—æœ‰å¤šå°‘ä¸ªå£«å…µ
 	 * @param x
 	 * @return
 	 */
@@ -196,6 +303,14 @@ public class Square {
 			size++;
 		}
 		return size;
+	}
+	
+	/**
+	 * è·å–é­”åŠ›å€¼
+	 * @return
+	 */
+	public int getMagic(){
+		return this.magic;
 	}
 	
 	public static void main(String[] args) throws BiffException, IOException{
@@ -228,4 +343,23 @@ public class Square {
 		}
 	}
 	
+	
+	public List<BattleArmy> buildBattleArmys(){
+		List<BattleArmy> battleArmys = new ArrayList<>();
+		for(Army[] armys : y_Armies){
+			for(Army army : armys){
+				if (army == null) {
+					continue;
+				}
+				BattleArmy.Builder builder = BattleArmy.newBuilder();
+				builder.setX(army.getX());
+				builder.setY(army.getY());
+				builder.setIcon(army.getTemplate().icon);
+				builder.setArmyColor(army.getColor());
+				builder.setInstanceId(army.getInstanceId());
+				battleArmys.add(builder.build());
+			}
+		}
+		return battleArmys;
+	}
 }

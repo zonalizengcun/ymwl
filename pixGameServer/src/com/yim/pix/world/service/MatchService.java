@@ -16,14 +16,14 @@ import com.yim.service.ServiceContainer;
 import com.yim.util.DateUtil;
 
 /**
- * Õ½¶·Æ¥Åä
+ * Õ½ï¿½ï¿½Æ¥ï¿½ï¿½
  * @author admin
  *
  */
 public class MatchService implements IService {
 	
 	/**
-	 * Æ¥Åä³¬Ê±Ê±¼ä
+	 * åŒ¹é…è¶…æ—¶æ—¶é—´
 	 */
 	public static final int TIMEOUT = 40;
 	
@@ -47,7 +47,7 @@ public class MatchService implements IService {
 				match();
 			}
 		}, "battleMatch");
-
+		thread.start();
 	}
 
 	@Override
@@ -63,10 +63,9 @@ public class MatchService implements IService {
 	
 	private void match(){
 		while(true){
-			
 			synchronized (matcherMap) {
 				Iterator<Map.Entry<Integer, Matcher>> iterator = matcherMap.entrySet().iterator();
-				while (iterator.hasNext()) {//É¾³ıÆ¥Åä³¬Ê±µÄÍæ¼Ò
+				while (iterator.hasNext()) {//æ£€æŸ¥åŒ¹é…è¶…æ—¶
 					Map.Entry<Integer, Matcher> entry = iterator.next();
 					Matcher matcher = entry.getValue();
 					if (DateUtil.getSecondStamp() - matcher.getStartTime() >= TIMEOUT) {
@@ -74,11 +73,11 @@ public class MatchService implements IService {
 						this.matchFail(entry.getKey());
 					}
 				}
-				if (matcherMap.size() < 2) {//ÈËÊı²»×ã
+				if (matcherMap.size() < 2) {//äººæ•°ä¸è¶³
 					return;
 				}
 				List<Matcher> tempList = new ArrayList<>(matcherMap.values());
-				if (matcherMap.size() %2 == 1) {//ÓĞÆæÊı¸öÍæ¼Ò ²»Æ¥Åä×îºóÒ»¸öÍæ¼Ò
+				if (matcherMap.size() %2 == 1) {//æ•°é‡å¿…é¡»æ˜¯å¶æ•°
 					tempList.remove(tempList.size()-1);
 				}
 				for(int i=0;i<tempList.size();i=i+2){
@@ -98,7 +97,7 @@ public class MatchService implements IService {
 	}
 	
 	/**
-	 * Æ¥Åä³É¹¦
+	 * åŒ¹é…æˆåŠŸ
 	 * @param matcher1
 	 * @param matcher2
 	 */
@@ -117,7 +116,7 @@ public class MatchService implements IService {
 	}
 	
 	/**
-	 * Í¨ÖªÍæ¼ÒÆ¥ÅäÊ§°Ü
+	 * åŒ¹é…å¤±è´¥
 	 * @param playerId
 	 */
 	private void matchFail(int playerId){

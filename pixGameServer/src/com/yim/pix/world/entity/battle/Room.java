@@ -3,27 +3,34 @@ package com.yim.pix.world.entity.battle;
 import com.yim.pix.world.entity.Player;
 
 /**
- * ·¿¼ä
+ * å¯¹æˆ˜æˆ¿é—´
  * @author admin
  *
  */
 public class Room {
 
+	
 	private int roomId;
+	
+	private volatile boolean start;
 	
 	private Player player1;
 	
 	private Player player2;
 	
 	/**
-	 * ºì·½
+	 * çº¢æ–¹
 	 */
 	private Square redSquare;
 	
 	/**
-	 * À¶·½
+	 * è“æ–¹
 	 */
 	private Square blueSquare;
+	
+	private int maxHp = 100;
+	
+	private int maxMagic = 30;
 	
 	public Room(int roomId) {
 		this(roomId,null,null);
@@ -35,8 +42,35 @@ public class Room {
 		this.setPlayer2(player2);
 		this.redSquare = new Square(player1);
 		this.blueSquare = new Square(player2);
-		this.init();
 	}
+	
+	/**
+	 * åˆå§‹åŒ–æˆ˜æ–—
+	 */
+	public void initRoom(){
+		if (!this.start) {
+			this.redSquare.initSquare();
+			this.blueSquare.initSquare();
+			this.start = true;
+		}
+	}
+	
+	public Square getSquare(int playerId){
+		if (playerId == player1.getId()) {
+			return this.redSquare;
+		}else {
+			return this.blueSquare;
+		}
+	}
+	
+	public Square getESquare(int playerId){
+		if (playerId == player1.getId()) {
+			return blueSquare;
+		}else{
+			return this.redSquare;
+		}
+	}
+	
 
 	public int getRoomId() {
 		return roomId;
@@ -62,10 +96,6 @@ public class Room {
 		this.blueSquare = blueSquare;
 	}
 	
-	//³õÊ¼»¯·¿¼ä
-	private void init() {
-		
-	}
 
 	public Player getPlayer2() {
 		return player2;
@@ -81,6 +111,22 @@ public class Room {
 
 	public void setPlayer1(Player player1) {
 		this.player1 = player1;
+	}
+
+	public int getMaxHp() {
+		return maxHp;
+	}
+
+	public void setMaxHp(int maxHp) {
+		this.maxHp = maxHp;
+	}
+
+	public int getMaxMagic() {
+		return maxMagic;
+	}
+
+	public void setMaxMagic(int maxMagic) {
+		this.maxMagic = maxMagic;
 	}
 	
 }

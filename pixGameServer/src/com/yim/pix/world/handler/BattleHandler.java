@@ -6,18 +6,25 @@ import javax.persistence.criteria.CriteriaBuilder.Case;
 
 import com.google.protobuf.MessageLite;
 import com.yim.message.pix.game.GameCodeMaper;
+import com.yim.message.pix.game.MessagePtoto.BattleArmy;
+import com.yim.message.pix.game.MessagePtoto.BattleMatchRes;
 import com.yim.message.pix.game.MessagePtoto.FormationRes;
 import com.yim.message.pix.game.MessagePtoto.FormationSaveReq;
 import com.yim.message.pix.game.MessagePtoto.FormationSaveRes;
+import com.yim.message.pix.game.MessagePtoto.StartBattleRes;
 import com.yim.net.packet.PacketHandler;
+import com.yim.net.protocol.OpCodeMapper;
 import com.yim.net.session.ClientSession;
 import com.yim.pix.world.World;
 import com.yim.pix.world.entity.Player;
 import com.yim.pix.world.entity.Racist;
+import com.yim.pix.world.entity.battle.Room;
+import com.yim.pix.world.entity.battle.Square;
 import com.yim.pix.world.model.RacistType;
 import com.yim.pix.world.model.army.ArmyModel;
 import com.yim.pix.world.model.army.ArmyTemplate;
 import com.yim.pix.world.service.BattleService;
+import com.yim.pix.world.service.MatchService;
 import com.yim.service.ServiceContainer;
 
 public class BattleHandler implements PacketHandler{
@@ -34,16 +41,20 @@ public class BattleHandler implements PacketHandler{
 		case GameCodeMaper.BATTLEMATCHREQ:
 			this.battleMatch(message, session);
 			break;
+		case GameCodeMaper.STARTBATTLEREQ:
+			this.startBattle(message, session);
+			break;
 		}
 	}
 
 	@Override
 	public int[] getOpcodes() {
-		return new int[]{GameCodeMaper.FORMATIONREQ,GameCodeMaper.FORMATIONSAVEREQ,GameCodeMaper.BATTLEMATCHREQ};
+		return new int[]{GameCodeMaper.FORMATIONREQ,GameCodeMaper.FORMATIONSAVEREQ,
+				GameCodeMaper.BATTLEMATCHREQ,GameCodeMaper.STARTBATTLEREQ};
 	}
 	
 	/**
-	 * ªÒ»°’Û–Õ
+	 * 
 	 * @param message
 	 * @param session
 	 */
@@ -68,7 +79,7 @@ public class BattleHandler implements PacketHandler{
 	}
 	
 	/**
-	 * ±£¥Ê’Û–Õ
+	 * ‰øùÂ≠òÈòµÂûã
 	 */
 	public void saveFormation(MessageLite message, ClientSession session){
 		Player player = (Player)session.getClient();
@@ -86,14 +97,50 @@ public class BattleHandler implements PacketHandler{
 	}
 	
 	/**
-	 * ∆•≈‰’Ω∂∑
+	 * ÊàòÊñóÂåπÈÖç
 	 * @param message
 	 * @param session
 	 */
 	public void battleMatch(MessageLite message, ClientSession session){
-		
+		Player player = (Player)session.getClient();
+		if (player != null) {
+			MatchService matchService = ServiceContainer.getInstance().get(MatchService.class);
+			matchService.addMatcher(player.getId());
+			BattleMatchRes.Builder response = BattleMatchRes.newBuilder();
+			session.send(GameCodeMaper.BATTLEMATCHRES, response.build());
+		}
 	}
 	
+	/**
+	 * ÂºÄÂßãÊàòÊñó
+	 * @param message
+	 * @param session
+	 */
+	public void startBattle(MessageLite message, ClientSession session){
+		Player player = (Player)session.getClient();
+		if (player!=null) {
+			BattleService battleService = ServiceContainer.getInstance().get(BattleService.class);
+			Racist racist = player.getRacist();
+			Room room = battleService.getRoom(racist.getRoomId());
+			room.initRoom();
+			StartBattleRes.Builder respones = StartBattleRes.newBuilder();
+			respones.setMaxHp(room.getMaxHp());
+			respones.setMaxHpE(room.getMaxHp());
+			Square square = room.getSquare(player.getId());
+			Square eSquare = room.getESquare(player.getId());
+			respones.setHp(square.getHp());
+			respones.setHpE(eSquare.getHp());
+			respones.setMaxMagic(room.getMaxMagic());
+			respones.setMaxMagicE(room.getMaxMagic());
+			respones.setMagic(square.getMagic());
+			respones.setMagic(eSquare.getMagic());
+			respones.setIdleArmy(square.getIdleArmy());
+			respones.setIdleArmyE(eSquare.getIdleArmy());
+			respones.addAllBattleArmys(square.buildBattleArmys());
+			respones.addAllBattleArmysE(eSquare.buildBattleArmys());
+			session.send(GameCodeMaper.STARTBATTLERES, respones.build());
+		}
+	}
 	
 
 }

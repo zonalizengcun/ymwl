@@ -11,7 +11,7 @@ import org.hibernate.annotations.Type;
 import com.yim.pix.world.entity.premryKey.RacistPK;
 
 /**
- * 种族
+ * 锟斤拷锟斤拷
  * 
  * @author lizengcun
  *
@@ -30,7 +30,7 @@ public class Racist {
 	private HeroContainer heroContainer;
 	
 	/**
-	 * 5个兵种位置对应的5个兵种 
+	 * 闃靛瀷涓殑鑻遍泟妯℃澘id
 	 */
 	private int position0 = -1;
 	private int position1 = -1;
@@ -38,6 +38,8 @@ public class Racist {
 	private int position3 = -1;
 	private int position4 = -1;
 	
+	
+	private int roomId;
 	
 	
 
@@ -122,6 +124,14 @@ public class Racist {
 		default:
 			return -1;
 		}
+	}
+
+	public int getRoomId() {
+		return roomId;
+	}
+
+	public void setRoomId(int roomId) {
+		this.roomId = roomId;
 	}
 
 	
