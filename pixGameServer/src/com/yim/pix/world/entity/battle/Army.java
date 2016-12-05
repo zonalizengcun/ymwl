@@ -15,9 +15,9 @@ public class Army {
 	//模板id
 	private int templateId;
 	
-	private int x;
+	private short x;
 	
-	private int y;
+	private short y;
 	//缓存兵种模板
 	private ArmyTemplate armyTemplate;
 	//士兵颜色，跟阵型位置有关 0 1 2
@@ -49,6 +49,10 @@ public class Army {
 		}
 		return armyTemplate;
 	}
+	
+	public void setTemplate(ArmyTemplate armyTemplate){
+		this.armyTemplate = armyTemplate;
+	}
 
 	public int getColor() {
 		return color;
@@ -58,19 +62,19 @@ public class Army {
 		this.color = color;
 	}
 
-	public int getX() {
+	public short getX() {
 		return x;
 	}
 
-	public void setX(int x) {
+	public void setX(short x) {
 		this.x = x;
 	}
 
-	public int getY() {
+	public short getY() {
 		return y;
 	}
 
-	public void setY(int y) {
+	public void setY(short y) {
 		this.y = y;
 	}
 }
