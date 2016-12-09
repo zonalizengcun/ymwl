@@ -46,7 +46,7 @@ public class PlayerHandler implements PacketHandler {
 	}
 	
 	/**
-	 * �������� ���ط�����ʱ��
+	 * 处理心跳包
 	 * @param message
 	 * @param session
 	 */
@@ -89,7 +89,7 @@ public class PlayerHandler implements PacketHandler {
 		response.setName(name);
 		response.setPlayerId(player.getId());
 		session.send(GameCodeMaper.LOGINRES, response.build());
-		log.info("[LOGOUT]PLAYERID["+player.getId()+"]PLAYERNAME["+player.getName()+"]");
+		log.info("[LOGOIN]PLAYERID["+player.getId()+"]PLAYERNAME["+player.getName()+"]");
 	}
 	
 	/**
