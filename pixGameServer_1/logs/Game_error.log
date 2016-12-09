@@ -1,0 +1,10 @@
+2016-12-10 00:06:55  [ nioEventLoopGroup-4-7:1309582 ] - [ ERROR ]  
+2016-12-10 00:06:55  [ nioEventLoopGroup-4-7:1309586 ] - [ ERROR ]  Adjusted frame length exceeds 204800: 1633751045 - discarded
+2016-12-10 00:09:29  [ nioEventLoopGroup-4-1:95007 ] - [ ERROR ]  
+2016-12-10 00:09:29  [ nioEventLoopGroup-4-1:95008 ] - [ ERROR ]  Adjusted frame length exceeds 204800: 1633751044 - discarded
+2016-12-10 00:10:11  [ nioEventLoopGroup-4-2:136366 ] - [ ERROR ]  
+2016-12-10 00:10:11  [ nioEventLoopGroup-4-2:136367 ] - [ ERROR ]  Adjusted frame length exceeds 204800: 1633751044 - discarded
+2016-12-10 00:13:13  [ nioEventLoopGroup-4-4:318895 ] - [ ERROR ]  
+2016-12-10 00:13:13  [ nioEventLoopGroup-4-4:318895 ] - [ ERROR ]  Adjusted frame length exceeds 204800: 1633751044 - discarded
+2016-12-10 00:29:58  [ pool-1-logic-1:22491 ] - [ ERROR ]  Duplicate entry '2-0' for key 'PRIMARY'
+2016-12-10 00:40:35  [ pool-1-logic-1:415786 ] - [ ERROR ]  Duplicate entry '3-0' for key 'PRIMARY'

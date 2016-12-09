@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<!--   <property name="connection.url">jdbc:mysql://localhost/mzcity10</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">root</property>-->
+		
+		<property name="connection.url">jdbc:mysql://127.0.0.1:3306/pix_game</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">ymwl126@126.com</property>
+	
+		<!--
+    	<property name="connection.url">jdbc:mysql://221.179.216.55:7011/mzc_91_01</property>
+		<property name="connection.username">mzc</property>
+		<property name="connection.password">3VQ|i6-w</property>
+	   -->
+		<!--<property name="dialect">org.hibernate.dialect.HSQLDialect</property> 
+		<property name="connection.driver_class">org.hsqldb.jdbcDriver</property> 
+		<property name="connection.url">jdbc:hsqldb:hsql://localhost/</property> 
+		<property name="connection.username">SA</property> 
+		<property name="connection.password"/>-->
+
+        <property name="connection.useUnicode">true</property>
+        <property name="connection.characterEncoding">UTF-8</property>
+
+		<property name="hibernate.connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+		<property name="c3p0.min_size">5</property>
+		<property name="c3p0.max_size">30</property>
+		<property name="c3p0.time_out">1800</property> <!-- seconds --><!-- default: 0 -->
+		<property name="c3p0.max_statement">50</property> <!-- default: 0 -->
+		<property name="c3p0.acquire_increment">1</property> <!-- default: 1 -->
+		<property name="c3p0.idle_test_period">120</property>  <!-- seconds --><!-- default: 0 -->
+		<property name="c3p0.validate">true</property>
+
+
+
+		<property name="current_session_context_class">thread</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="show_sql">true</property>
+		<property name="format_sql">true</property>
+
+		<mapping class="com.yim.pix.world.entity.Player" />
+		<mapping class="com.yim.pix.world.entity.Racist"/>
+	</session-factory>
+</hibernate-configuration>
