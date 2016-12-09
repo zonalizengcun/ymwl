@@ -9,14 +9,13 @@ import java.util.Map;
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import org.apache.commons.lang.ObjectUtils.Null;
-
+import com.yim.message.pix.game.MessagePtoto.AtkQueueMessage;
 import com.yim.message.pix.game.MessagePtoto.BattleArmy;
 import com.yim.pix.world.World;
 import com.yim.pix.world.entity.Player;
 import com.yim.pix.world.entity.Racist;
+import com.yim.pix.world.exception.BattleException;
 
-import io.netty.channel.epoll.AbstractEpollStreamChannel;
 import jxl.read.biff.BiffException;
 
 /**
@@ -47,6 +46,11 @@ public class Square {
 	 * 血量
 	 */
 	private int hp;
+	
+	/**
+	 * 所有攻击队列
+	 */
+	private Map<Integer,AtkQueue> atkQueues = new HashMap<>();
 	
 
 	public Square(Player player) {
@@ -138,6 +142,8 @@ public class Square {
 		int color1 = -1;
 		int color2 = -1;
 		for(Army[] armys : x_Armies){
+			color1 = -1;
+			color2 = -1;
 			for(Army army : armys){
 				if (army == null) {
 					color1 = -1;
@@ -160,9 +166,9 @@ public class Square {
 				color2 = army.getColor();
 			}
 		}
-		color1 = -1;
-		color2 = -1;
 		for(Army[] armys : y_Armies){
+			color1 = -1;
+			color2 = -1;
 			for(Army army : armys){
 				if (army == null) {
 					color1 = -1;
@@ -361,5 +367,199 @@ public class Square {
 			}
 		}
 		return battleArmys;
+	}
+	
+	/**
+	 * 检查队形中所有队列
+	 */
+	public void checkQueue(){
+		for(AtkQueue queue : atkQueues.values()){
+			if (queue.getRound() != 0) {
+				queue.setRound(queue.getRound()-1);
+				queue.setAtk(queue.getAtk()+queue.getArmyTemplate().queueAddAtk);
+			}
+		}
+	}
+	
+	/**
+	 * 玩家移动后检查是否有新的队列
+	 */
+	public boolean checkAtkqueue(){
+
+		//攻击队列检测
+		for(Army[] armys : x_Armies){
+			int color1 = -1;
+			int color2 = -1;
+			for(int i=0;i<armys.length;i++){
+				Army army = armys[i];
+				if (army == null || army.getQueueId() != -1 || army.getTemplate().level!=0 || army.isWall()) {
+					color1 = -1;
+					color2 = -1;
+					continue;
+				}
+				if (army.getColor()==color1 && army.getColor() == color2) {
+					AtkQueueMessage.Builder atkBuilder = AtkQueueMessage.newBuilder();
+					AtkQueue atkQueue = new AtkQueue(this.poolInstance.getAndIncrement(),army.getTemplateId());
+					atkQueue.setArmyIds(new int[]{armys[i-2].getInstanceId(),armys[i-1].getInstanceId(),armys[i].getInstanceId()});
+					this.atkQueues.put(atkQueue.getInstanceId(), atkQueue);
+					atkBuilder.addArmyId(armys[i-2].getInstanceId());
+					atkBuilder.addArmyId(armys[i-1].getInstanceId());
+					atkBuilder.addArmyId(armys[i].getInstanceId());
+					short startY = this.getYStart(army.getX());
+					short endY = (short)(i-2);
+					if (armys[i-2].getY() > startY) {//所有兵向上移动
+						armys[i-2].setY(startY);
+						armys[i-1].setY((short)(startY+1));
+						armys[i].setY((short)(startY+2));
+						for(int m=startY;m<endY;m++){
+							armys[m].setY((short)(armys[m].getY()+3));
+						}
+					}
+					atkBuilder.addTargetY(startY);
+					atkBuilder.addTargetY(startY+1);
+					atkBuilder.addTargetY(startY+2);
+					return true;
+				}
+				color1 = color2;
+				color2 = army.getColor();
+			}
+		}
+		
+		
+		for(Army army : this.armyMap.values()){
+			if (army.getTemplate().level == 1 && army.getY()<=2) {
+				Army next = x_Armies[army.getX()][army.getY()+2];
+				Army next1 = x_Armies[army.getX()][army.getY()+3];
+				if (next!=null && next1!=null && next.getColor()==next1.getColor()&& next.getColor() == army.getColor()) {
+					AtkQueueMessage.Builder atkBuilder = AtkQueueMessage.newBuilder();
+					AtkQueue atkQueue = new AtkQueue(this.poolInstance.getAndIncrement(), army.getTemplateId());
+					this.atkQueues.put(atkQueue.getInstanceId(), atkQueue);
+					atkQueue.setArmyIds(new int[]{army.getInstanceId()});
+					x_Armies[next.getX()][next.getY()] = null;
+					x_Armies[next1.getX()][next1.getY()] = null;
+					y_Armies[next.getY()][next.getX()] = null;
+					y_Armies[next1.getY()][next1.getX()] = null;
+					this.armyMap.remove(next.getInstanceId());
+					this.armyMap.remove(next1.getInstanceId());
+					return true;
+ 				}
+			}
+			if (army.getTemplate().level == 2 && army.getY()<=2) {
+				Army next = x_Armies[army.getX()][army.getY()+2];
+				Army next1 = x_Armies[army.getX()][army.getY()+3];
+				Army next2 = x_Armies[army.getX()+1][army.getY()+2];
+				Army next3 = x_Armies[army.getX()+1][army.getY()+3];
+				if (next!=null&& next1!= null && next2!=null && next3!=null && next.getColor() == army.getColor()
+						&& next1.getColor() == army.getColor()&& next2.getColor() == army.getColor() && next3.getColor()== army.getColor()) {
+					AtkQueue atkQueue = new AtkQueue(this.poolInstance.getAndIncrement(), army.getTemplateId());
+					atkQueue.setArmyIds(new int[]{army.getInstanceId()});
+					
+					this.atkQueues.put(atkQueue.getInstanceId(), atkQueue);
+					
+					return true;
+				}
+			}
+		}
+		return false;
+	
+	
+	}
+	
+
+	public void checkDefQueue() {
+		// 防御队列检测
+		for (Army[] armys : y_Armies) {
+			int color = -1;
+			int sameCount = 1;
+			for (int i = 0; i < armys.length; i++) {
+				Army army = armys[i];
+				if (army == null || army.getQueueId() != -1 || army.getTemplate().level != 0 || army.isWall()) {
+					color = -1;
+					sameCount = 0;
+					continue;
+				}
+				if (army.getColor() == color) {
+					sameCount++;
+				} else {
+					if (sameCount >= 3) {
+						for (int j = 1; j <= sameCount; j++) {
+							armys[i - j].setWall(true);
+							armys[i - j].setColor(-1);
+						}
+					}
+					sameCount = 1;
+					color = army.getColor();
+				}
+			}
+		}
+	}
+	
+	public Army moveArmy(int fromx,int tox)throws BattleException{
+		
+		Army[] armys = x_Armies[fromx];
+		Army army = armys[armys.length-1];
+		int toY = 0;
+		if (army.getTemplate().level == 0) {
+			int xlenth = getXArmyLength(tox);
+			if (xlenth >= armys.length) {
+				throw new BattleException("目标队列已满");
+			}
+			toY = xlenth-1;
+			x_Armies[tox][toY] = army;
+			y_Armies[toY][tox ] = army;
+		}else if (army.getTemplate().level == 1){
+			int xlenth = getXArmyLength(tox);
+			if (xlenth >= 5) {
+				throw new BattleException("目标队列已满");
+			}
+			x_Armies[tox][toY] = army;
+			y_Armies[toY][tox ] = army;
+			x_Armies[tox][toY+1] = army;
+			y_Armies[toY+1][tox] = army;
+			
+		}else if (army.getTemplate().level == 2) {
+			int xlenth = getXArmyLength(tox);
+			if (tox >=7 ||xlenth >= 5 || getXArmyLength(tox+1)>= 5) {
+				throw new BattleException("目标队列已满");
+			}
+			x_Armies[tox][toY] = army;
+			y_Armies[toY][tox ] = army;
+			x_Armies[tox][toY+1] = army;
+			y_Armies[toY+1][tox] = army;
+			x_Armies[tox+1][toY] = army;
+			y_Armies[toY][tox+1] = army;
+			x_Armies[tox+1][toY+1] = army;
+			y_Armies[toY+1][tox+1] = army;
+		}
+		armys[armys.length-1] = null;
+		y_Armies[army.getY()][army.getX()] = null;
+		return army;
+	}
+	
+	private int getXArmyLength(int x){
+		Army[] armys = x_Armies[x];
+		for(int i=armys.length-1;i>=0;i--){
+			if (armys[i] != null) {
+				return i+1;
+			}
+		}
+		return armys.length;
+	}
+	
+	/**
+	 * 当普通攻击队形向上移动的时候，检测该移动到哪个位置
+	 * @return
+	 */
+	private short getYStart(int x){
+		Army[] armys = x_Armies[x];
+		for(short i=0;i<6;i++){
+			if (armys[i].isWall()) {
+				continue;
+			}
+			if (armys[i]==null || armys[i].getQueueId()==0) {
+				return i;
+			}
+		}
+		return 5;
 	}
 }

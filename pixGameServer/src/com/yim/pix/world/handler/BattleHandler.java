@@ -11,6 +11,7 @@ import com.yim.message.pix.game.MessagePtoto.BattleMatchRes;
 import com.yim.message.pix.game.MessagePtoto.FormationRes;
 import com.yim.message.pix.game.MessagePtoto.FormationSaveReq;
 import com.yim.message.pix.game.MessagePtoto.FormationSaveRes;
+import com.yim.message.pix.game.MessagePtoto.MoveArmyReq;
 import com.yim.message.pix.game.MessagePtoto.StartBattleRes;
 import com.yim.net.packet.PacketHandler;
 import com.yim.net.protocol.OpCodeMapper;
@@ -140,6 +141,21 @@ public class BattleHandler implements PacketHandler{
 			respones.addAllBattleArmysE(eSquare.buildBattleArmys());
 			session.send(GameCodeMaper.STARTBATTLERES, respones.build());
 		}
+	}
+	/**
+	 * 移动士兵
+	 * @param message
+	 * @param session
+	 */
+	public void moveArmy(MessageLite message, ClientSession session){
+		MoveArmyReq request = (MoveArmyReq)message;
+		int fromx = request.getFromx();
+		int tox = request.getTox();
+		Player player = (Player)session.getClient();
+		if (player !=null) {
+			int roomId = player.getRacist().getRoomId();
+		}
+		
 	}
 	
 

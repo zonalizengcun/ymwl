@@ -3,7 +3,7 @@ package com.yim.pix.world.model.army;
 import com.yim.pix.world.model.RacistType;
 
 /**
- * ±øÖÖÄ£°å
+ * ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½
  * @author admin
  *
  */
@@ -18,48 +18,57 @@ public class ArmyTemplate {
 	public String armyName;
 	
 	/**
-	 * ¹¥»÷Á¦
+	 * æ”»å‡»åŠ›
 	 */
 	public int atk;
 	
 	/**
-	 * ·ÀÓùÁ¦
+	 * é˜²å¾¡åŠ›
 	 */
 	public int def;
 	
 	/**
-	 * »ØºÏÊı
+	 * å›åˆæ•°
 	 */
 	public int round;
 	
 	/**
-	 * Õ¼¸ñÊı
+	 * å ç”¨ç©ºé—´
 	 */
 	public int space;
 	
 	/**
-	 * ±øÖÖµÈ¼¶
+	 * ç­‰çº§
 	 */
 	public int level;
 	
 	/**
-	 * ÌØÊâ¼¼ÄÜ
+	 * æŠ€èƒ½
 	 */
 	public int skill;
 	
 	/**
-	 * ±øÖÖÍ¼±ê
+	 * å£«å…µå›¾æ ‡
 	 */
 	public String icon;
 	
 	/**
-	 * ÃèÊö
+	 * æè¿°
 	 */
 	public String describe;
 	
 	
 	/**
-	 * ²ú³öÉÏÏŞ
+	 * ä¸Šé™
 	 */
 	public int productLimit;
+	
+	/**
+	 * é˜Ÿåˆ—åŸºç¡€æ”»å‡»åŠ›
+	 */
+	public int queueAtk;
+	/**
+	 * æ¯å›åˆå¢å¢é•¿æ”»å‡»åŠ›
+	 */
+	public int queueAddAtk;
 }

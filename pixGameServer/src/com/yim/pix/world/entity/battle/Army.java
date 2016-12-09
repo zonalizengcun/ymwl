@@ -4,24 +4,35 @@ import com.yim.pix.world.World;
 import com.yim.pix.world.model.army.ArmyTemplate;
 
 /**
- * Ò»¸öÊ¿±ø
+ * Ò»ï¿½ï¿½Ê¿ï¿½ï¿½
  * @author admin
  *
  */
 public class Army {
 
-	//ÊµÀıid
+	//Êµï¿½ï¿½id
 	private int instanceId;
-	//Ä£°åid
+	//Ä£ï¿½ï¿½id
 	private int templateId;
 	
 	private short x;
 	
 	private short y;
-	//»º´æ±øÖÖÄ£°å
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½
 	private ArmyTemplate armyTemplate;
-	//Ê¿±øÑÕÉ«£¬¸úÕóĞÍÎ»ÖÃÓĞ¹Ø 0 1 2
+	//é¢œè‰²ï¼Œå¯¹åº”é˜µå‹åæ ‡012
 	private int color;
+	
+	
+	/**
+	 * å¯¹åº”çš„æ”»å‡»é˜Ÿåˆ—id
+	 */
+	private int queueId;
+	
+	/**
+	 * æ˜¯å¦æ˜¯åŸå¢™
+	 */
+	private boolean isWall;
 	
 	public Army() {
 	}
@@ -77,4 +88,25 @@ public class Army {
 	public void setY(short y) {
 		this.y = y;
 	}
+
+
+	public int getQueueId() {
+		return queueId;
+	}
+
+
+	public void setQueueId(int queueId) {
+		this.queueId = queueId;
+	}
+
+
+	public boolean isWall() {
+		return isWall;
+	}
+
+
+	public void setWall(boolean isWall) {
+		this.isWall = isWall;
+	}
+
 }
