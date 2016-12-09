@@ -40,7 +40,6 @@ public class input : MonoBehaviour {
 		case "btn_login":
 			VitNetworkScript.Instance.connect("127.0.0.1",10001,sendLogin());
 
-			Utils.m_instance.LoadLevelAsync ("game");
 			break;
 		}
 	}
@@ -59,6 +58,7 @@ public class input : MonoBehaviour {
 		int playerId = message.playerId;
 		Utils.m_instance.playerId = playerId;
 		Utils.m_instance.name = name;
+		Utils.m_instance.LoadLevelAsync ("game");
 	}
 
 }

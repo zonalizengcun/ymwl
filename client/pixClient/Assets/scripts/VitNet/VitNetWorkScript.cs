@@ -363,6 +363,7 @@ namespace Vitality
 
 				if (m_heartSend >= m_heartDelta)
 				{
+					Debug.Log ("send HeartBeat");
 					m_bHeartSend = true;
 					m_heartSend = 0.0f;
 					m_heartRev = 0.0f;
