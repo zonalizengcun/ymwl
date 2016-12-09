@@ -12390,6 +12390,6284 @@ public final class MessagePtoto {
     // @@protoc_insertion_point(class_scope:BattleArmy)
   }
 
+  public interface MoveArmyReqOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required int32 fromx = 1;
+    /**
+     * <code>required int32 fromx = 1;</code>
+     *
+     * <pre>
+     *移动开始的x坐标
+     * </pre>
+     */
+    boolean hasFromx();
+    /**
+     * <code>required int32 fromx = 1;</code>
+     *
+     * <pre>
+     *移动开始的x坐标
+     * </pre>
+     */
+    int getFromx();
+
+    // required int32 tox = 2;
+    /**
+     * <code>required int32 tox = 2;</code>
+     *
+     * <pre>
+     *目标x坐标
+     * </pre>
+     */
+    boolean hasTox();
+    /**
+     * <code>required int32 tox = 2;</code>
+     *
+     * <pre>
+     *目标x坐标
+     * </pre>
+     */
+    int getTox();
+  }
+  /**
+   * Protobuf type {@code MoveArmyReq}
+   *
+   * <pre>
+   *请求移动士兵 = 113
+   * </pre>
+   */
+  public static final class MoveArmyReq extends
+      com.google.protobuf.GeneratedMessage
+      implements MoveArmyReqOrBuilder {
+    // Use MoveArmyReq.newBuilder() to construct.
+    private MoveArmyReq(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private MoveArmyReq(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final MoveArmyReq defaultInstance;
+    public static MoveArmyReq getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public MoveArmyReq getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private MoveArmyReq(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              fromx_ = input.readInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              tox_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.yim.message.pix.game.MessagePtoto.internal_static_MoveArmyReq_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.yim.message.pix.game.MessagePtoto.internal_static_MoveArmyReq_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.yim.message.pix.game.MessagePtoto.MoveArmyReq.class, com.yim.message.pix.game.MessagePtoto.MoveArmyReq.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<MoveArmyReq> PARSER =
+        new com.google.protobuf.AbstractParser<MoveArmyReq>() {
+      public MoveArmyReq parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new MoveArmyReq(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MoveArmyReq> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required int32 fromx = 1;
+    public static final int FROMX_FIELD_NUMBER = 1;
+    private int fromx_;
+    /**
+     * <code>required int32 fromx = 1;</code>
+     *
+     * <pre>
+     *移动开始的x坐标
+     * </pre>
+     */
+    public boolean hasFromx() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int32 fromx = 1;</code>
+     *
+     * <pre>
+     *移动开始的x坐标
+     * </pre>
+     */
+    public int getFromx() {
+      return fromx_;
+    }
+
+    // required int32 tox = 2;
+    public static final int TOX_FIELD_NUMBER = 2;
+    private int tox_;
+    /**
+     * <code>required int32 tox = 2;</code>
+     *
+     * <pre>
+     *目标x坐标
+     * </pre>
+     */
+    public boolean hasTox() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required int32 tox = 2;</code>
+     *
+     * <pre>
+     *目标x坐标
+     * </pre>
+     */
+    public int getTox() {
+      return tox_;
+    }
+
+    private void initFields() {
+      fromx_ = 0;
+      tox_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasFromx()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasTox()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, fromx_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(2, tox_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, fromx_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, tox_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.yim.message.pix.game.MessagePtoto.MoveArmyReq parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.MoveArmyReq parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.MoveArmyReq parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.MoveArmyReq parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.MoveArmyReq parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.MoveArmyReq parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.MoveArmyReq parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.MoveArmyReq parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.MoveArmyReq parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.MoveArmyReq parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.yim.message.pix.game.MessagePtoto.MoveArmyReq prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code MoveArmyReq}
+     *
+     * <pre>
+     *请求移动士兵 = 113
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.yim.message.pix.game.MessagePtoto.MoveArmyReqOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.yim.message.pix.game.MessagePtoto.internal_static_MoveArmyReq_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.yim.message.pix.game.MessagePtoto.internal_static_MoveArmyReq_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.yim.message.pix.game.MessagePtoto.MoveArmyReq.class, com.yim.message.pix.game.MessagePtoto.MoveArmyReq.Builder.class);
+      }
+
+      // Construct using com.yim.message.pix.game.MessagePtoto.MoveArmyReq.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        fromx_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        tox_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.yim.message.pix.game.MessagePtoto.internal_static_MoveArmyReq_descriptor;
+      }
+
+      public com.yim.message.pix.game.MessagePtoto.MoveArmyReq getDefaultInstanceForType() {
+        return com.yim.message.pix.game.MessagePtoto.MoveArmyReq.getDefaultInstance();
+      }
+
+      public com.yim.message.pix.game.MessagePtoto.MoveArmyReq build() {
+        com.yim.message.pix.game.MessagePtoto.MoveArmyReq result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.yim.message.pix.game.MessagePtoto.MoveArmyReq buildPartial() {
+        com.yim.message.pix.game.MessagePtoto.MoveArmyReq result = new com.yim.message.pix.game.MessagePtoto.MoveArmyReq(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.fromx_ = fromx_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.tox_ = tox_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.yim.message.pix.game.MessagePtoto.MoveArmyReq) {
+          return mergeFrom((com.yim.message.pix.game.MessagePtoto.MoveArmyReq)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.yim.message.pix.game.MessagePtoto.MoveArmyReq other) {
+        if (other == com.yim.message.pix.game.MessagePtoto.MoveArmyReq.getDefaultInstance()) return this;
+        if (other.hasFromx()) {
+          setFromx(other.getFromx());
+        }
+        if (other.hasTox()) {
+          setTox(other.getTox());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasFromx()) {
+          
+          return false;
+        }
+        if (!hasTox()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.yim.message.pix.game.MessagePtoto.MoveArmyReq parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.yim.message.pix.game.MessagePtoto.MoveArmyReq) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // required int32 fromx = 1;
+      private int fromx_ ;
+      /**
+       * <code>required int32 fromx = 1;</code>
+       *
+       * <pre>
+       *移动开始的x坐标
+       * </pre>
+       */
+      public boolean hasFromx() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int32 fromx = 1;</code>
+       *
+       * <pre>
+       *移动开始的x坐标
+       * </pre>
+       */
+      public int getFromx() {
+        return fromx_;
+      }
+      /**
+       * <code>required int32 fromx = 1;</code>
+       *
+       * <pre>
+       *移动开始的x坐标
+       * </pre>
+       */
+      public Builder setFromx(int value) {
+        bitField0_ |= 0x00000001;
+        fromx_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 fromx = 1;</code>
+       *
+       * <pre>
+       *移动开始的x坐标
+       * </pre>
+       */
+      public Builder clearFromx() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        fromx_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required int32 tox = 2;
+      private int tox_ ;
+      /**
+       * <code>required int32 tox = 2;</code>
+       *
+       * <pre>
+       *目标x坐标
+       * </pre>
+       */
+      public boolean hasTox() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required int32 tox = 2;</code>
+       *
+       * <pre>
+       *目标x坐标
+       * </pre>
+       */
+      public int getTox() {
+        return tox_;
+      }
+      /**
+       * <code>required int32 tox = 2;</code>
+       *
+       * <pre>
+       *目标x坐标
+       * </pre>
+       */
+      public Builder setTox(int value) {
+        bitField0_ |= 0x00000002;
+        tox_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 tox = 2;</code>
+       *
+       * <pre>
+       *目标x坐标
+       * </pre>
+       */
+      public Builder clearTox() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        tox_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:MoveArmyReq)
+    }
+
+    static {
+      defaultInstance = new MoveArmyReq(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:MoveArmyReq)
+  }
+
+  public interface RemoveArmyReqOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required int32 targetx = 1;
+    /**
+     * <code>required int32 targetx = 1;</code>
+     */
+    boolean hasTargetx();
+    /**
+     * <code>required int32 targetx = 1;</code>
+     */
+    int getTargetx();
+
+    // required int32 targety = 2;
+    /**
+     * <code>required int32 targety = 2;</code>
+     */
+    boolean hasTargety();
+    /**
+     * <code>required int32 targety = 2;</code>
+     */
+    int getTargety();
+  }
+  /**
+   * Protobuf type {@code RemoveArmyReq}
+   *
+   * <pre>
+   *请求删除士兵 = 114
+   * </pre>
+   */
+  public static final class RemoveArmyReq extends
+      com.google.protobuf.GeneratedMessage
+      implements RemoveArmyReqOrBuilder {
+    // Use RemoveArmyReq.newBuilder() to construct.
+    private RemoveArmyReq(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private RemoveArmyReq(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final RemoveArmyReq defaultInstance;
+    public static RemoveArmyReq getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public RemoveArmyReq getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RemoveArmyReq(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              targetx_ = input.readInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              targety_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.yim.message.pix.game.MessagePtoto.internal_static_RemoveArmyReq_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.yim.message.pix.game.MessagePtoto.internal_static_RemoveArmyReq_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.yim.message.pix.game.MessagePtoto.RemoveArmyReq.class, com.yim.message.pix.game.MessagePtoto.RemoveArmyReq.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<RemoveArmyReq> PARSER =
+        new com.google.protobuf.AbstractParser<RemoveArmyReq>() {
+      public RemoveArmyReq parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RemoveArmyReq(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RemoveArmyReq> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required int32 targetx = 1;
+    public static final int TARGETX_FIELD_NUMBER = 1;
+    private int targetx_;
+    /**
+     * <code>required int32 targetx = 1;</code>
+     */
+    public boolean hasTargetx() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int32 targetx = 1;</code>
+     */
+    public int getTargetx() {
+      return targetx_;
+    }
+
+    // required int32 targety = 2;
+    public static final int TARGETY_FIELD_NUMBER = 2;
+    private int targety_;
+    /**
+     * <code>required int32 targety = 2;</code>
+     */
+    public boolean hasTargety() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required int32 targety = 2;</code>
+     */
+    public int getTargety() {
+      return targety_;
+    }
+
+    private void initFields() {
+      targetx_ = 0;
+      targety_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasTargetx()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasTargety()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, targetx_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(2, targety_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, targetx_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, targety_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.yim.message.pix.game.MessagePtoto.RemoveArmyReq parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.RemoveArmyReq parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.RemoveArmyReq parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.RemoveArmyReq parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.RemoveArmyReq parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.RemoveArmyReq parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.RemoveArmyReq parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.RemoveArmyReq parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.RemoveArmyReq parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.RemoveArmyReq parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.yim.message.pix.game.MessagePtoto.RemoveArmyReq prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code RemoveArmyReq}
+     *
+     * <pre>
+     *请求删除士兵 = 114
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.yim.message.pix.game.MessagePtoto.RemoveArmyReqOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.yim.message.pix.game.MessagePtoto.internal_static_RemoveArmyReq_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.yim.message.pix.game.MessagePtoto.internal_static_RemoveArmyReq_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.yim.message.pix.game.MessagePtoto.RemoveArmyReq.class, com.yim.message.pix.game.MessagePtoto.RemoveArmyReq.Builder.class);
+      }
+
+      // Construct using com.yim.message.pix.game.MessagePtoto.RemoveArmyReq.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        targetx_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        targety_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.yim.message.pix.game.MessagePtoto.internal_static_RemoveArmyReq_descriptor;
+      }
+
+      public com.yim.message.pix.game.MessagePtoto.RemoveArmyReq getDefaultInstanceForType() {
+        return com.yim.message.pix.game.MessagePtoto.RemoveArmyReq.getDefaultInstance();
+      }
+
+      public com.yim.message.pix.game.MessagePtoto.RemoveArmyReq build() {
+        com.yim.message.pix.game.MessagePtoto.RemoveArmyReq result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.yim.message.pix.game.MessagePtoto.RemoveArmyReq buildPartial() {
+        com.yim.message.pix.game.MessagePtoto.RemoveArmyReq result = new com.yim.message.pix.game.MessagePtoto.RemoveArmyReq(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.targetx_ = targetx_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.targety_ = targety_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.yim.message.pix.game.MessagePtoto.RemoveArmyReq) {
+          return mergeFrom((com.yim.message.pix.game.MessagePtoto.RemoveArmyReq)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.yim.message.pix.game.MessagePtoto.RemoveArmyReq other) {
+        if (other == com.yim.message.pix.game.MessagePtoto.RemoveArmyReq.getDefaultInstance()) return this;
+        if (other.hasTargetx()) {
+          setTargetx(other.getTargetx());
+        }
+        if (other.hasTargety()) {
+          setTargety(other.getTargety());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasTargetx()) {
+          
+          return false;
+        }
+        if (!hasTargety()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.yim.message.pix.game.MessagePtoto.RemoveArmyReq parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.yim.message.pix.game.MessagePtoto.RemoveArmyReq) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // required int32 targetx = 1;
+      private int targetx_ ;
+      /**
+       * <code>required int32 targetx = 1;</code>
+       */
+      public boolean hasTargetx() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int32 targetx = 1;</code>
+       */
+      public int getTargetx() {
+        return targetx_;
+      }
+      /**
+       * <code>required int32 targetx = 1;</code>
+       */
+      public Builder setTargetx(int value) {
+        bitField0_ |= 0x00000001;
+        targetx_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 targetx = 1;</code>
+       */
+      public Builder clearTargetx() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        targetx_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required int32 targety = 2;
+      private int targety_ ;
+      /**
+       * <code>required int32 targety = 2;</code>
+       */
+      public boolean hasTargety() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required int32 targety = 2;</code>
+       */
+      public int getTargety() {
+        return targety_;
+      }
+      /**
+       * <code>required int32 targety = 2;</code>
+       */
+      public Builder setTargety(int value) {
+        bitField0_ |= 0x00000002;
+        targety_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 targety = 2;</code>
+       */
+      public Builder clearTargety() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        targety_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:RemoveArmyReq)
+    }
+
+    static {
+      defaultInstance = new RemoveArmyReq(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:RemoveArmyReq)
+  }
+
+  public interface PlayerAtkReqOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code PlayerAtkReq}
+   *
+   * <pre>
+   *释放技能 = 115
+   * </pre>
+   */
+  public static final class PlayerAtkReq extends
+      com.google.protobuf.GeneratedMessage
+      implements PlayerAtkReqOrBuilder {
+    // Use PlayerAtkReq.newBuilder() to construct.
+    private PlayerAtkReq(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private PlayerAtkReq(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final PlayerAtkReq defaultInstance;
+    public static PlayerAtkReq getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public PlayerAtkReq getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PlayerAtkReq(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.yim.message.pix.game.MessagePtoto.internal_static_PlayerAtkReq_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.yim.message.pix.game.MessagePtoto.internal_static_PlayerAtkReq_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.yim.message.pix.game.MessagePtoto.PlayerAtkReq.class, com.yim.message.pix.game.MessagePtoto.PlayerAtkReq.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<PlayerAtkReq> PARSER =
+        new com.google.protobuf.AbstractParser<PlayerAtkReq>() {
+      public PlayerAtkReq parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PlayerAtkReq(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PlayerAtkReq> getParserForType() {
+      return PARSER;
+    }
+
+    private void initFields() {
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.yim.message.pix.game.MessagePtoto.PlayerAtkReq parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.PlayerAtkReq parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.PlayerAtkReq parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.PlayerAtkReq parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.PlayerAtkReq parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.PlayerAtkReq parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.PlayerAtkReq parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.PlayerAtkReq parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.PlayerAtkReq parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.PlayerAtkReq parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.yim.message.pix.game.MessagePtoto.PlayerAtkReq prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code PlayerAtkReq}
+     *
+     * <pre>
+     *释放技能 = 115
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.yim.message.pix.game.MessagePtoto.PlayerAtkReqOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.yim.message.pix.game.MessagePtoto.internal_static_PlayerAtkReq_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.yim.message.pix.game.MessagePtoto.internal_static_PlayerAtkReq_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.yim.message.pix.game.MessagePtoto.PlayerAtkReq.class, com.yim.message.pix.game.MessagePtoto.PlayerAtkReq.Builder.class);
+      }
+
+      // Construct using com.yim.message.pix.game.MessagePtoto.PlayerAtkReq.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.yim.message.pix.game.MessagePtoto.internal_static_PlayerAtkReq_descriptor;
+      }
+
+      public com.yim.message.pix.game.MessagePtoto.PlayerAtkReq getDefaultInstanceForType() {
+        return com.yim.message.pix.game.MessagePtoto.PlayerAtkReq.getDefaultInstance();
+      }
+
+      public com.yim.message.pix.game.MessagePtoto.PlayerAtkReq build() {
+        com.yim.message.pix.game.MessagePtoto.PlayerAtkReq result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.yim.message.pix.game.MessagePtoto.PlayerAtkReq buildPartial() {
+        com.yim.message.pix.game.MessagePtoto.PlayerAtkReq result = new com.yim.message.pix.game.MessagePtoto.PlayerAtkReq(this);
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.yim.message.pix.game.MessagePtoto.PlayerAtkReq) {
+          return mergeFrom((com.yim.message.pix.game.MessagePtoto.PlayerAtkReq)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.yim.message.pix.game.MessagePtoto.PlayerAtkReq other) {
+        if (other == com.yim.message.pix.game.MessagePtoto.PlayerAtkReq.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.yim.message.pix.game.MessagePtoto.PlayerAtkReq parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.yim.message.pix.game.MessagePtoto.PlayerAtkReq) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:PlayerAtkReq)
+    }
+
+    static {
+      defaultInstance = new PlayerAtkReq(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:PlayerAtkReq)
+  }
+
+  public interface BattleChangeSynOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // repeated .BattleStepMessage battleStep = 1;
+    /**
+     * <code>repeated .BattleStepMessage battleStep = 1;</code>
+     */
+    java.util.List<com.yim.message.pix.game.MessagePtoto.BattleStepMessage> 
+        getBattleStepList();
+    /**
+     * <code>repeated .BattleStepMessage battleStep = 1;</code>
+     */
+    com.yim.message.pix.game.MessagePtoto.BattleStepMessage getBattleStep(int index);
+    /**
+     * <code>repeated .BattleStepMessage battleStep = 1;</code>
+     */
+    int getBattleStepCount();
+    /**
+     * <code>repeated .BattleStepMessage battleStep = 1;</code>
+     */
+    java.util.List<? extends com.yim.message.pix.game.MessagePtoto.BattleStepMessageOrBuilder> 
+        getBattleStepOrBuilderList();
+    /**
+     * <code>repeated .BattleStepMessage battleStep = 1;</code>
+     */
+    com.yim.message.pix.game.MessagePtoto.BattleStepMessageOrBuilder getBattleStepOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code BattleChangeSyn}
+   *
+   * <pre>
+   *战场效果变化 = 120
+   * </pre>
+   */
+  public static final class BattleChangeSyn extends
+      com.google.protobuf.GeneratedMessage
+      implements BattleChangeSynOrBuilder {
+    // Use BattleChangeSyn.newBuilder() to construct.
+    private BattleChangeSyn(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private BattleChangeSyn(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final BattleChangeSyn defaultInstance;
+    public static BattleChangeSyn getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public BattleChangeSyn getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private BattleChangeSyn(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                battleStep_ = new java.util.ArrayList<com.yim.message.pix.game.MessagePtoto.BattleStepMessage>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              battleStep_.add(input.readMessage(com.yim.message.pix.game.MessagePtoto.BattleStepMessage.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          battleStep_ = java.util.Collections.unmodifiableList(battleStep_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.yim.message.pix.game.MessagePtoto.internal_static_BattleChangeSyn_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.yim.message.pix.game.MessagePtoto.internal_static_BattleChangeSyn_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.yim.message.pix.game.MessagePtoto.BattleChangeSyn.class, com.yim.message.pix.game.MessagePtoto.BattleChangeSyn.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<BattleChangeSyn> PARSER =
+        new com.google.protobuf.AbstractParser<BattleChangeSyn>() {
+      public BattleChangeSyn parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new BattleChangeSyn(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BattleChangeSyn> getParserForType() {
+      return PARSER;
+    }
+
+    // repeated .BattleStepMessage battleStep = 1;
+    public static final int BATTLESTEP_FIELD_NUMBER = 1;
+    private java.util.List<com.yim.message.pix.game.MessagePtoto.BattleStepMessage> battleStep_;
+    /**
+     * <code>repeated .BattleStepMessage battleStep = 1;</code>
+     */
+    public java.util.List<com.yim.message.pix.game.MessagePtoto.BattleStepMessage> getBattleStepList() {
+      return battleStep_;
+    }
+    /**
+     * <code>repeated .BattleStepMessage battleStep = 1;</code>
+     */
+    public java.util.List<? extends com.yim.message.pix.game.MessagePtoto.BattleStepMessageOrBuilder> 
+        getBattleStepOrBuilderList() {
+      return battleStep_;
+    }
+    /**
+     * <code>repeated .BattleStepMessage battleStep = 1;</code>
+     */
+    public int getBattleStepCount() {
+      return battleStep_.size();
+    }
+    /**
+     * <code>repeated .BattleStepMessage battleStep = 1;</code>
+     */
+    public com.yim.message.pix.game.MessagePtoto.BattleStepMessage getBattleStep(int index) {
+      return battleStep_.get(index);
+    }
+    /**
+     * <code>repeated .BattleStepMessage battleStep = 1;</code>
+     */
+    public com.yim.message.pix.game.MessagePtoto.BattleStepMessageOrBuilder getBattleStepOrBuilder(
+        int index) {
+      return battleStep_.get(index);
+    }
+
+    private void initFields() {
+      battleStep_ = java.util.Collections.emptyList();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      for (int i = 0; i < getBattleStepCount(); i++) {
+        if (!getBattleStep(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      for (int i = 0; i < battleStep_.size(); i++) {
+        output.writeMessage(1, battleStep_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < battleStep_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, battleStep_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.yim.message.pix.game.MessagePtoto.BattleChangeSyn parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.BattleChangeSyn parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.BattleChangeSyn parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.BattleChangeSyn parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.BattleChangeSyn parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.BattleChangeSyn parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.BattleChangeSyn parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.BattleChangeSyn parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.BattleChangeSyn parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.BattleChangeSyn parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.yim.message.pix.game.MessagePtoto.BattleChangeSyn prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code BattleChangeSyn}
+     *
+     * <pre>
+     *战场效果变化 = 120
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.yim.message.pix.game.MessagePtoto.BattleChangeSynOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.yim.message.pix.game.MessagePtoto.internal_static_BattleChangeSyn_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.yim.message.pix.game.MessagePtoto.internal_static_BattleChangeSyn_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.yim.message.pix.game.MessagePtoto.BattleChangeSyn.class, com.yim.message.pix.game.MessagePtoto.BattleChangeSyn.Builder.class);
+      }
+
+      // Construct using com.yim.message.pix.game.MessagePtoto.BattleChangeSyn.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getBattleStepFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        if (battleStepBuilder_ == null) {
+          battleStep_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          battleStepBuilder_.clear();
+        }
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.yim.message.pix.game.MessagePtoto.internal_static_BattleChangeSyn_descriptor;
+      }
+
+      public com.yim.message.pix.game.MessagePtoto.BattleChangeSyn getDefaultInstanceForType() {
+        return com.yim.message.pix.game.MessagePtoto.BattleChangeSyn.getDefaultInstance();
+      }
+
+      public com.yim.message.pix.game.MessagePtoto.BattleChangeSyn build() {
+        com.yim.message.pix.game.MessagePtoto.BattleChangeSyn result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.yim.message.pix.game.MessagePtoto.BattleChangeSyn buildPartial() {
+        com.yim.message.pix.game.MessagePtoto.BattleChangeSyn result = new com.yim.message.pix.game.MessagePtoto.BattleChangeSyn(this);
+        int from_bitField0_ = bitField0_;
+        if (battleStepBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            battleStep_ = java.util.Collections.unmodifiableList(battleStep_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.battleStep_ = battleStep_;
+        } else {
+          result.battleStep_ = battleStepBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.yim.message.pix.game.MessagePtoto.BattleChangeSyn) {
+          return mergeFrom((com.yim.message.pix.game.MessagePtoto.BattleChangeSyn)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.yim.message.pix.game.MessagePtoto.BattleChangeSyn other) {
+        if (other == com.yim.message.pix.game.MessagePtoto.BattleChangeSyn.getDefaultInstance()) return this;
+        if (battleStepBuilder_ == null) {
+          if (!other.battleStep_.isEmpty()) {
+            if (battleStep_.isEmpty()) {
+              battleStep_ = other.battleStep_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureBattleStepIsMutable();
+              battleStep_.addAll(other.battleStep_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.battleStep_.isEmpty()) {
+            if (battleStepBuilder_.isEmpty()) {
+              battleStepBuilder_.dispose();
+              battleStepBuilder_ = null;
+              battleStep_ = other.battleStep_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              battleStepBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getBattleStepFieldBuilder() : null;
+            } else {
+              battleStepBuilder_.addAllMessages(other.battleStep_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        for (int i = 0; i < getBattleStepCount(); i++) {
+          if (!getBattleStep(i).isInitialized()) {
+            
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.yim.message.pix.game.MessagePtoto.BattleChangeSyn parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.yim.message.pix.game.MessagePtoto.BattleChangeSyn) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // repeated .BattleStepMessage battleStep = 1;
+      private java.util.List<com.yim.message.pix.game.MessagePtoto.BattleStepMessage> battleStep_ =
+        java.util.Collections.emptyList();
+      private void ensureBattleStepIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          battleStep_ = new java.util.ArrayList<com.yim.message.pix.game.MessagePtoto.BattleStepMessage>(battleStep_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.yim.message.pix.game.MessagePtoto.BattleStepMessage, com.yim.message.pix.game.MessagePtoto.BattleStepMessage.Builder, com.yim.message.pix.game.MessagePtoto.BattleStepMessageOrBuilder> battleStepBuilder_;
+
+      /**
+       * <code>repeated .BattleStepMessage battleStep = 1;</code>
+       */
+      public java.util.List<com.yim.message.pix.game.MessagePtoto.BattleStepMessage> getBattleStepList() {
+        if (battleStepBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(battleStep_);
+        } else {
+          return battleStepBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .BattleStepMessage battleStep = 1;</code>
+       */
+      public int getBattleStepCount() {
+        if (battleStepBuilder_ == null) {
+          return battleStep_.size();
+        } else {
+          return battleStepBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .BattleStepMessage battleStep = 1;</code>
+       */
+      public com.yim.message.pix.game.MessagePtoto.BattleStepMessage getBattleStep(int index) {
+        if (battleStepBuilder_ == null) {
+          return battleStep_.get(index);
+        } else {
+          return battleStepBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .BattleStepMessage battleStep = 1;</code>
+       */
+      public Builder setBattleStep(
+          int index, com.yim.message.pix.game.MessagePtoto.BattleStepMessage value) {
+        if (battleStepBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBattleStepIsMutable();
+          battleStep_.set(index, value);
+          onChanged();
+        } else {
+          battleStepBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .BattleStepMessage battleStep = 1;</code>
+       */
+      public Builder setBattleStep(
+          int index, com.yim.message.pix.game.MessagePtoto.BattleStepMessage.Builder builderForValue) {
+        if (battleStepBuilder_ == null) {
+          ensureBattleStepIsMutable();
+          battleStep_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          battleStepBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .BattleStepMessage battleStep = 1;</code>
+       */
+      public Builder addBattleStep(com.yim.message.pix.game.MessagePtoto.BattleStepMessage value) {
+        if (battleStepBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBattleStepIsMutable();
+          battleStep_.add(value);
+          onChanged();
+        } else {
+          battleStepBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .BattleStepMessage battleStep = 1;</code>
+       */
+      public Builder addBattleStep(
+          int index, com.yim.message.pix.game.MessagePtoto.BattleStepMessage value) {
+        if (battleStepBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBattleStepIsMutable();
+          battleStep_.add(index, value);
+          onChanged();
+        } else {
+          battleStepBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .BattleStepMessage battleStep = 1;</code>
+       */
+      public Builder addBattleStep(
+          com.yim.message.pix.game.MessagePtoto.BattleStepMessage.Builder builderForValue) {
+        if (battleStepBuilder_ == null) {
+          ensureBattleStepIsMutable();
+          battleStep_.add(builderForValue.build());
+          onChanged();
+        } else {
+          battleStepBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .BattleStepMessage battleStep = 1;</code>
+       */
+      public Builder addBattleStep(
+          int index, com.yim.message.pix.game.MessagePtoto.BattleStepMessage.Builder builderForValue) {
+        if (battleStepBuilder_ == null) {
+          ensureBattleStepIsMutable();
+          battleStep_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          battleStepBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .BattleStepMessage battleStep = 1;</code>
+       */
+      public Builder addAllBattleStep(
+          java.lang.Iterable<? extends com.yim.message.pix.game.MessagePtoto.BattleStepMessage> values) {
+        if (battleStepBuilder_ == null) {
+          ensureBattleStepIsMutable();
+          super.addAll(values, battleStep_);
+          onChanged();
+        } else {
+          battleStepBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .BattleStepMessage battleStep = 1;</code>
+       */
+      public Builder clearBattleStep() {
+        if (battleStepBuilder_ == null) {
+          battleStep_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          battleStepBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .BattleStepMessage battleStep = 1;</code>
+       */
+      public Builder removeBattleStep(int index) {
+        if (battleStepBuilder_ == null) {
+          ensureBattleStepIsMutable();
+          battleStep_.remove(index);
+          onChanged();
+        } else {
+          battleStepBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .BattleStepMessage battleStep = 1;</code>
+       */
+      public com.yim.message.pix.game.MessagePtoto.BattleStepMessage.Builder getBattleStepBuilder(
+          int index) {
+        return getBattleStepFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .BattleStepMessage battleStep = 1;</code>
+       */
+      public com.yim.message.pix.game.MessagePtoto.BattleStepMessageOrBuilder getBattleStepOrBuilder(
+          int index) {
+        if (battleStepBuilder_ == null) {
+          return battleStep_.get(index);  } else {
+          return battleStepBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .BattleStepMessage battleStep = 1;</code>
+       */
+      public java.util.List<? extends com.yim.message.pix.game.MessagePtoto.BattleStepMessageOrBuilder> 
+           getBattleStepOrBuilderList() {
+        if (battleStepBuilder_ != null) {
+          return battleStepBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(battleStep_);
+        }
+      }
+      /**
+       * <code>repeated .BattleStepMessage battleStep = 1;</code>
+       */
+      public com.yim.message.pix.game.MessagePtoto.BattleStepMessage.Builder addBattleStepBuilder() {
+        return getBattleStepFieldBuilder().addBuilder(
+            com.yim.message.pix.game.MessagePtoto.BattleStepMessage.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .BattleStepMessage battleStep = 1;</code>
+       */
+      public com.yim.message.pix.game.MessagePtoto.BattleStepMessage.Builder addBattleStepBuilder(
+          int index) {
+        return getBattleStepFieldBuilder().addBuilder(
+            index, com.yim.message.pix.game.MessagePtoto.BattleStepMessage.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .BattleStepMessage battleStep = 1;</code>
+       */
+      public java.util.List<com.yim.message.pix.game.MessagePtoto.BattleStepMessage.Builder> 
+           getBattleStepBuilderList() {
+        return getBattleStepFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.yim.message.pix.game.MessagePtoto.BattleStepMessage, com.yim.message.pix.game.MessagePtoto.BattleStepMessage.Builder, com.yim.message.pix.game.MessagePtoto.BattleStepMessageOrBuilder> 
+          getBattleStepFieldBuilder() {
+        if (battleStepBuilder_ == null) {
+          battleStepBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.yim.message.pix.game.MessagePtoto.BattleStepMessage, com.yim.message.pix.game.MessagePtoto.BattleStepMessage.Builder, com.yim.message.pix.game.MessagePtoto.BattleStepMessageOrBuilder>(
+                  battleStep_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          battleStep_ = null;
+        }
+        return battleStepBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:BattleChangeSyn)
+    }
+
+    static {
+      defaultInstance = new BattleChangeSyn(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:BattleChangeSyn)
+  }
+
+  public interface BattleStepMessageOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required int32 type = 1;
+    /**
+     * <code>required int32 type = 1;</code>
+     *
+     * <pre>
+     *步骤类型 0单个士兵移动 2形成攻击阵型3个士兵移动 3形成防御城墙 4城墙合成
+     * </pre>
+     */
+    boolean hasType();
+    /**
+     * <code>required int32 type = 1;</code>
+     *
+     * <pre>
+     *步骤类型 0单个士兵移动 2形成攻击阵型3个士兵移动 3形成防御城墙 4城墙合成
+     * </pre>
+     */
+    int getType();
+
+    // optional .ArmyMoveMessage armyMove = 2;
+    /**
+     * <code>optional .ArmyMoveMessage armyMove = 2;</code>
+     *
+     * <pre>
+     *单个士兵移动
+     * </pre>
+     */
+    boolean hasArmyMove();
+    /**
+     * <code>optional .ArmyMoveMessage armyMove = 2;</code>
+     *
+     * <pre>
+     *单个士兵移动
+     * </pre>
+     */
+    com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage getArmyMove();
+    /**
+     * <code>optional .ArmyMoveMessage armyMove = 2;</code>
+     *
+     * <pre>
+     *单个士兵移动
+     * </pre>
+     */
+    com.yim.message.pix.game.MessagePtoto.ArmyMoveMessageOrBuilder getArmyMoveOrBuilder();
+
+    // optional .AtkQueueMessage atkqueue = 3;
+    /**
+     * <code>optional .AtkQueueMessage atkqueue = 3;</code>
+     *
+     * <pre>
+     *攻击阵型
+     * </pre>
+     */
+    boolean hasAtkqueue();
+    /**
+     * <code>optional .AtkQueueMessage atkqueue = 3;</code>
+     *
+     * <pre>
+     *攻击阵型
+     * </pre>
+     */
+    com.yim.message.pix.game.MessagePtoto.AtkQueueMessage getAtkqueue();
+    /**
+     * <code>optional .AtkQueueMessage atkqueue = 3;</code>
+     *
+     * <pre>
+     *攻击阵型
+     * </pre>
+     */
+    com.yim.message.pix.game.MessagePtoto.AtkQueueMessageOrBuilder getAtkqueueOrBuilder();
+
+    // optional .WallQueueMessage wallQueue = 4;
+    /**
+     * <code>optional .WallQueueMessage wallQueue = 4;</code>
+     *
+     * <pre>
+     *防御城墙
+     * </pre>
+     */
+    boolean hasWallQueue();
+    /**
+     * <code>optional .WallQueueMessage wallQueue = 4;</code>
+     *
+     * <pre>
+     *防御城墙
+     * </pre>
+     */
+    com.yim.message.pix.game.MessagePtoto.WallQueueMessage getWallQueue();
+    /**
+     * <code>optional .WallQueueMessage wallQueue = 4;</code>
+     *
+     * <pre>
+     *防御城墙
+     * </pre>
+     */
+    com.yim.message.pix.game.MessagePtoto.WallQueueMessageOrBuilder getWallQueueOrBuilder();
+
+    // optional .WallMergeMessage wallMerge = 5;
+    /**
+     * <code>optional .WallMergeMessage wallMerge = 5;</code>
+     *
+     * <pre>
+     *合成城墙
+     * </pre>
+     */
+    boolean hasWallMerge();
+    /**
+     * <code>optional .WallMergeMessage wallMerge = 5;</code>
+     *
+     * <pre>
+     *合成城墙
+     * </pre>
+     */
+    com.yim.message.pix.game.MessagePtoto.WallMergeMessage getWallMerge();
+    /**
+     * <code>optional .WallMergeMessage wallMerge = 5;</code>
+     *
+     * <pre>
+     *合成城墙
+     * </pre>
+     */
+    com.yim.message.pix.game.MessagePtoto.WallMergeMessageOrBuilder getWallMergeOrBuilder();
+  }
+  /**
+   * Protobuf type {@code BattleStepMessage}
+   */
+  public static final class BattleStepMessage extends
+      com.google.protobuf.GeneratedMessage
+      implements BattleStepMessageOrBuilder {
+    // Use BattleStepMessage.newBuilder() to construct.
+    private BattleStepMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private BattleStepMessage(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final BattleStepMessage defaultInstance;
+    public static BattleStepMessage getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public BattleStepMessage getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private BattleStepMessage(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              type_ = input.readInt32();
+              break;
+            }
+            case 18: {
+              com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                subBuilder = armyMove_.toBuilder();
+              }
+              armyMove_ = input.readMessage(com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(armyMove_);
+                armyMove_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
+              break;
+            }
+            case 26: {
+              com.yim.message.pix.game.MessagePtoto.AtkQueueMessage.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                subBuilder = atkqueue_.toBuilder();
+              }
+              atkqueue_ = input.readMessage(com.yim.message.pix.game.MessagePtoto.AtkQueueMessage.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(atkqueue_);
+                atkqueue_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
+              break;
+            }
+            case 34: {
+              com.yim.message.pix.game.MessagePtoto.WallQueueMessage.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000008) == 0x00000008)) {
+                subBuilder = wallQueue_.toBuilder();
+              }
+              wallQueue_ = input.readMessage(com.yim.message.pix.game.MessagePtoto.WallQueueMessage.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(wallQueue_);
+                wallQueue_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000008;
+              break;
+            }
+            case 42: {
+              com.yim.message.pix.game.MessagePtoto.WallMergeMessage.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000010) == 0x00000010)) {
+                subBuilder = wallMerge_.toBuilder();
+              }
+              wallMerge_ = input.readMessage(com.yim.message.pix.game.MessagePtoto.WallMergeMessage.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(wallMerge_);
+                wallMerge_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000010;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.yim.message.pix.game.MessagePtoto.internal_static_BattleStepMessage_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.yim.message.pix.game.MessagePtoto.internal_static_BattleStepMessage_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.yim.message.pix.game.MessagePtoto.BattleStepMessage.class, com.yim.message.pix.game.MessagePtoto.BattleStepMessage.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<BattleStepMessage> PARSER =
+        new com.google.protobuf.AbstractParser<BattleStepMessage>() {
+      public BattleStepMessage parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new BattleStepMessage(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BattleStepMessage> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required int32 type = 1;
+    public static final int TYPE_FIELD_NUMBER = 1;
+    private int type_;
+    /**
+     * <code>required int32 type = 1;</code>
+     *
+     * <pre>
+     *步骤类型 0单个士兵移动 2形成攻击阵型3个士兵移动 3形成防御城墙 4城墙合成
+     * </pre>
+     */
+    public boolean hasType() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int32 type = 1;</code>
+     *
+     * <pre>
+     *步骤类型 0单个士兵移动 2形成攻击阵型3个士兵移动 3形成防御城墙 4城墙合成
+     * </pre>
+     */
+    public int getType() {
+      return type_;
+    }
+
+    // optional .ArmyMoveMessage armyMove = 2;
+    public static final int ARMYMOVE_FIELD_NUMBER = 2;
+    private com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage armyMove_;
+    /**
+     * <code>optional .ArmyMoveMessage armyMove = 2;</code>
+     *
+     * <pre>
+     *单个士兵移动
+     * </pre>
+     */
+    public boolean hasArmyMove() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional .ArmyMoveMessage armyMove = 2;</code>
+     *
+     * <pre>
+     *单个士兵移动
+     * </pre>
+     */
+    public com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage getArmyMove() {
+      return armyMove_;
+    }
+    /**
+     * <code>optional .ArmyMoveMessage armyMove = 2;</code>
+     *
+     * <pre>
+     *单个士兵移动
+     * </pre>
+     */
+    public com.yim.message.pix.game.MessagePtoto.ArmyMoveMessageOrBuilder getArmyMoveOrBuilder() {
+      return armyMove_;
+    }
+
+    // optional .AtkQueueMessage atkqueue = 3;
+    public static final int ATKQUEUE_FIELD_NUMBER = 3;
+    private com.yim.message.pix.game.MessagePtoto.AtkQueueMessage atkqueue_;
+    /**
+     * <code>optional .AtkQueueMessage atkqueue = 3;</code>
+     *
+     * <pre>
+     *攻击阵型
+     * </pre>
+     */
+    public boolean hasAtkqueue() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional .AtkQueueMessage atkqueue = 3;</code>
+     *
+     * <pre>
+     *攻击阵型
+     * </pre>
+     */
+    public com.yim.message.pix.game.MessagePtoto.AtkQueueMessage getAtkqueue() {
+      return atkqueue_;
+    }
+    /**
+     * <code>optional .AtkQueueMessage atkqueue = 3;</code>
+     *
+     * <pre>
+     *攻击阵型
+     * </pre>
+     */
+    public com.yim.message.pix.game.MessagePtoto.AtkQueueMessageOrBuilder getAtkqueueOrBuilder() {
+      return atkqueue_;
+    }
+
+    // optional .WallQueueMessage wallQueue = 4;
+    public static final int WALLQUEUE_FIELD_NUMBER = 4;
+    private com.yim.message.pix.game.MessagePtoto.WallQueueMessage wallQueue_;
+    /**
+     * <code>optional .WallQueueMessage wallQueue = 4;</code>
+     *
+     * <pre>
+     *防御城墙
+     * </pre>
+     */
+    public boolean hasWallQueue() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional .WallQueueMessage wallQueue = 4;</code>
+     *
+     * <pre>
+     *防御城墙
+     * </pre>
+     */
+    public com.yim.message.pix.game.MessagePtoto.WallQueueMessage getWallQueue() {
+      return wallQueue_;
+    }
+    /**
+     * <code>optional .WallQueueMessage wallQueue = 4;</code>
+     *
+     * <pre>
+     *防御城墙
+     * </pre>
+     */
+    public com.yim.message.pix.game.MessagePtoto.WallQueueMessageOrBuilder getWallQueueOrBuilder() {
+      return wallQueue_;
+    }
+
+    // optional .WallMergeMessage wallMerge = 5;
+    public static final int WALLMERGE_FIELD_NUMBER = 5;
+    private com.yim.message.pix.game.MessagePtoto.WallMergeMessage wallMerge_;
+    /**
+     * <code>optional .WallMergeMessage wallMerge = 5;</code>
+     *
+     * <pre>
+     *合成城墙
+     * </pre>
+     */
+    public boolean hasWallMerge() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional .WallMergeMessage wallMerge = 5;</code>
+     *
+     * <pre>
+     *合成城墙
+     * </pre>
+     */
+    public com.yim.message.pix.game.MessagePtoto.WallMergeMessage getWallMerge() {
+      return wallMerge_;
+    }
+    /**
+     * <code>optional .WallMergeMessage wallMerge = 5;</code>
+     *
+     * <pre>
+     *合成城墙
+     * </pre>
+     */
+    public com.yim.message.pix.game.MessagePtoto.WallMergeMessageOrBuilder getWallMergeOrBuilder() {
+      return wallMerge_;
+    }
+
+    private void initFields() {
+      type_ = 0;
+      armyMove_ = com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage.getDefaultInstance();
+      atkqueue_ = com.yim.message.pix.game.MessagePtoto.AtkQueueMessage.getDefaultInstance();
+      wallQueue_ = com.yim.message.pix.game.MessagePtoto.WallQueueMessage.getDefaultInstance();
+      wallMerge_ = com.yim.message.pix.game.MessagePtoto.WallMergeMessage.getDefaultInstance();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasType()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (hasArmyMove()) {
+        if (!getArmyMove().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, type_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeMessage(2, armyMove_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeMessage(3, atkqueue_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeMessage(4, wallQueue_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeMessage(5, wallMerge_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, type_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, armyMove_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, atkqueue_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, wallQueue_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, wallMerge_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.yim.message.pix.game.MessagePtoto.BattleStepMessage parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.BattleStepMessage parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.BattleStepMessage parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.BattleStepMessage parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.BattleStepMessage parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.BattleStepMessage parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.BattleStepMessage parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.BattleStepMessage parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.BattleStepMessage parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.BattleStepMessage parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.yim.message.pix.game.MessagePtoto.BattleStepMessage prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code BattleStepMessage}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.yim.message.pix.game.MessagePtoto.BattleStepMessageOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.yim.message.pix.game.MessagePtoto.internal_static_BattleStepMessage_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.yim.message.pix.game.MessagePtoto.internal_static_BattleStepMessage_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.yim.message.pix.game.MessagePtoto.BattleStepMessage.class, com.yim.message.pix.game.MessagePtoto.BattleStepMessage.Builder.class);
+      }
+
+      // Construct using com.yim.message.pix.game.MessagePtoto.BattleStepMessage.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getArmyMoveFieldBuilder();
+          getAtkqueueFieldBuilder();
+          getWallQueueFieldBuilder();
+          getWallMergeFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        type_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (armyMoveBuilder_ == null) {
+          armyMove_ = com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage.getDefaultInstance();
+        } else {
+          armyMoveBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (atkqueueBuilder_ == null) {
+          atkqueue_ = com.yim.message.pix.game.MessagePtoto.AtkQueueMessage.getDefaultInstance();
+        } else {
+          atkqueueBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (wallQueueBuilder_ == null) {
+          wallQueue_ = com.yim.message.pix.game.MessagePtoto.WallQueueMessage.getDefaultInstance();
+        } else {
+          wallQueueBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        if (wallMergeBuilder_ == null) {
+          wallMerge_ = com.yim.message.pix.game.MessagePtoto.WallMergeMessage.getDefaultInstance();
+        } else {
+          wallMergeBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.yim.message.pix.game.MessagePtoto.internal_static_BattleStepMessage_descriptor;
+      }
+
+      public com.yim.message.pix.game.MessagePtoto.BattleStepMessage getDefaultInstanceForType() {
+        return com.yim.message.pix.game.MessagePtoto.BattleStepMessage.getDefaultInstance();
+      }
+
+      public com.yim.message.pix.game.MessagePtoto.BattleStepMessage build() {
+        com.yim.message.pix.game.MessagePtoto.BattleStepMessage result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.yim.message.pix.game.MessagePtoto.BattleStepMessage buildPartial() {
+        com.yim.message.pix.game.MessagePtoto.BattleStepMessage result = new com.yim.message.pix.game.MessagePtoto.BattleStepMessage(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.type_ = type_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        if (armyMoveBuilder_ == null) {
+          result.armyMove_ = armyMove_;
+        } else {
+          result.armyMove_ = armyMoveBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        if (atkqueueBuilder_ == null) {
+          result.atkqueue_ = atkqueue_;
+        } else {
+          result.atkqueue_ = atkqueueBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        if (wallQueueBuilder_ == null) {
+          result.wallQueue_ = wallQueue_;
+        } else {
+          result.wallQueue_ = wallQueueBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        if (wallMergeBuilder_ == null) {
+          result.wallMerge_ = wallMerge_;
+        } else {
+          result.wallMerge_ = wallMergeBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.yim.message.pix.game.MessagePtoto.BattleStepMessage) {
+          return mergeFrom((com.yim.message.pix.game.MessagePtoto.BattleStepMessage)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.yim.message.pix.game.MessagePtoto.BattleStepMessage other) {
+        if (other == com.yim.message.pix.game.MessagePtoto.BattleStepMessage.getDefaultInstance()) return this;
+        if (other.hasType()) {
+          setType(other.getType());
+        }
+        if (other.hasArmyMove()) {
+          mergeArmyMove(other.getArmyMove());
+        }
+        if (other.hasAtkqueue()) {
+          mergeAtkqueue(other.getAtkqueue());
+        }
+        if (other.hasWallQueue()) {
+          mergeWallQueue(other.getWallQueue());
+        }
+        if (other.hasWallMerge()) {
+          mergeWallMerge(other.getWallMerge());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasType()) {
+          
+          return false;
+        }
+        if (hasArmyMove()) {
+          if (!getArmyMove().isInitialized()) {
+            
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.yim.message.pix.game.MessagePtoto.BattleStepMessage parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.yim.message.pix.game.MessagePtoto.BattleStepMessage) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // required int32 type = 1;
+      private int type_ ;
+      /**
+       * <code>required int32 type = 1;</code>
+       *
+       * <pre>
+       *步骤类型 0单个士兵移动 2形成攻击阵型3个士兵移动 3形成防御城墙 4城墙合成
+       * </pre>
+       */
+      public boolean hasType() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int32 type = 1;</code>
+       *
+       * <pre>
+       *步骤类型 0单个士兵移动 2形成攻击阵型3个士兵移动 3形成防御城墙 4城墙合成
+       * </pre>
+       */
+      public int getType() {
+        return type_;
+      }
+      /**
+       * <code>required int32 type = 1;</code>
+       *
+       * <pre>
+       *步骤类型 0单个士兵移动 2形成攻击阵型3个士兵移动 3形成防御城墙 4城墙合成
+       * </pre>
+       */
+      public Builder setType(int value) {
+        bitField0_ |= 0x00000001;
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 type = 1;</code>
+       *
+       * <pre>
+       *步骤类型 0单个士兵移动 2形成攻击阵型3个士兵移动 3形成防御城墙 4城墙合成
+       * </pre>
+       */
+      public Builder clearType() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        type_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // optional .ArmyMoveMessage armyMove = 2;
+      private com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage armyMove_ = com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage, com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage.Builder, com.yim.message.pix.game.MessagePtoto.ArmyMoveMessageOrBuilder> armyMoveBuilder_;
+      /**
+       * <code>optional .ArmyMoveMessage armyMove = 2;</code>
+       *
+       * <pre>
+       *单个士兵移动
+       * </pre>
+       */
+      public boolean hasArmyMove() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional .ArmyMoveMessage armyMove = 2;</code>
+       *
+       * <pre>
+       *单个士兵移动
+       * </pre>
+       */
+      public com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage getArmyMove() {
+        if (armyMoveBuilder_ == null) {
+          return armyMove_;
+        } else {
+          return armyMoveBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .ArmyMoveMessage armyMove = 2;</code>
+       *
+       * <pre>
+       *单个士兵移动
+       * </pre>
+       */
+      public Builder setArmyMove(com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage value) {
+        if (armyMoveBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          armyMove_ = value;
+          onChanged();
+        } else {
+          armyMoveBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .ArmyMoveMessage armyMove = 2;</code>
+       *
+       * <pre>
+       *单个士兵移动
+       * </pre>
+       */
+      public Builder setArmyMove(
+          com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage.Builder builderForValue) {
+        if (armyMoveBuilder_ == null) {
+          armyMove_ = builderForValue.build();
+          onChanged();
+        } else {
+          armyMoveBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .ArmyMoveMessage armyMove = 2;</code>
+       *
+       * <pre>
+       *单个士兵移动
+       * </pre>
+       */
+      public Builder mergeArmyMove(com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage value) {
+        if (armyMoveBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002) &&
+              armyMove_ != com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage.getDefaultInstance()) {
+            armyMove_ =
+              com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage.newBuilder(armyMove_).mergeFrom(value).buildPartial();
+          } else {
+            armyMove_ = value;
+          }
+          onChanged();
+        } else {
+          armyMoveBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .ArmyMoveMessage armyMove = 2;</code>
+       *
+       * <pre>
+       *单个士兵移动
+       * </pre>
+       */
+      public Builder clearArmyMove() {
+        if (armyMoveBuilder_ == null) {
+          armyMove_ = com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage.getDefaultInstance();
+          onChanged();
+        } else {
+          armyMoveBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+      /**
+       * <code>optional .ArmyMoveMessage armyMove = 2;</code>
+       *
+       * <pre>
+       *单个士兵移动
+       * </pre>
+       */
+      public com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage.Builder getArmyMoveBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getArmyMoveFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .ArmyMoveMessage armyMove = 2;</code>
+       *
+       * <pre>
+       *单个士兵移动
+       * </pre>
+       */
+      public com.yim.message.pix.game.MessagePtoto.ArmyMoveMessageOrBuilder getArmyMoveOrBuilder() {
+        if (armyMoveBuilder_ != null) {
+          return armyMoveBuilder_.getMessageOrBuilder();
+        } else {
+          return armyMove_;
+        }
+      }
+      /**
+       * <code>optional .ArmyMoveMessage armyMove = 2;</code>
+       *
+       * <pre>
+       *单个士兵移动
+       * </pre>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage, com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage.Builder, com.yim.message.pix.game.MessagePtoto.ArmyMoveMessageOrBuilder> 
+          getArmyMoveFieldBuilder() {
+        if (armyMoveBuilder_ == null) {
+          armyMoveBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage, com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage.Builder, com.yim.message.pix.game.MessagePtoto.ArmyMoveMessageOrBuilder>(
+                  armyMove_,
+                  getParentForChildren(),
+                  isClean());
+          armyMove_ = null;
+        }
+        return armyMoveBuilder_;
+      }
+
+      // optional .AtkQueueMessage atkqueue = 3;
+      private com.yim.message.pix.game.MessagePtoto.AtkQueueMessage atkqueue_ = com.yim.message.pix.game.MessagePtoto.AtkQueueMessage.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.yim.message.pix.game.MessagePtoto.AtkQueueMessage, com.yim.message.pix.game.MessagePtoto.AtkQueueMessage.Builder, com.yim.message.pix.game.MessagePtoto.AtkQueueMessageOrBuilder> atkqueueBuilder_;
+      /**
+       * <code>optional .AtkQueueMessage atkqueue = 3;</code>
+       *
+       * <pre>
+       *攻击阵型
+       * </pre>
+       */
+      public boolean hasAtkqueue() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional .AtkQueueMessage atkqueue = 3;</code>
+       *
+       * <pre>
+       *攻击阵型
+       * </pre>
+       */
+      public com.yim.message.pix.game.MessagePtoto.AtkQueueMessage getAtkqueue() {
+        if (atkqueueBuilder_ == null) {
+          return atkqueue_;
+        } else {
+          return atkqueueBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .AtkQueueMessage atkqueue = 3;</code>
+       *
+       * <pre>
+       *攻击阵型
+       * </pre>
+       */
+      public Builder setAtkqueue(com.yim.message.pix.game.MessagePtoto.AtkQueueMessage value) {
+        if (atkqueueBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          atkqueue_ = value;
+          onChanged();
+        } else {
+          atkqueueBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .AtkQueueMessage atkqueue = 3;</code>
+       *
+       * <pre>
+       *攻击阵型
+       * </pre>
+       */
+      public Builder setAtkqueue(
+          com.yim.message.pix.game.MessagePtoto.AtkQueueMessage.Builder builderForValue) {
+        if (atkqueueBuilder_ == null) {
+          atkqueue_ = builderForValue.build();
+          onChanged();
+        } else {
+          atkqueueBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .AtkQueueMessage atkqueue = 3;</code>
+       *
+       * <pre>
+       *攻击阵型
+       * </pre>
+       */
+      public Builder mergeAtkqueue(com.yim.message.pix.game.MessagePtoto.AtkQueueMessage value) {
+        if (atkqueueBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) == 0x00000004) &&
+              atkqueue_ != com.yim.message.pix.game.MessagePtoto.AtkQueueMessage.getDefaultInstance()) {
+            atkqueue_ =
+              com.yim.message.pix.game.MessagePtoto.AtkQueueMessage.newBuilder(atkqueue_).mergeFrom(value).buildPartial();
+          } else {
+            atkqueue_ = value;
+          }
+          onChanged();
+        } else {
+          atkqueueBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .AtkQueueMessage atkqueue = 3;</code>
+       *
+       * <pre>
+       *攻击阵型
+       * </pre>
+       */
+      public Builder clearAtkqueue() {
+        if (atkqueueBuilder_ == null) {
+          atkqueue_ = com.yim.message.pix.game.MessagePtoto.AtkQueueMessage.getDefaultInstance();
+          onChanged();
+        } else {
+          atkqueueBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+      /**
+       * <code>optional .AtkQueueMessage atkqueue = 3;</code>
+       *
+       * <pre>
+       *攻击阵型
+       * </pre>
+       */
+      public com.yim.message.pix.game.MessagePtoto.AtkQueueMessage.Builder getAtkqueueBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getAtkqueueFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .AtkQueueMessage atkqueue = 3;</code>
+       *
+       * <pre>
+       *攻击阵型
+       * </pre>
+       */
+      public com.yim.message.pix.game.MessagePtoto.AtkQueueMessageOrBuilder getAtkqueueOrBuilder() {
+        if (atkqueueBuilder_ != null) {
+          return atkqueueBuilder_.getMessageOrBuilder();
+        } else {
+          return atkqueue_;
+        }
+      }
+      /**
+       * <code>optional .AtkQueueMessage atkqueue = 3;</code>
+       *
+       * <pre>
+       *攻击阵型
+       * </pre>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.yim.message.pix.game.MessagePtoto.AtkQueueMessage, com.yim.message.pix.game.MessagePtoto.AtkQueueMessage.Builder, com.yim.message.pix.game.MessagePtoto.AtkQueueMessageOrBuilder> 
+          getAtkqueueFieldBuilder() {
+        if (atkqueueBuilder_ == null) {
+          atkqueueBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.yim.message.pix.game.MessagePtoto.AtkQueueMessage, com.yim.message.pix.game.MessagePtoto.AtkQueueMessage.Builder, com.yim.message.pix.game.MessagePtoto.AtkQueueMessageOrBuilder>(
+                  atkqueue_,
+                  getParentForChildren(),
+                  isClean());
+          atkqueue_ = null;
+        }
+        return atkqueueBuilder_;
+      }
+
+      // optional .WallQueueMessage wallQueue = 4;
+      private com.yim.message.pix.game.MessagePtoto.WallQueueMessage wallQueue_ = com.yim.message.pix.game.MessagePtoto.WallQueueMessage.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.yim.message.pix.game.MessagePtoto.WallQueueMessage, com.yim.message.pix.game.MessagePtoto.WallQueueMessage.Builder, com.yim.message.pix.game.MessagePtoto.WallQueueMessageOrBuilder> wallQueueBuilder_;
+      /**
+       * <code>optional .WallQueueMessage wallQueue = 4;</code>
+       *
+       * <pre>
+       *防御城墙
+       * </pre>
+       */
+      public boolean hasWallQueue() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional .WallQueueMessage wallQueue = 4;</code>
+       *
+       * <pre>
+       *防御城墙
+       * </pre>
+       */
+      public com.yim.message.pix.game.MessagePtoto.WallQueueMessage getWallQueue() {
+        if (wallQueueBuilder_ == null) {
+          return wallQueue_;
+        } else {
+          return wallQueueBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .WallQueueMessage wallQueue = 4;</code>
+       *
+       * <pre>
+       *防御城墙
+       * </pre>
+       */
+      public Builder setWallQueue(com.yim.message.pix.game.MessagePtoto.WallQueueMessage value) {
+        if (wallQueueBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          wallQueue_ = value;
+          onChanged();
+        } else {
+          wallQueueBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .WallQueueMessage wallQueue = 4;</code>
+       *
+       * <pre>
+       *防御城墙
+       * </pre>
+       */
+      public Builder setWallQueue(
+          com.yim.message.pix.game.MessagePtoto.WallQueueMessage.Builder builderForValue) {
+        if (wallQueueBuilder_ == null) {
+          wallQueue_ = builderForValue.build();
+          onChanged();
+        } else {
+          wallQueueBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .WallQueueMessage wallQueue = 4;</code>
+       *
+       * <pre>
+       *防御城墙
+       * </pre>
+       */
+      public Builder mergeWallQueue(com.yim.message.pix.game.MessagePtoto.WallQueueMessage value) {
+        if (wallQueueBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) == 0x00000008) &&
+              wallQueue_ != com.yim.message.pix.game.MessagePtoto.WallQueueMessage.getDefaultInstance()) {
+            wallQueue_ =
+              com.yim.message.pix.game.MessagePtoto.WallQueueMessage.newBuilder(wallQueue_).mergeFrom(value).buildPartial();
+          } else {
+            wallQueue_ = value;
+          }
+          onChanged();
+        } else {
+          wallQueueBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .WallQueueMessage wallQueue = 4;</code>
+       *
+       * <pre>
+       *防御城墙
+       * </pre>
+       */
+      public Builder clearWallQueue() {
+        if (wallQueueBuilder_ == null) {
+          wallQueue_ = com.yim.message.pix.game.MessagePtoto.WallQueueMessage.getDefaultInstance();
+          onChanged();
+        } else {
+          wallQueueBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+      /**
+       * <code>optional .WallQueueMessage wallQueue = 4;</code>
+       *
+       * <pre>
+       *防御城墙
+       * </pre>
+       */
+      public com.yim.message.pix.game.MessagePtoto.WallQueueMessage.Builder getWallQueueBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getWallQueueFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .WallQueueMessage wallQueue = 4;</code>
+       *
+       * <pre>
+       *防御城墙
+       * </pre>
+       */
+      public com.yim.message.pix.game.MessagePtoto.WallQueueMessageOrBuilder getWallQueueOrBuilder() {
+        if (wallQueueBuilder_ != null) {
+          return wallQueueBuilder_.getMessageOrBuilder();
+        } else {
+          return wallQueue_;
+        }
+      }
+      /**
+       * <code>optional .WallQueueMessage wallQueue = 4;</code>
+       *
+       * <pre>
+       *防御城墙
+       * </pre>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.yim.message.pix.game.MessagePtoto.WallQueueMessage, com.yim.message.pix.game.MessagePtoto.WallQueueMessage.Builder, com.yim.message.pix.game.MessagePtoto.WallQueueMessageOrBuilder> 
+          getWallQueueFieldBuilder() {
+        if (wallQueueBuilder_ == null) {
+          wallQueueBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.yim.message.pix.game.MessagePtoto.WallQueueMessage, com.yim.message.pix.game.MessagePtoto.WallQueueMessage.Builder, com.yim.message.pix.game.MessagePtoto.WallQueueMessageOrBuilder>(
+                  wallQueue_,
+                  getParentForChildren(),
+                  isClean());
+          wallQueue_ = null;
+        }
+        return wallQueueBuilder_;
+      }
+
+      // optional .WallMergeMessage wallMerge = 5;
+      private com.yim.message.pix.game.MessagePtoto.WallMergeMessage wallMerge_ = com.yim.message.pix.game.MessagePtoto.WallMergeMessage.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.yim.message.pix.game.MessagePtoto.WallMergeMessage, com.yim.message.pix.game.MessagePtoto.WallMergeMessage.Builder, com.yim.message.pix.game.MessagePtoto.WallMergeMessageOrBuilder> wallMergeBuilder_;
+      /**
+       * <code>optional .WallMergeMessage wallMerge = 5;</code>
+       *
+       * <pre>
+       *合成城墙
+       * </pre>
+       */
+      public boolean hasWallMerge() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional .WallMergeMessage wallMerge = 5;</code>
+       *
+       * <pre>
+       *合成城墙
+       * </pre>
+       */
+      public com.yim.message.pix.game.MessagePtoto.WallMergeMessage getWallMerge() {
+        if (wallMergeBuilder_ == null) {
+          return wallMerge_;
+        } else {
+          return wallMergeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .WallMergeMessage wallMerge = 5;</code>
+       *
+       * <pre>
+       *合成城墙
+       * </pre>
+       */
+      public Builder setWallMerge(com.yim.message.pix.game.MessagePtoto.WallMergeMessage value) {
+        if (wallMergeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          wallMerge_ = value;
+          onChanged();
+        } else {
+          wallMergeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .WallMergeMessage wallMerge = 5;</code>
+       *
+       * <pre>
+       *合成城墙
+       * </pre>
+       */
+      public Builder setWallMerge(
+          com.yim.message.pix.game.MessagePtoto.WallMergeMessage.Builder builderForValue) {
+        if (wallMergeBuilder_ == null) {
+          wallMerge_ = builderForValue.build();
+          onChanged();
+        } else {
+          wallMergeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .WallMergeMessage wallMerge = 5;</code>
+       *
+       * <pre>
+       *合成城墙
+       * </pre>
+       */
+      public Builder mergeWallMerge(com.yim.message.pix.game.MessagePtoto.WallMergeMessage value) {
+        if (wallMergeBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) == 0x00000010) &&
+              wallMerge_ != com.yim.message.pix.game.MessagePtoto.WallMergeMessage.getDefaultInstance()) {
+            wallMerge_ =
+              com.yim.message.pix.game.MessagePtoto.WallMergeMessage.newBuilder(wallMerge_).mergeFrom(value).buildPartial();
+          } else {
+            wallMerge_ = value;
+          }
+          onChanged();
+        } else {
+          wallMergeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .WallMergeMessage wallMerge = 5;</code>
+       *
+       * <pre>
+       *合成城墙
+       * </pre>
+       */
+      public Builder clearWallMerge() {
+        if (wallMergeBuilder_ == null) {
+          wallMerge_ = com.yim.message.pix.game.MessagePtoto.WallMergeMessage.getDefaultInstance();
+          onChanged();
+        } else {
+          wallMergeBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+      /**
+       * <code>optional .WallMergeMessage wallMerge = 5;</code>
+       *
+       * <pre>
+       *合成城墙
+       * </pre>
+       */
+      public com.yim.message.pix.game.MessagePtoto.WallMergeMessage.Builder getWallMergeBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getWallMergeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .WallMergeMessage wallMerge = 5;</code>
+       *
+       * <pre>
+       *合成城墙
+       * </pre>
+       */
+      public com.yim.message.pix.game.MessagePtoto.WallMergeMessageOrBuilder getWallMergeOrBuilder() {
+        if (wallMergeBuilder_ != null) {
+          return wallMergeBuilder_.getMessageOrBuilder();
+        } else {
+          return wallMerge_;
+        }
+      }
+      /**
+       * <code>optional .WallMergeMessage wallMerge = 5;</code>
+       *
+       * <pre>
+       *合成城墙
+       * </pre>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.yim.message.pix.game.MessagePtoto.WallMergeMessage, com.yim.message.pix.game.MessagePtoto.WallMergeMessage.Builder, com.yim.message.pix.game.MessagePtoto.WallMergeMessageOrBuilder> 
+          getWallMergeFieldBuilder() {
+        if (wallMergeBuilder_ == null) {
+          wallMergeBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.yim.message.pix.game.MessagePtoto.WallMergeMessage, com.yim.message.pix.game.MessagePtoto.WallMergeMessage.Builder, com.yim.message.pix.game.MessagePtoto.WallMergeMessageOrBuilder>(
+                  wallMerge_,
+                  getParentForChildren(),
+                  isClean());
+          wallMerge_ = null;
+        }
+        return wallMergeBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:BattleStepMessage)
+    }
+
+    static {
+      defaultInstance = new BattleStepMessage(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:BattleStepMessage)
+  }
+
+  public interface ArmyMoveMessageOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required int32 armyId = 1;
+    /**
+     * <code>required int32 armyId = 1;</code>
+     *
+     * <pre>
+     *士兵instanceId
+     * </pre>
+     */
+    boolean hasArmyId();
+    /**
+     * <code>required int32 armyId = 1;</code>
+     *
+     * <pre>
+     *士兵instanceId
+     * </pre>
+     */
+    int getArmyId();
+
+    // required int32 tox = 2;
+    /**
+     * <code>required int32 tox = 2;</code>
+     *
+     * <pre>
+     *目标x坐标
+     * </pre>
+     */
+    boolean hasTox();
+    /**
+     * <code>required int32 tox = 2;</code>
+     *
+     * <pre>
+     *目标x坐标
+     * </pre>
+     */
+    int getTox();
+
+    // required int32 toy = 3;
+    /**
+     * <code>required int32 toy = 3;</code>
+     *
+     * <pre>
+     *目标y坐标
+     * </pre>
+     */
+    boolean hasToy();
+    /**
+     * <code>required int32 toy = 3;</code>
+     *
+     * <pre>
+     *目标y坐标
+     * </pre>
+     */
+    int getToy();
+  }
+  /**
+   * Protobuf type {@code ArmyMoveMessage}
+   *
+   * <pre>
+   *单个士兵移动
+   * </pre>
+   */
+  public static final class ArmyMoveMessage extends
+      com.google.protobuf.GeneratedMessage
+      implements ArmyMoveMessageOrBuilder {
+    // Use ArmyMoveMessage.newBuilder() to construct.
+    private ArmyMoveMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private ArmyMoveMessage(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final ArmyMoveMessage defaultInstance;
+    public static ArmyMoveMessage getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public ArmyMoveMessage getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ArmyMoveMessage(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              armyId_ = input.readInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              tox_ = input.readInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              toy_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.yim.message.pix.game.MessagePtoto.internal_static_ArmyMoveMessage_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.yim.message.pix.game.MessagePtoto.internal_static_ArmyMoveMessage_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage.class, com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<ArmyMoveMessage> PARSER =
+        new com.google.protobuf.AbstractParser<ArmyMoveMessage>() {
+      public ArmyMoveMessage parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ArmyMoveMessage(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ArmyMoveMessage> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required int32 armyId = 1;
+    public static final int ARMYID_FIELD_NUMBER = 1;
+    private int armyId_;
+    /**
+     * <code>required int32 armyId = 1;</code>
+     *
+     * <pre>
+     *士兵instanceId
+     * </pre>
+     */
+    public boolean hasArmyId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int32 armyId = 1;</code>
+     *
+     * <pre>
+     *士兵instanceId
+     * </pre>
+     */
+    public int getArmyId() {
+      return armyId_;
+    }
+
+    // required int32 tox = 2;
+    public static final int TOX_FIELD_NUMBER = 2;
+    private int tox_;
+    /**
+     * <code>required int32 tox = 2;</code>
+     *
+     * <pre>
+     *目标x坐标
+     * </pre>
+     */
+    public boolean hasTox() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required int32 tox = 2;</code>
+     *
+     * <pre>
+     *目标x坐标
+     * </pre>
+     */
+    public int getTox() {
+      return tox_;
+    }
+
+    // required int32 toy = 3;
+    public static final int TOY_FIELD_NUMBER = 3;
+    private int toy_;
+    /**
+     * <code>required int32 toy = 3;</code>
+     *
+     * <pre>
+     *目标y坐标
+     * </pre>
+     */
+    public boolean hasToy() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>required int32 toy = 3;</code>
+     *
+     * <pre>
+     *目标y坐标
+     * </pre>
+     */
+    public int getToy() {
+      return toy_;
+    }
+
+    private void initFields() {
+      armyId_ = 0;
+      tox_ = 0;
+      toy_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasArmyId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasTox()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasToy()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, armyId_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(2, tox_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeInt32(3, toy_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, armyId_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, tox_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, toy_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ArmyMoveMessage}
+     *
+     * <pre>
+     *单个士兵移动
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.yim.message.pix.game.MessagePtoto.ArmyMoveMessageOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.yim.message.pix.game.MessagePtoto.internal_static_ArmyMoveMessage_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.yim.message.pix.game.MessagePtoto.internal_static_ArmyMoveMessage_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage.class, com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage.Builder.class);
+      }
+
+      // Construct using com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        armyId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        tox_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        toy_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.yim.message.pix.game.MessagePtoto.internal_static_ArmyMoveMessage_descriptor;
+      }
+
+      public com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage getDefaultInstanceForType() {
+        return com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage.getDefaultInstance();
+      }
+
+      public com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage build() {
+        com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage buildPartial() {
+        com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage result = new com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.armyId_ = armyId_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.tox_ = tox_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.toy_ = toy_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage) {
+          return mergeFrom((com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage other) {
+        if (other == com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage.getDefaultInstance()) return this;
+        if (other.hasArmyId()) {
+          setArmyId(other.getArmyId());
+        }
+        if (other.hasTox()) {
+          setTox(other.getTox());
+        }
+        if (other.hasToy()) {
+          setToy(other.getToy());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasArmyId()) {
+          
+          return false;
+        }
+        if (!hasTox()) {
+          
+          return false;
+        }
+        if (!hasToy()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.yim.message.pix.game.MessagePtoto.ArmyMoveMessage) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // required int32 armyId = 1;
+      private int armyId_ ;
+      /**
+       * <code>required int32 armyId = 1;</code>
+       *
+       * <pre>
+       *士兵instanceId
+       * </pre>
+       */
+      public boolean hasArmyId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int32 armyId = 1;</code>
+       *
+       * <pre>
+       *士兵instanceId
+       * </pre>
+       */
+      public int getArmyId() {
+        return armyId_;
+      }
+      /**
+       * <code>required int32 armyId = 1;</code>
+       *
+       * <pre>
+       *士兵instanceId
+       * </pre>
+       */
+      public Builder setArmyId(int value) {
+        bitField0_ |= 0x00000001;
+        armyId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 armyId = 1;</code>
+       *
+       * <pre>
+       *士兵instanceId
+       * </pre>
+       */
+      public Builder clearArmyId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        armyId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required int32 tox = 2;
+      private int tox_ ;
+      /**
+       * <code>required int32 tox = 2;</code>
+       *
+       * <pre>
+       *目标x坐标
+       * </pre>
+       */
+      public boolean hasTox() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required int32 tox = 2;</code>
+       *
+       * <pre>
+       *目标x坐标
+       * </pre>
+       */
+      public int getTox() {
+        return tox_;
+      }
+      /**
+       * <code>required int32 tox = 2;</code>
+       *
+       * <pre>
+       *目标x坐标
+       * </pre>
+       */
+      public Builder setTox(int value) {
+        bitField0_ |= 0x00000002;
+        tox_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 tox = 2;</code>
+       *
+       * <pre>
+       *目标x坐标
+       * </pre>
+       */
+      public Builder clearTox() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        tox_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required int32 toy = 3;
+      private int toy_ ;
+      /**
+       * <code>required int32 toy = 3;</code>
+       *
+       * <pre>
+       *目标y坐标
+       * </pre>
+       */
+      public boolean hasToy() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>required int32 toy = 3;</code>
+       *
+       * <pre>
+       *目标y坐标
+       * </pre>
+       */
+      public int getToy() {
+        return toy_;
+      }
+      /**
+       * <code>required int32 toy = 3;</code>
+       *
+       * <pre>
+       *目标y坐标
+       * </pre>
+       */
+      public Builder setToy(int value) {
+        bitField0_ |= 0x00000004;
+        toy_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 toy = 3;</code>
+       *
+       * <pre>
+       *目标y坐标
+       * </pre>
+       */
+      public Builder clearToy() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        toy_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:ArmyMoveMessage)
+    }
+
+    static {
+      defaultInstance = new ArmyMoveMessage(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:ArmyMoveMessage)
+  }
+
+  public interface AtkQueueMessageOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // repeated int32 armyId = 1;
+    /**
+     * <code>repeated int32 armyId = 1;</code>
+     */
+    java.util.List<java.lang.Integer> getArmyIdList();
+    /**
+     * <code>repeated int32 armyId = 1;</code>
+     */
+    int getArmyIdCount();
+    /**
+     * <code>repeated int32 armyId = 1;</code>
+     */
+    int getArmyId(int index);
+
+    // repeated int32 targetY = 2;
+    /**
+     * <code>repeated int32 targetY = 2;</code>
+     */
+    java.util.List<java.lang.Integer> getTargetYList();
+    /**
+     * <code>repeated int32 targetY = 2;</code>
+     */
+    int getTargetYCount();
+    /**
+     * <code>repeated int32 targetY = 2;</code>
+     */
+    int getTargetY(int index);
+  }
+  /**
+   * Protobuf type {@code AtkQueueMessage}
+   *
+   * <pre>
+   *形成一个攻击阵型
+   * </pre>
+   */
+  public static final class AtkQueueMessage extends
+      com.google.protobuf.GeneratedMessage
+      implements AtkQueueMessageOrBuilder {
+    // Use AtkQueueMessage.newBuilder() to construct.
+    private AtkQueueMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private AtkQueueMessage(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final AtkQueueMessage defaultInstance;
+    public static AtkQueueMessage getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public AtkQueueMessage getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AtkQueueMessage(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                armyId_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              armyId_.add(input.readInt32());
+              break;
+            }
+            case 10: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001) && input.getBytesUntilLimit() > 0) {
+                armyId_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                armyId_.add(input.readInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 16: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                targetY_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              targetY_.add(input.readInt32());
+              break;
+            }
+            case 18: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002) && input.getBytesUntilLimit() > 0) {
+                targetY_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                targetY_.add(input.readInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          armyId_ = java.util.Collections.unmodifiableList(armyId_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          targetY_ = java.util.Collections.unmodifiableList(targetY_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.yim.message.pix.game.MessagePtoto.internal_static_AtkQueueMessage_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.yim.message.pix.game.MessagePtoto.internal_static_AtkQueueMessage_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.yim.message.pix.game.MessagePtoto.AtkQueueMessage.class, com.yim.message.pix.game.MessagePtoto.AtkQueueMessage.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<AtkQueueMessage> PARSER =
+        new com.google.protobuf.AbstractParser<AtkQueueMessage>() {
+      public AtkQueueMessage parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AtkQueueMessage(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AtkQueueMessage> getParserForType() {
+      return PARSER;
+    }
+
+    // repeated int32 armyId = 1;
+    public static final int ARMYID_FIELD_NUMBER = 1;
+    private java.util.List<java.lang.Integer> armyId_;
+    /**
+     * <code>repeated int32 armyId = 1;</code>
+     */
+    public java.util.List<java.lang.Integer>
+        getArmyIdList() {
+      return armyId_;
+    }
+    /**
+     * <code>repeated int32 armyId = 1;</code>
+     */
+    public int getArmyIdCount() {
+      return armyId_.size();
+    }
+    /**
+     * <code>repeated int32 armyId = 1;</code>
+     */
+    public int getArmyId(int index) {
+      return armyId_.get(index);
+    }
+
+    // repeated int32 targetY = 2;
+    public static final int TARGETY_FIELD_NUMBER = 2;
+    private java.util.List<java.lang.Integer> targetY_;
+    /**
+     * <code>repeated int32 targetY = 2;</code>
+     */
+    public java.util.List<java.lang.Integer>
+        getTargetYList() {
+      return targetY_;
+    }
+    /**
+     * <code>repeated int32 targetY = 2;</code>
+     */
+    public int getTargetYCount() {
+      return targetY_.size();
+    }
+    /**
+     * <code>repeated int32 targetY = 2;</code>
+     */
+    public int getTargetY(int index) {
+      return targetY_.get(index);
+    }
+
+    private void initFields() {
+      armyId_ = java.util.Collections.emptyList();
+      targetY_ = java.util.Collections.emptyList();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      for (int i = 0; i < armyId_.size(); i++) {
+        output.writeInt32(1, armyId_.get(i));
+      }
+      for (int i = 0; i < targetY_.size(); i++) {
+        output.writeInt32(2, targetY_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < armyId_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(armyId_.get(i));
+        }
+        size += dataSize;
+        size += 1 * getArmyIdList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < targetY_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(targetY_.get(i));
+        }
+        size += dataSize;
+        size += 1 * getTargetYList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.yim.message.pix.game.MessagePtoto.AtkQueueMessage parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.AtkQueueMessage parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.AtkQueueMessage parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.AtkQueueMessage parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.AtkQueueMessage parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.AtkQueueMessage parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.AtkQueueMessage parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.AtkQueueMessage parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.AtkQueueMessage parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.AtkQueueMessage parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.yim.message.pix.game.MessagePtoto.AtkQueueMessage prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code AtkQueueMessage}
+     *
+     * <pre>
+     *形成一个攻击阵型
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.yim.message.pix.game.MessagePtoto.AtkQueueMessageOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.yim.message.pix.game.MessagePtoto.internal_static_AtkQueueMessage_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.yim.message.pix.game.MessagePtoto.internal_static_AtkQueueMessage_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.yim.message.pix.game.MessagePtoto.AtkQueueMessage.class, com.yim.message.pix.game.MessagePtoto.AtkQueueMessage.Builder.class);
+      }
+
+      // Construct using com.yim.message.pix.game.MessagePtoto.AtkQueueMessage.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        armyId_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        targetY_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.yim.message.pix.game.MessagePtoto.internal_static_AtkQueueMessage_descriptor;
+      }
+
+      public com.yim.message.pix.game.MessagePtoto.AtkQueueMessage getDefaultInstanceForType() {
+        return com.yim.message.pix.game.MessagePtoto.AtkQueueMessage.getDefaultInstance();
+      }
+
+      public com.yim.message.pix.game.MessagePtoto.AtkQueueMessage build() {
+        com.yim.message.pix.game.MessagePtoto.AtkQueueMessage result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.yim.message.pix.game.MessagePtoto.AtkQueueMessage buildPartial() {
+        com.yim.message.pix.game.MessagePtoto.AtkQueueMessage result = new com.yim.message.pix.game.MessagePtoto.AtkQueueMessage(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          armyId_ = java.util.Collections.unmodifiableList(armyId_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.armyId_ = armyId_;
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          targetY_ = java.util.Collections.unmodifiableList(targetY_);
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.targetY_ = targetY_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.yim.message.pix.game.MessagePtoto.AtkQueueMessage) {
+          return mergeFrom((com.yim.message.pix.game.MessagePtoto.AtkQueueMessage)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.yim.message.pix.game.MessagePtoto.AtkQueueMessage other) {
+        if (other == com.yim.message.pix.game.MessagePtoto.AtkQueueMessage.getDefaultInstance()) return this;
+        if (!other.armyId_.isEmpty()) {
+          if (armyId_.isEmpty()) {
+            armyId_ = other.armyId_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureArmyIdIsMutable();
+            armyId_.addAll(other.armyId_);
+          }
+          onChanged();
+        }
+        if (!other.targetY_.isEmpty()) {
+          if (targetY_.isEmpty()) {
+            targetY_ = other.targetY_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureTargetYIsMutable();
+            targetY_.addAll(other.targetY_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.yim.message.pix.game.MessagePtoto.AtkQueueMessage parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.yim.message.pix.game.MessagePtoto.AtkQueueMessage) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // repeated int32 armyId = 1;
+      private java.util.List<java.lang.Integer> armyId_ = java.util.Collections.emptyList();
+      private void ensureArmyIdIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          armyId_ = new java.util.ArrayList<java.lang.Integer>(armyId_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated int32 armyId = 1;</code>
+       */
+      public java.util.List<java.lang.Integer>
+          getArmyIdList() {
+        return java.util.Collections.unmodifiableList(armyId_);
+      }
+      /**
+       * <code>repeated int32 armyId = 1;</code>
+       */
+      public int getArmyIdCount() {
+        return armyId_.size();
+      }
+      /**
+       * <code>repeated int32 armyId = 1;</code>
+       */
+      public int getArmyId(int index) {
+        return armyId_.get(index);
+      }
+      /**
+       * <code>repeated int32 armyId = 1;</code>
+       */
+      public Builder setArmyId(
+          int index, int value) {
+        ensureArmyIdIsMutable();
+        armyId_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 armyId = 1;</code>
+       */
+      public Builder addArmyId(int value) {
+        ensureArmyIdIsMutable();
+        armyId_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 armyId = 1;</code>
+       */
+      public Builder addAllArmyId(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureArmyIdIsMutable();
+        super.addAll(values, armyId_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 armyId = 1;</code>
+       */
+      public Builder clearArmyId() {
+        armyId_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+
+      // repeated int32 targetY = 2;
+      private java.util.List<java.lang.Integer> targetY_ = java.util.Collections.emptyList();
+      private void ensureTargetYIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          targetY_ = new java.util.ArrayList<java.lang.Integer>(targetY_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <code>repeated int32 targetY = 2;</code>
+       */
+      public java.util.List<java.lang.Integer>
+          getTargetYList() {
+        return java.util.Collections.unmodifiableList(targetY_);
+      }
+      /**
+       * <code>repeated int32 targetY = 2;</code>
+       */
+      public int getTargetYCount() {
+        return targetY_.size();
+      }
+      /**
+       * <code>repeated int32 targetY = 2;</code>
+       */
+      public int getTargetY(int index) {
+        return targetY_.get(index);
+      }
+      /**
+       * <code>repeated int32 targetY = 2;</code>
+       */
+      public Builder setTargetY(
+          int index, int value) {
+        ensureTargetYIsMutable();
+        targetY_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 targetY = 2;</code>
+       */
+      public Builder addTargetY(int value) {
+        ensureTargetYIsMutable();
+        targetY_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 targetY = 2;</code>
+       */
+      public Builder addAllTargetY(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureTargetYIsMutable();
+        super.addAll(values, targetY_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 targetY = 2;</code>
+       */
+      public Builder clearTargetY() {
+        targetY_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:AtkQueueMessage)
+    }
+
+    static {
+      defaultInstance = new AtkQueueMessage(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:AtkQueueMessage)
+  }
+
+  public interface WallQueueMessageOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // repeated int32 armyId = 1;
+    /**
+     * <code>repeated int32 armyId = 1;</code>
+     */
+    java.util.List<java.lang.Integer> getArmyIdList();
+    /**
+     * <code>repeated int32 armyId = 1;</code>
+     */
+    int getArmyIdCount();
+    /**
+     * <code>repeated int32 armyId = 1;</code>
+     */
+    int getArmyId(int index);
+
+    // repeated int32 targetX = 2;
+    /**
+     * <code>repeated int32 targetX = 2;</code>
+     */
+    java.util.List<java.lang.Integer> getTargetXList();
+    /**
+     * <code>repeated int32 targetX = 2;</code>
+     */
+    int getTargetXCount();
+    /**
+     * <code>repeated int32 targetX = 2;</code>
+     */
+    int getTargetX(int index);
+
+    // repeated int32 targetY = 3;
+    /**
+     * <code>repeated int32 targetY = 3;</code>
+     */
+    java.util.List<java.lang.Integer> getTargetYList();
+    /**
+     * <code>repeated int32 targetY = 3;</code>
+     */
+    int getTargetYCount();
+    /**
+     * <code>repeated int32 targetY = 3;</code>
+     */
+    int getTargetY(int index);
+  }
+  /**
+   * Protobuf type {@code WallQueueMessage}
+   *
+   * <pre>
+   *防御城墙
+   * </pre>
+   */
+  public static final class WallQueueMessage extends
+      com.google.protobuf.GeneratedMessage
+      implements WallQueueMessageOrBuilder {
+    // Use WallQueueMessage.newBuilder() to construct.
+    private WallQueueMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private WallQueueMessage(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final WallQueueMessage defaultInstance;
+    public static WallQueueMessage getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public WallQueueMessage getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private WallQueueMessage(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                armyId_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              armyId_.add(input.readInt32());
+              break;
+            }
+            case 10: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001) && input.getBytesUntilLimit() > 0) {
+                armyId_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                armyId_.add(input.readInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 16: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                targetX_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              targetX_.add(input.readInt32());
+              break;
+            }
+            case 18: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002) && input.getBytesUntilLimit() > 0) {
+                targetX_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                targetX_.add(input.readInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 24: {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                targetY_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              targetY_.add(input.readInt32());
+              break;
+            }
+            case 26: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004) && input.getBytesUntilLimit() > 0) {
+                targetY_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                targetY_.add(input.readInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          armyId_ = java.util.Collections.unmodifiableList(armyId_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          targetX_ = java.util.Collections.unmodifiableList(targetX_);
+        }
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          targetY_ = java.util.Collections.unmodifiableList(targetY_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.yim.message.pix.game.MessagePtoto.internal_static_WallQueueMessage_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.yim.message.pix.game.MessagePtoto.internal_static_WallQueueMessage_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.yim.message.pix.game.MessagePtoto.WallQueueMessage.class, com.yim.message.pix.game.MessagePtoto.WallQueueMessage.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<WallQueueMessage> PARSER =
+        new com.google.protobuf.AbstractParser<WallQueueMessage>() {
+      public WallQueueMessage parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new WallQueueMessage(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<WallQueueMessage> getParserForType() {
+      return PARSER;
+    }
+
+    // repeated int32 armyId = 1;
+    public static final int ARMYID_FIELD_NUMBER = 1;
+    private java.util.List<java.lang.Integer> armyId_;
+    /**
+     * <code>repeated int32 armyId = 1;</code>
+     */
+    public java.util.List<java.lang.Integer>
+        getArmyIdList() {
+      return armyId_;
+    }
+    /**
+     * <code>repeated int32 armyId = 1;</code>
+     */
+    public int getArmyIdCount() {
+      return armyId_.size();
+    }
+    /**
+     * <code>repeated int32 armyId = 1;</code>
+     */
+    public int getArmyId(int index) {
+      return armyId_.get(index);
+    }
+
+    // repeated int32 targetX = 2;
+    public static final int TARGETX_FIELD_NUMBER = 2;
+    private java.util.List<java.lang.Integer> targetX_;
+    /**
+     * <code>repeated int32 targetX = 2;</code>
+     */
+    public java.util.List<java.lang.Integer>
+        getTargetXList() {
+      return targetX_;
+    }
+    /**
+     * <code>repeated int32 targetX = 2;</code>
+     */
+    public int getTargetXCount() {
+      return targetX_.size();
+    }
+    /**
+     * <code>repeated int32 targetX = 2;</code>
+     */
+    public int getTargetX(int index) {
+      return targetX_.get(index);
+    }
+
+    // repeated int32 targetY = 3;
+    public static final int TARGETY_FIELD_NUMBER = 3;
+    private java.util.List<java.lang.Integer> targetY_;
+    /**
+     * <code>repeated int32 targetY = 3;</code>
+     */
+    public java.util.List<java.lang.Integer>
+        getTargetYList() {
+      return targetY_;
+    }
+    /**
+     * <code>repeated int32 targetY = 3;</code>
+     */
+    public int getTargetYCount() {
+      return targetY_.size();
+    }
+    /**
+     * <code>repeated int32 targetY = 3;</code>
+     */
+    public int getTargetY(int index) {
+      return targetY_.get(index);
+    }
+
+    private void initFields() {
+      armyId_ = java.util.Collections.emptyList();
+      targetX_ = java.util.Collections.emptyList();
+      targetY_ = java.util.Collections.emptyList();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      for (int i = 0; i < armyId_.size(); i++) {
+        output.writeInt32(1, armyId_.get(i));
+      }
+      for (int i = 0; i < targetX_.size(); i++) {
+        output.writeInt32(2, targetX_.get(i));
+      }
+      for (int i = 0; i < targetY_.size(); i++) {
+        output.writeInt32(3, targetY_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < armyId_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(armyId_.get(i));
+        }
+        size += dataSize;
+        size += 1 * getArmyIdList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < targetX_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(targetX_.get(i));
+        }
+        size += dataSize;
+        size += 1 * getTargetXList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < targetY_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(targetY_.get(i));
+        }
+        size += dataSize;
+        size += 1 * getTargetYList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.yim.message.pix.game.MessagePtoto.WallQueueMessage parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.WallQueueMessage parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.WallQueueMessage parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.WallQueueMessage parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.WallQueueMessage parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.WallQueueMessage parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.WallQueueMessage parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.WallQueueMessage parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.WallQueueMessage parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.WallQueueMessage parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.yim.message.pix.game.MessagePtoto.WallQueueMessage prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code WallQueueMessage}
+     *
+     * <pre>
+     *防御城墙
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.yim.message.pix.game.MessagePtoto.WallQueueMessageOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.yim.message.pix.game.MessagePtoto.internal_static_WallQueueMessage_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.yim.message.pix.game.MessagePtoto.internal_static_WallQueueMessage_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.yim.message.pix.game.MessagePtoto.WallQueueMessage.class, com.yim.message.pix.game.MessagePtoto.WallQueueMessage.Builder.class);
+      }
+
+      // Construct using com.yim.message.pix.game.MessagePtoto.WallQueueMessage.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        armyId_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        targetX_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        targetY_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.yim.message.pix.game.MessagePtoto.internal_static_WallQueueMessage_descriptor;
+      }
+
+      public com.yim.message.pix.game.MessagePtoto.WallQueueMessage getDefaultInstanceForType() {
+        return com.yim.message.pix.game.MessagePtoto.WallQueueMessage.getDefaultInstance();
+      }
+
+      public com.yim.message.pix.game.MessagePtoto.WallQueueMessage build() {
+        com.yim.message.pix.game.MessagePtoto.WallQueueMessage result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.yim.message.pix.game.MessagePtoto.WallQueueMessage buildPartial() {
+        com.yim.message.pix.game.MessagePtoto.WallQueueMessage result = new com.yim.message.pix.game.MessagePtoto.WallQueueMessage(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          armyId_ = java.util.Collections.unmodifiableList(armyId_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.armyId_ = armyId_;
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          targetX_ = java.util.Collections.unmodifiableList(targetX_);
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.targetX_ = targetX_;
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          targetY_ = java.util.Collections.unmodifiableList(targetY_);
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.targetY_ = targetY_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.yim.message.pix.game.MessagePtoto.WallQueueMessage) {
+          return mergeFrom((com.yim.message.pix.game.MessagePtoto.WallQueueMessage)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.yim.message.pix.game.MessagePtoto.WallQueueMessage other) {
+        if (other == com.yim.message.pix.game.MessagePtoto.WallQueueMessage.getDefaultInstance()) return this;
+        if (!other.armyId_.isEmpty()) {
+          if (armyId_.isEmpty()) {
+            armyId_ = other.armyId_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureArmyIdIsMutable();
+            armyId_.addAll(other.armyId_);
+          }
+          onChanged();
+        }
+        if (!other.targetX_.isEmpty()) {
+          if (targetX_.isEmpty()) {
+            targetX_ = other.targetX_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureTargetXIsMutable();
+            targetX_.addAll(other.targetX_);
+          }
+          onChanged();
+        }
+        if (!other.targetY_.isEmpty()) {
+          if (targetY_.isEmpty()) {
+            targetY_ = other.targetY_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureTargetYIsMutable();
+            targetY_.addAll(other.targetY_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.yim.message.pix.game.MessagePtoto.WallQueueMessage parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.yim.message.pix.game.MessagePtoto.WallQueueMessage) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // repeated int32 armyId = 1;
+      private java.util.List<java.lang.Integer> armyId_ = java.util.Collections.emptyList();
+      private void ensureArmyIdIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          armyId_ = new java.util.ArrayList<java.lang.Integer>(armyId_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated int32 armyId = 1;</code>
+       */
+      public java.util.List<java.lang.Integer>
+          getArmyIdList() {
+        return java.util.Collections.unmodifiableList(armyId_);
+      }
+      /**
+       * <code>repeated int32 armyId = 1;</code>
+       */
+      public int getArmyIdCount() {
+        return armyId_.size();
+      }
+      /**
+       * <code>repeated int32 armyId = 1;</code>
+       */
+      public int getArmyId(int index) {
+        return armyId_.get(index);
+      }
+      /**
+       * <code>repeated int32 armyId = 1;</code>
+       */
+      public Builder setArmyId(
+          int index, int value) {
+        ensureArmyIdIsMutable();
+        armyId_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 armyId = 1;</code>
+       */
+      public Builder addArmyId(int value) {
+        ensureArmyIdIsMutable();
+        armyId_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 armyId = 1;</code>
+       */
+      public Builder addAllArmyId(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureArmyIdIsMutable();
+        super.addAll(values, armyId_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 armyId = 1;</code>
+       */
+      public Builder clearArmyId() {
+        armyId_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+
+      // repeated int32 targetX = 2;
+      private java.util.List<java.lang.Integer> targetX_ = java.util.Collections.emptyList();
+      private void ensureTargetXIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          targetX_ = new java.util.ArrayList<java.lang.Integer>(targetX_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <code>repeated int32 targetX = 2;</code>
+       */
+      public java.util.List<java.lang.Integer>
+          getTargetXList() {
+        return java.util.Collections.unmodifiableList(targetX_);
+      }
+      /**
+       * <code>repeated int32 targetX = 2;</code>
+       */
+      public int getTargetXCount() {
+        return targetX_.size();
+      }
+      /**
+       * <code>repeated int32 targetX = 2;</code>
+       */
+      public int getTargetX(int index) {
+        return targetX_.get(index);
+      }
+      /**
+       * <code>repeated int32 targetX = 2;</code>
+       */
+      public Builder setTargetX(
+          int index, int value) {
+        ensureTargetXIsMutable();
+        targetX_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 targetX = 2;</code>
+       */
+      public Builder addTargetX(int value) {
+        ensureTargetXIsMutable();
+        targetX_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 targetX = 2;</code>
+       */
+      public Builder addAllTargetX(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureTargetXIsMutable();
+        super.addAll(values, targetX_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 targetX = 2;</code>
+       */
+      public Builder clearTargetX() {
+        targetX_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+
+      // repeated int32 targetY = 3;
+      private java.util.List<java.lang.Integer> targetY_ = java.util.Collections.emptyList();
+      private void ensureTargetYIsMutable() {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          targetY_ = new java.util.ArrayList<java.lang.Integer>(targetY_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+      /**
+       * <code>repeated int32 targetY = 3;</code>
+       */
+      public java.util.List<java.lang.Integer>
+          getTargetYList() {
+        return java.util.Collections.unmodifiableList(targetY_);
+      }
+      /**
+       * <code>repeated int32 targetY = 3;</code>
+       */
+      public int getTargetYCount() {
+        return targetY_.size();
+      }
+      /**
+       * <code>repeated int32 targetY = 3;</code>
+       */
+      public int getTargetY(int index) {
+        return targetY_.get(index);
+      }
+      /**
+       * <code>repeated int32 targetY = 3;</code>
+       */
+      public Builder setTargetY(
+          int index, int value) {
+        ensureTargetYIsMutable();
+        targetY_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 targetY = 3;</code>
+       */
+      public Builder addTargetY(int value) {
+        ensureTargetYIsMutable();
+        targetY_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 targetY = 3;</code>
+       */
+      public Builder addAllTargetY(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureTargetYIsMutable();
+        super.addAll(values, targetY_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 targetY = 3;</code>
+       */
+      public Builder clearTargetY() {
+        targetY_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:WallQueueMessage)
+    }
+
+    static {
+      defaultInstance = new WallQueueMessage(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:WallQueueMessage)
+  }
+
+  public interface WallMergeMessageOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // repeated int32 fromId = 1;
+    /**
+     * <code>repeated int32 fromId = 1;</code>
+     */
+    java.util.List<java.lang.Integer> getFromIdList();
+    /**
+     * <code>repeated int32 fromId = 1;</code>
+     */
+    int getFromIdCount();
+    /**
+     * <code>repeated int32 fromId = 1;</code>
+     */
+    int getFromId(int index);
+
+    // repeated int32 toId = 2;
+    /**
+     * <code>repeated int32 toId = 2;</code>
+     */
+    java.util.List<java.lang.Integer> getToIdList();
+    /**
+     * <code>repeated int32 toId = 2;</code>
+     */
+    int getToIdCount();
+    /**
+     * <code>repeated int32 toId = 2;</code>
+     */
+    int getToId(int index);
+  }
+  /**
+   * Protobuf type {@code WallMergeMessage}
+   *
+   * <pre>
+   *城墙合成
+   * </pre>
+   */
+  public static final class WallMergeMessage extends
+      com.google.protobuf.GeneratedMessage
+      implements WallMergeMessageOrBuilder {
+    // Use WallMergeMessage.newBuilder() to construct.
+    private WallMergeMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private WallMergeMessage(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final WallMergeMessage defaultInstance;
+    public static WallMergeMessage getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public WallMergeMessage getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private WallMergeMessage(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                fromId_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              fromId_.add(input.readInt32());
+              break;
+            }
+            case 10: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001) && input.getBytesUntilLimit() > 0) {
+                fromId_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                fromId_.add(input.readInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 16: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                toId_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              toId_.add(input.readInt32());
+              break;
+            }
+            case 18: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002) && input.getBytesUntilLimit() > 0) {
+                toId_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                toId_.add(input.readInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          fromId_ = java.util.Collections.unmodifiableList(fromId_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          toId_ = java.util.Collections.unmodifiableList(toId_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.yim.message.pix.game.MessagePtoto.internal_static_WallMergeMessage_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.yim.message.pix.game.MessagePtoto.internal_static_WallMergeMessage_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.yim.message.pix.game.MessagePtoto.WallMergeMessage.class, com.yim.message.pix.game.MessagePtoto.WallMergeMessage.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<WallMergeMessage> PARSER =
+        new com.google.protobuf.AbstractParser<WallMergeMessage>() {
+      public WallMergeMessage parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new WallMergeMessage(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<WallMergeMessage> getParserForType() {
+      return PARSER;
+    }
+
+    // repeated int32 fromId = 1;
+    public static final int FROMID_FIELD_NUMBER = 1;
+    private java.util.List<java.lang.Integer> fromId_;
+    /**
+     * <code>repeated int32 fromId = 1;</code>
+     */
+    public java.util.List<java.lang.Integer>
+        getFromIdList() {
+      return fromId_;
+    }
+    /**
+     * <code>repeated int32 fromId = 1;</code>
+     */
+    public int getFromIdCount() {
+      return fromId_.size();
+    }
+    /**
+     * <code>repeated int32 fromId = 1;</code>
+     */
+    public int getFromId(int index) {
+      return fromId_.get(index);
+    }
+
+    // repeated int32 toId = 2;
+    public static final int TOID_FIELD_NUMBER = 2;
+    private java.util.List<java.lang.Integer> toId_;
+    /**
+     * <code>repeated int32 toId = 2;</code>
+     */
+    public java.util.List<java.lang.Integer>
+        getToIdList() {
+      return toId_;
+    }
+    /**
+     * <code>repeated int32 toId = 2;</code>
+     */
+    public int getToIdCount() {
+      return toId_.size();
+    }
+    /**
+     * <code>repeated int32 toId = 2;</code>
+     */
+    public int getToId(int index) {
+      return toId_.get(index);
+    }
+
+    private void initFields() {
+      fromId_ = java.util.Collections.emptyList();
+      toId_ = java.util.Collections.emptyList();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      for (int i = 0; i < fromId_.size(); i++) {
+        output.writeInt32(1, fromId_.get(i));
+      }
+      for (int i = 0; i < toId_.size(); i++) {
+        output.writeInt32(2, toId_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < fromId_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(fromId_.get(i));
+        }
+        size += dataSize;
+        size += 1 * getFromIdList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < toId_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(toId_.get(i));
+        }
+        size += dataSize;
+        size += 1 * getToIdList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.yim.message.pix.game.MessagePtoto.WallMergeMessage parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.WallMergeMessage parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.WallMergeMessage parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.WallMergeMessage parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.WallMergeMessage parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.WallMergeMessage parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.WallMergeMessage parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.WallMergeMessage parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.WallMergeMessage parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.yim.message.pix.game.MessagePtoto.WallMergeMessage parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.yim.message.pix.game.MessagePtoto.WallMergeMessage prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code WallMergeMessage}
+     *
+     * <pre>
+     *城墙合成
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.yim.message.pix.game.MessagePtoto.WallMergeMessageOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.yim.message.pix.game.MessagePtoto.internal_static_WallMergeMessage_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.yim.message.pix.game.MessagePtoto.internal_static_WallMergeMessage_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.yim.message.pix.game.MessagePtoto.WallMergeMessage.class, com.yim.message.pix.game.MessagePtoto.WallMergeMessage.Builder.class);
+      }
+
+      // Construct using com.yim.message.pix.game.MessagePtoto.WallMergeMessage.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        fromId_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        toId_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.yim.message.pix.game.MessagePtoto.internal_static_WallMergeMessage_descriptor;
+      }
+
+      public com.yim.message.pix.game.MessagePtoto.WallMergeMessage getDefaultInstanceForType() {
+        return com.yim.message.pix.game.MessagePtoto.WallMergeMessage.getDefaultInstance();
+      }
+
+      public com.yim.message.pix.game.MessagePtoto.WallMergeMessage build() {
+        com.yim.message.pix.game.MessagePtoto.WallMergeMessage result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.yim.message.pix.game.MessagePtoto.WallMergeMessage buildPartial() {
+        com.yim.message.pix.game.MessagePtoto.WallMergeMessage result = new com.yim.message.pix.game.MessagePtoto.WallMergeMessage(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          fromId_ = java.util.Collections.unmodifiableList(fromId_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.fromId_ = fromId_;
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          toId_ = java.util.Collections.unmodifiableList(toId_);
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.toId_ = toId_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.yim.message.pix.game.MessagePtoto.WallMergeMessage) {
+          return mergeFrom((com.yim.message.pix.game.MessagePtoto.WallMergeMessage)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.yim.message.pix.game.MessagePtoto.WallMergeMessage other) {
+        if (other == com.yim.message.pix.game.MessagePtoto.WallMergeMessage.getDefaultInstance()) return this;
+        if (!other.fromId_.isEmpty()) {
+          if (fromId_.isEmpty()) {
+            fromId_ = other.fromId_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureFromIdIsMutable();
+            fromId_.addAll(other.fromId_);
+          }
+          onChanged();
+        }
+        if (!other.toId_.isEmpty()) {
+          if (toId_.isEmpty()) {
+            toId_ = other.toId_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureToIdIsMutable();
+            toId_.addAll(other.toId_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.yim.message.pix.game.MessagePtoto.WallMergeMessage parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.yim.message.pix.game.MessagePtoto.WallMergeMessage) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // repeated int32 fromId = 1;
+      private java.util.List<java.lang.Integer> fromId_ = java.util.Collections.emptyList();
+      private void ensureFromIdIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          fromId_ = new java.util.ArrayList<java.lang.Integer>(fromId_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated int32 fromId = 1;</code>
+       */
+      public java.util.List<java.lang.Integer>
+          getFromIdList() {
+        return java.util.Collections.unmodifiableList(fromId_);
+      }
+      /**
+       * <code>repeated int32 fromId = 1;</code>
+       */
+      public int getFromIdCount() {
+        return fromId_.size();
+      }
+      /**
+       * <code>repeated int32 fromId = 1;</code>
+       */
+      public int getFromId(int index) {
+        return fromId_.get(index);
+      }
+      /**
+       * <code>repeated int32 fromId = 1;</code>
+       */
+      public Builder setFromId(
+          int index, int value) {
+        ensureFromIdIsMutable();
+        fromId_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 fromId = 1;</code>
+       */
+      public Builder addFromId(int value) {
+        ensureFromIdIsMutable();
+        fromId_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 fromId = 1;</code>
+       */
+      public Builder addAllFromId(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureFromIdIsMutable();
+        super.addAll(values, fromId_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 fromId = 1;</code>
+       */
+      public Builder clearFromId() {
+        fromId_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+
+      // repeated int32 toId = 2;
+      private java.util.List<java.lang.Integer> toId_ = java.util.Collections.emptyList();
+      private void ensureToIdIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          toId_ = new java.util.ArrayList<java.lang.Integer>(toId_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <code>repeated int32 toId = 2;</code>
+       */
+      public java.util.List<java.lang.Integer>
+          getToIdList() {
+        return java.util.Collections.unmodifiableList(toId_);
+      }
+      /**
+       * <code>repeated int32 toId = 2;</code>
+       */
+      public int getToIdCount() {
+        return toId_.size();
+      }
+      /**
+       * <code>repeated int32 toId = 2;</code>
+       */
+      public int getToId(int index) {
+        return toId_.get(index);
+      }
+      /**
+       * <code>repeated int32 toId = 2;</code>
+       */
+      public Builder setToId(
+          int index, int value) {
+        ensureToIdIsMutable();
+        toId_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 toId = 2;</code>
+       */
+      public Builder addToId(int value) {
+        ensureToIdIsMutable();
+        toId_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 toId = 2;</code>
+       */
+      public Builder addAllToId(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureToIdIsMutable();
+        super.addAll(values, toId_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 toId = 2;</code>
+       */
+      public Builder clearToId() {
+        toId_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:WallMergeMessage)
+    }
+
+    static {
+      defaultInstance = new WallMergeMessage(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:WallMergeMessage)
+  }
+
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_ErrorMessage_descriptor;
   private static
@@ -12475,6 +18753,51 @@ public final class MessagePtoto {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_BattleArmy_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_MoveArmyReq_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_MoveArmyReq_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_RemoveArmyReq_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_RemoveArmyReq_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_PlayerAtkReq_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_PlayerAtkReq_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_BattleChangeSyn_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_BattleChangeSyn_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_BattleStepMessage_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_BattleStepMessage_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_ArmyMoveMessage_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ArmyMoveMessage_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_AtkQueueMessage_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_AtkQueueMessage_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_WallQueueMessage_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_WallQueueMessage_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_WallMergeMessage_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_WallMergeMessage_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -12514,8 +18837,22 @@ public final class MessagePtoto {
       "\"\n\rbattleArmys_e\030\014 \003(\0132\013.BattleArmy\"W\n\nB" +
       "attleArmy\022\t\n\001x\030\001 \002(\005\022\t\n\001y\030\002 \002(\005\022\022\n\ninsta" +
       "nceId\030\003 \002(\005\022\021\n\tarmyColor\030\004 \002(\005\022\014\n\004icon\030\005",
-      " \002(\tB(\n\030com.yim.message.pix.gameB\014Messag" +
-      "ePtoto"
+      " \002(\t\")\n\013MoveArmyReq\022\r\n\005fromx\030\001 \002(\005\022\013\n\003to" +
+      "x\030\002 \002(\005\"1\n\rRemoveArmyReq\022\017\n\007targetx\030\001 \002(" +
+      "\005\022\017\n\007targety\030\002 \002(\005\"\016\n\014PlayerAtkReq\"9\n\017Ba" +
+      "ttleChangeSyn\022&\n\nbattleStep\030\001 \003(\0132\022.Batt" +
+      "leStepMessage\"\265\001\n\021BattleStepMessage\022\014\n\004t" +
+      "ype\030\001 \002(\005\022\"\n\010armyMove\030\002 \001(\0132\020.ArmyMoveMe" +
+      "ssage\022\"\n\010atkqueue\030\003 \001(\0132\020.AtkQueueMessag" +
+      "e\022$\n\twallQueue\030\004 \001(\0132\021.WallQueueMessage\022" +
+      "$\n\twallMerge\030\005 \001(\0132\021.WallMergeMessage\";\n" +
+      "\017ArmyMoveMessage\022\016\n\006armyId\030\001 \002(\005\022\013\n\003tox\030",
+      "\002 \002(\005\022\013\n\003toy\030\003 \002(\005\"2\n\017AtkQueueMessage\022\016\n" +
+      "\006armyId\030\001 \003(\005\022\017\n\007targetY\030\002 \003(\005\"D\n\020WallQu" +
+      "eueMessage\022\016\n\006armyId\030\001 \003(\005\022\017\n\007targetX\030\002 " +
+      "\003(\005\022\017\n\007targetY\030\003 \003(\005\"0\n\020WallMergeMessage" +
+      "\022\016\n\006fromId\030\001 \003(\005\022\014\n\004toId\030\002 \003(\005B(\n\030com.yi" +
+      "m.message.pix.gameB\014MessagePtoto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -12624,6 +18961,60 @@ public final class MessagePtoto {
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_BattleArmy_descriptor,
               new java.lang.String[] { "X", "Y", "InstanceId", "ArmyColor", "Icon", });
+          internal_static_MoveArmyReq_descriptor =
+            getDescriptor().getMessageTypes().get(17);
+          internal_static_MoveArmyReq_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_MoveArmyReq_descriptor,
+              new java.lang.String[] { "Fromx", "Tox", });
+          internal_static_RemoveArmyReq_descriptor =
+            getDescriptor().getMessageTypes().get(18);
+          internal_static_RemoveArmyReq_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_RemoveArmyReq_descriptor,
+              new java.lang.String[] { "Targetx", "Targety", });
+          internal_static_PlayerAtkReq_descriptor =
+            getDescriptor().getMessageTypes().get(19);
+          internal_static_PlayerAtkReq_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_PlayerAtkReq_descriptor,
+              new java.lang.String[] { });
+          internal_static_BattleChangeSyn_descriptor =
+            getDescriptor().getMessageTypes().get(20);
+          internal_static_BattleChangeSyn_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_BattleChangeSyn_descriptor,
+              new java.lang.String[] { "BattleStep", });
+          internal_static_BattleStepMessage_descriptor =
+            getDescriptor().getMessageTypes().get(21);
+          internal_static_BattleStepMessage_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_BattleStepMessage_descriptor,
+              new java.lang.String[] { "Type", "ArmyMove", "Atkqueue", "WallQueue", "WallMerge", });
+          internal_static_ArmyMoveMessage_descriptor =
+            getDescriptor().getMessageTypes().get(22);
+          internal_static_ArmyMoveMessage_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_ArmyMoveMessage_descriptor,
+              new java.lang.String[] { "ArmyId", "Tox", "Toy", });
+          internal_static_AtkQueueMessage_descriptor =
+            getDescriptor().getMessageTypes().get(23);
+          internal_static_AtkQueueMessage_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_AtkQueueMessage_descriptor,
+              new java.lang.String[] { "ArmyId", "TargetY", });
+          internal_static_WallQueueMessage_descriptor =
+            getDescriptor().getMessageTypes().get(24);
+          internal_static_WallQueueMessage_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_WallQueueMessage_descriptor,
+              new java.lang.String[] { "ArmyId", "TargetX", "TargetY", });
+          internal_static_WallMergeMessage_descriptor =
+            getDescriptor().getMessageTypes().get(25);
+          internal_static_WallMergeMessage_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_WallMergeMessage_descriptor,
+              new java.lang.String[] { "FromId", "ToId", });
           return null;
         }
       };

@@ -1,7 +1,6 @@
 package com.yim.message.pix.game;
 
-import java.sql.SQLNonTransientConnectionException;
-
+import com.yim.message.pix.game.MessagePtoto.BattleChangeSyn;
 import com.yim.message.pix.game.MessagePtoto.BattleMatchReq;
 import com.yim.message.pix.game.MessagePtoto.BattleMatchRes;
 import com.yim.message.pix.game.MessagePtoto.ErrorMessage;
@@ -13,6 +12,8 @@ import com.yim.message.pix.game.MessagePtoto.HeartBeatReq;
 import com.yim.message.pix.game.MessagePtoto.HeartBeatRes;
 import com.yim.message.pix.game.MessagePtoto.LoginReq;
 import com.yim.message.pix.game.MessagePtoto.LoginRes;
+import com.yim.message.pix.game.MessagePtoto.MoveArmyReq;
+import com.yim.message.pix.game.MessagePtoto.PlayerAtkReq;
 import com.yim.message.pix.game.MessagePtoto.StartBattleReq;
 import com.yim.message.pix.game.MessagePtoto.StartBattleRes;
 import com.yim.net.protocol.OpCodeMapper;
@@ -40,6 +41,10 @@ public class GameCodeMaper extends OpCodeMapper{
 	public static final int STARTBATTLEREQ = 111;
 	public static final int STARTBATTLERES = 112;
 	
+	public static final int MOVEARMYREQ = 113;
+	public static final int PLAYERATKREQ = 115;
+	public static final int BATTLECHANGESYN = 117;
+	
 	
 	
 	public GameCodeMaper() {
@@ -62,6 +67,9 @@ public class GameCodeMaper extends OpCodeMapper{
 		this.codeToClazz.put(BATTLEMATCHSYN, BattleMatchRes.class);
 		this.codeToClazz.put(STARTBATTLEREQ, StartBattleReq.class);
 		this.codeToClazz.put(STARTBATTLERES, StartBattleRes.class);
+		this.codeToClazz.put(MOVEARMYREQ, MoveArmyReq.class);
+		this.codeToClazz.put(PLAYERATKREQ, PlayerAtkReq.class);
+		this.codeToClazz.put(BATTLECHANGESYN, BattleChangeSyn.class);
 	}
 
 }
