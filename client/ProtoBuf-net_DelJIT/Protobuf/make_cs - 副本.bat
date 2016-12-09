@@ -1,0 +1,1 @@
+protogen -i:Message.proto -o:./CS/Message.cs 

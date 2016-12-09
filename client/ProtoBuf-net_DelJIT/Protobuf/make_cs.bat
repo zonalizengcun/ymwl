@@ -1,0 +1,1 @@
+protogen -i:Message.proto -o:../ProtoBufModel/ProtoBufModel/Message.cs 

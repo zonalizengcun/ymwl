@@ -1,0 +1,45 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class input : MonoBehaviour {
+
+	// Use this for initialization
+
+	public static input m_instance;
+
+	public Transform layer_ui;
+
+	void Start () {
+		m_instance = this;
+		initGameCommonBtn (layer_ui);
+
+	}
+	
+	// Update is called once per frame
+	void Update () {
+	
+	}
+
+
+	/// <summary>
+	/// /////// ui button//////////////////
+	/// </summary>
+	void initGameCommonBtn(Transform parent){
+		//true 包括隐藏按键
+		tk2dButton[] button = parent.GetComponentsInChildren<tk2dButton> (true);
+		for (int i=0; i<button.Length; i++) {
+			button[i].ButtonPressedEvent += event_btnUi;
+		}
+	}
+
+	//游戏中界面通用ＵＩ按钮事件
+	void event_btnUi(tk2dButton source){
+		switch (source.name) {
+		case "btn_login":
+			string inputstr = layer_ui.transform.FindChild ("inputName").GetComponent<tk2dUITextInput> ().Text;
+			Debug.Log (inputstr);
+			Utils.m_instance.LoadLevelAsync ("game");
+			break;
+		}
+	}
+}

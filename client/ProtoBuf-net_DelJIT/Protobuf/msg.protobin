@@ -1,0 +1,59 @@
+
+ˆ
+Message.proto"*
+Vector3	
+x (	
+y (	
+z ("H
+	CLConnect
+client_version (
+device (	
+operator_id ("
+MessageLogin
+name (	"T
+MessagePlayerData
+uid (
+name (	
+pos (2.Vector3
+mapID ("/
+MessageRefreshPosition
+pos (2.Vector3"X
+MessagePlayerMove
+type (
+curPos (2.Vector3
+	targetPos (2.Vector3"0
+MessageRequestChat
+type (
+data (	"?
+MessageResponseChat
+name (	
+type (
+data (	"F
+MessagePlayerEnter
+uid (
+name (	
+pos (2.Vector3" 
+MessagePlayerExit
+uid ("j
+MessageOtherPlayerMove
+uid (
+type (
+srcPos (2.Vector3
+	targetPos (2.Vector3"A
+MessageNearPlayerMoveUpdate
+uid (
+pos (2.Vector3"%
+MessageErrorCode
+	errorCode (*º
+MSG_ID
+ID_C2S_REQUEST_LOGINëN
+ID_S2C_PLAYER_DATA°ú
+ID_C2S_REFRESH_POSITION¢ú
+ID_C2S_PLAYER_MOVE£ú
+ID_C2S_REQUEST_CHAT±Í
+ID_S2C_RESPONSE_CHAT≤Í
+ID_S2C_PLAYER_ENTER¡∏
+ID_S2C_PLAYER_EXIT¬∏
+ID_S2C_OTHER_PLAYER_MOVE√∏$
+ID_S2C_NEAR_PLAYER_MOVE_UPDATEƒ∏
+ID_S2C_ERROR°ç

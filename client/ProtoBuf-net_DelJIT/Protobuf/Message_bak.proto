@@ -1,0 +1,92 @@
+enum MSG_ID
+{   	
+	ID_C2S_REQUEST_LOGIN      = 52; // 登陆 
+	ID_S2C_REQUEST_LOGIN      = 53; // 登陆返回信息
+	ID_C2S_GET_USERDATA	  = 54; // 请求玩家数据
+	ID_S2C_GET_USERDATA       = 70; // 返回玩家数据
+
+	ID_C2S_MATCHREQUEST	      = 71; // 匹配
+	ID_S2C_MATCHREQUEST	      = 73; // 匹配结果
+}; 
+
+enum MATCH_REQUEST_TYPE 
+{
+	MATCH_REQUEST_MATCH = 0;
+	MATCH_REQUEST_CANCEL = 1;
+ }
+
+enum GAME_RESULT 
+{
+	MATCH_REQUEST_OK = 0;		//匹配成功
+	MATCH_REQUEST_FAIL = 1;		//匹配失败
+ }
+
+message UUID
+{
+  required int32 UID = 1;
+}
+
+message _GUID_
+{
+  required int64 Guid = 1;
+}
+
+message MatchMemberData
+{
+ required 	int32 UID = 1;
+ optional	string Name = 2;		//人物的名称
+ optional	int32 Icon = 3;				//头像
+}
+
+//ID_C2S_REQUEST_LOGIN          = 52; // 登陆 
+message MessageLoginReq 
+{
+	required	string UserID = 1;
+	required	string SessionID = 2;
+	required	string Device = 3;
+	required	int32 Platform = 4;
+	required	int32 client_version = 5;
+}
+
+//ID_L2C_LOGIN_RET              = 53; // 登陆返回信息
+message MessageLoginRep 
+{
+    required	int32 LoginResult = 1;
+}
+
+//ID_C2S_GET_USERDATA				  = 54; // 请求角色信息
+message MessageGetUserDataReq 
+{
+	required	string Account = 1;		//账号
+}
+
+
+//ID_S2C_GET_USERDATA				  = 100; // 玩家信息
+message MessageGetUserData 
+{
+    	required	UUID guid = 1;							//人物ID(不会改变)
+		optional	string Name = 2;		//人物的名称
+		optional	int32 Level = 3;						//当前等级
+		optional	int32 Exp = 4;							//当前经验
+		optional	uint32 Money = 5;						//金钱
+		optional	uint32 Gold = 6;							//元宝
+		optional	uint32 Badge = 7;			//军功
+		optional	int32 Icon = 8;				//头像
+		optional	int32 VipLevel = 9;						//VIP等级
+		optional	int32 VipExp = 10;						//VIP经验
+    	optional	int32 ContinuesLoginCount = 11;          //连续登陆次数
+}
+
+//ID_C2S_MATCHREQUEST	      	      = 69; // 匹配
+message MessageMatchRequest 
+{
+    required	MATCH_REQUEST_TYPE MatchRequest = 1;
+    optional	int32 MatchType = 2;
+}
+
+//ID_S2C_MATCHREQUEST	      = 70; // 匹配结果
+message MessageMatchResult
+{
+    required	GAME_RESULT MatchResult = 1;
+    repeated	MatchMemberData MatchMember = 2;
+}
