@@ -18,7 +18,7 @@ public abstract class AbstractNettyServer {
 	
 	
 	public AbstractNettyServer(){
-		EventLoopGroup bossGroup = new NioEventLoopGroup();
+		EventLoopGroup bossGroup = new NioEventLoopGroup(1);
 		EventLoopGroup workerGroup = new NioEventLoopGroup();
 		serverBootstrap = new ServerBootstrap();
 		serverBootstrap.group(bossGroup, workerGroup).channel(NioServerSocketChannel.class)
