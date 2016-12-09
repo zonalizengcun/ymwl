@@ -127,9 +127,41 @@ message PlayerAtkReq{
 
 //战场效果变化 = 120
 message BattleChangeSyn{
+	repeated BattleStepMessage battleStep = 1;
+}
+
+message BattleStepMessage{
+	required int32 type = 1;//步骤类型 0单个士兵移动 2形成攻击阵型3个士兵移动 3形成防御城墙 4城墙合成
+	optional ArmyMoveMessage armyMove = 2;//单个士兵移动
+	optional AtkQueueMessage atkqueue = 3;//攻击阵型
+	optional WallQueueMessage wallQueue = 4;//防御城墙
+	optional WallMergeMessage wallMerge = 5;//合成城墙
 	
 }
 
+//单个士兵移动
+message ArmyMoveMessage{
+	required int32 armyId = 1;//士兵instanceId
+	required int32 tox = 2;//目标x坐标
+	required int32 toy = 3;//目标y坐标
+}
+
+//形成一个攻击阵型
+message AtkQueueMessage{
+	repeated int32 armyId = 1;
+	repeated int32 targetY = 2;
+}
+//防御城墙
+message WallQueueMessage{
+	repeated int32 armyId = 1;
+	repeated int32 targetX = 2;
+	repeated int32 targetY = 3;
+}
+//城墙合成
+message WallMergeMessage{
+	repeated int32 fromId = 1;
+	repeated int32 toId = 2;
+}
 
 
 
